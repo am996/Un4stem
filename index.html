@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutoring Program</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: #2b6cb0;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #1a4f8b;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2b6cb0;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #2b6cb0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1a4f8b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Your Tutoring Program</h1>
+  <p>Helping students succeed 📚</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#subjects">Subjects</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <div class="card">
+    <h2>About Us</h2>
+    <p>
+      We are high school students offering tutoring for middle and high school subjects.
+      Our goal is to make learning easier, clearer, and less stressful.
+    </p>
+  </div>
+</section>
+
+<section id="subjects">
+  <div class="card">
+    <h2>Subjects Offered</h2>
+    <ul>
+      <li>Math (Algebra, Geometry, etc.)</li>
+      <li>Science (Biology, Chemistry)</li>
+      <li>English & Writing</li>
+      <li>History</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Sign Up / Contact</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" placeholder="Student Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="What subject do you need help with?" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="response" style="color: green;"></p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Tutoring Program</p>
+</footer>
+
+<script>
+function handleSubmit(event) {
+  event.preventDefault();
+  document.getElementById("response").innerText =
+    "Thanks! We'll get back to you soon.";
+}
+</script>
+
+</body>
+</html>
