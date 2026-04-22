@@ -335,6 +335,29 @@ function closeModal(e) {
   }
 }
 </script>
+<script>
+  // Fade IN on load
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
 
+  // Fade OUT on navigation
+  document.querySelectorAll("a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (!href || href.startsWith("#") || href.startsWith("http")) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.body.classList.remove("loaded");
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 250);
+    });
+  });
+</script>
 </body>
 </html>

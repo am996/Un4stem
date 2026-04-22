@@ -2,141 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tutoring Program</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f7fa;
-      color: #333;
-    }
-
-    header {
-      background: #2b6cb0;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background: #1a4f8b;
-      padding: 10px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #2b6cb0;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background: #2b6cb0;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #1a4f8b;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #eee;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UN4STEM</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-  <h1>Your Tutoring Program</h1>
-  <p>Helping students succeed 📚</p>
-</header>
+<div class="container">
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#subjects">Subjects</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <nav>
+    <strong>UN4STEM</strong>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="impact.html">Impact</a>
+      <a href="apply.html">Apply</a>
+    </div>
+  </nav>
 
-<section id="about">
-  <div class="card">
-    <h2>About Us</h2>
-    <p>
-      We are high school students offering tutoring for middle and high school subjects.
-      Our goal is to make learning easier, clearer, and less stressful.
+  <header>
+    <h1>Student-led STEM education.</h1>
+
+    <p class="subtitle">
+      UN4STEM is a nonprofit organization connecting high school mentors with students to expand access to STEM education through peer-led learning and structured programs.
     </p>
-  </div>
-</section>
 
-<section id="subjects">
-  <div class="card">
-    <h2>Subjects Offered</h2>
-    <ul>
-      <li>Math (Algebra, Geometry, etc.)</li>
-      <li>Science (Biology, Chemistry)</li>
-      <li>English & Writing</li>
-      <li>History</li>
-    </ul>
-  </div>
-</section>
+    <a class="btn" href="programs.html">Explore Programs</a>
+  </header>
 
-<section id="contact">
-  <div class="card">
-    <h2>Sign Up / Contact</h2>
-    <form onsubmit="handleSubmit(event)">
-      <input type="text" placeholder="Student Name" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="What subject do you need help with?" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-    <p id="response" style="color: green;"></p>
-  </div>
-</section>
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      We aim to close educational gaps in STEM by creating accessible, student-led learning environments where mentorship drives understanding.
+    </p>
+  </section>
 
-<footer>
-  <p>© 2026 Tutoring Program</p>
-</footer>
+  <section>
+    <h2>What We Do</h2>
 
+    <div class="grid">
+      <div class="card">
+        <h3>Mentorship</h3>
+        <p>High school students teach STEM topics in a relatable way.</p>
+      </div>
+
+      <div class="card">
+        <h3>Structured Learning</h3>
+        <p>Organized courses across math, science, and computing.</p>
+      </div>
+
+      <div class="card">
+        <h3>Accessibility</h3>
+        <p>Programs designed for both online and in-person learning.</p>
+      </div>
+
+      <div class="card">
+        <h3>Student Perspective</h3>
+        <p>Built by students who understand learning challenges firsthand.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 UN4STEM
+  </footer>
+
+</div>
 <script>
-function handleSubmit(event) {
-  event.preventDefault();
-  document.getElementById("response").innerText =
-    "Thanks! We'll get back to you soon.";
-}
-</script>
+  // Fade IN on load
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
 
+  // Fade OUT on navigation
+  document.querySelectorAll("a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (!href || href.startsWith("#") || href.startsWith("http")) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.body.classList.remove("loaded");
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 250);
+    });
+  });
+</script>
 </body>
 </html>
