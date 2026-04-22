@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About - UN4STEM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+  // fade in on load
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+  // fade out on navigation
+  document.querySelectorAll("a").forEach(link => {
+    const url = link.getAttribute("href");
+
+    // ignore external links / anchors
+    if (!url || url.startsWith("#") || url.startsWith("http")) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.body.classList.remove("loaded");
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 300);
+    });
+  });
+</script>
+
+<body>
+
+<div class="container">
+
+<nav>
+  <div><strong>UN4STEM</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="impact.html">Impact</a>
+    <a href="apply.html">Apply</a>
+  </div>
+</nav>
+
+<header>
+  <h1>About UN4STEM</h1>
+</header>
+
+<section>
+  <h2>Our Origins</h2>
+  <p>
+    UN4STEM began as We Teach Scarsdale (WTS 2025), a student initiative in Westchester County focused on peer-led STEM tutoring.
+    It has since evolved into a structured nonprofit with a growing educational network.
+  </p>
+</section>
+
+<section>
+  <h2>Our Experience</h2>
+  <p>
+    We have taught nearly 40 students across subjects including Cellular Biology, Anatomy, and Abstract Algebra.
+    This experience has shaped our teaching philosophy and program design.
+  </p>
+</section>
+
+<section>
+  <h2>Our Philosophy</h2>
+  <p>
+    We believe students learn best from other students because they share a similar academic experience.
+    This allows for clearer explanations, stronger engagement, and more effective learning outcomes.
+  </p>
+</section>
+
+<footer>© 2026 UN4STEM</footer>
+
+</div>
+
+</body>
+</html>

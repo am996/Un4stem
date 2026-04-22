@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply - UN4STEM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<script>
+  // fade in on load
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+  // fade out on navigation
+  document.querySelectorAll("a").forEach(link => {
+    const url = link.getAttribute("href");
+
+    // ignore external links / anchors
+    if (!url || url.startsWith("#") || url.startsWith("http")) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.body.classList.remove("loaded");
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 300);
+    });
+  });
+</script>
+
+<body>
+
+<div class="container">
+
+<!-- NAV -->
+<nav>
+  <div><strong>UN4STEM</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="impact.html">Impact</a>
+    <a href="apply.html">Apply</a>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <h1>Apply to UN4STEM</h1>
+  <p class="subtitle">
+    Join our student-led initiative and help expand access to STEM education through peer mentorship.
+  </p>
+</header>
+
+<!-- CONTENT -->
+<section>
+
+  <div style="max-width: 800px; margin: 0 auto; text-align: center; line-height: 1.6;">
+
+    <p>
+      UN4STEM is always looking for motivated students who are passionate about STEM and interested in teaching or learning in a collaborative environment.
+      Our program is fully online this year, making it flexible and accessible for all applicants.
+    </p>
+
+    <br>
+
+    <p>
+      After applying, our team reviews each submission and matches students with appropriate courses or teaching opportunities based on interest and experience.
+    </p>
+
+    <br><br>
+
+    <!-- APPLICATION BUTTON -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0sZ-1bCxxka-cZb_jIbwAINuXjW-Qy3hWLW9xqb71rFlG4w/viewform?usp=dialog" target="_blank">
+      <button style="
+        padding: 14px 24px;
+        background: #2b6cb0;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      ">
+        Open Application Form
+      </button>
+    </a>
+
+    <p style="margin-top: 20px; font-size: 14px; color: gray;">
+      You will be redirected to a secure Google Form to complete your application.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 UN4STEM
+</footer>
+
+</div>
+
+</body>
+</html>

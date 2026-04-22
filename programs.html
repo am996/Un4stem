@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs - UN4STEM</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .course-card {
+      border: 1px solid #e5e7eb;
+      padding: 18px;
+      cursor: pointer;
+      background: white;
+    }
+
+    .course-card:hover {
+      border-color: #cbd5e1;
+    }
+
+    .course-title {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .course-desc {
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.6);
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: white;
+      max-width: 650px;
+      width: 100%;
+      padding: 26px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #64748b;
+    }
+
+    .modal h2 {
+      margin-bottom: 12px;
+    }
+
+    .modal p {
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+      white-space: pre-line;
+    }
+
+    @media (max-width: 900px) {
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<script>
+  // fade in on load
+  window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+  });
+
+  // fade out on navigation
+  document.querySelectorAll("a").forEach(link => {
+    const url = link.getAttribute("href");
+
+    // ignore external links / anchors
+    if (!url || url.startsWith("#") || url.startsWith("http")) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.body.classList.remove("loaded");
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 300);
+    });
+  });
+</script>
+
+<body>
+
+<div class="container">
+
+<nav>
+  <div><strong>UN4STEM</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="impact.html">Impact</a>
+    <a href="apply.html">Apply</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Programs</h1>
+  <p class="subtitle">Explore our STEM courses. Click any course to learn more.</p>
+</header>
+
+<section>
+
+<div class="course-grid">
+
+  <div class="course-card" onclick="openModal('Cellular Biology',
+`Cellular Biology introduces students to the fundamental building blocks of life: cells.
+
+This course explores cell structure, function, and organization, focusing on how biological systems operate at the microscopic level.
+
+Students will learn about organelles, cell membranes, transport mechanisms, energy production, and biochemical processes that sustain life.
+
+By the end, students will understand how cells function as living units and how disruptions relate to real-world health and disease.`)">
+    <div class="course-title">Cellular Biology</div>
+    <div class="course-desc">Cell structure and biological systems</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Anatomy and Physiology',
+`Anatomy and Physiology focuses on the structure and function of the human body.
+
+Students study organ systems including skeletal, muscular, circulatory, respiratory, and nervous systems.
+
+The course emphasizes how systems work together to maintain homeostasis and applies concepts to real-world health and movement.
+
+Students build a strong understanding of how the human body functions as an integrated system.`)">
+    <div class="course-title">Anatomy and Physiology</div>
+    <div class="course-desc">Human body systems</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Psychology',
+`Psychology is the scientific study of human behavior and mental processes.
+
+Topics include cognition, emotion, perception, learning, memory, and social behavior.
+
+Students explore how people think, make decisions, and interact with others.
+
+The course encourages deeper understanding of both individual and group behavior.`)">
+    <div class="course-title">Psychology</div>
+    <div class="course-desc">Mind and behavior</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Physics',
+`Physics is the study of matter, energy, motion, and forces.
+
+Students learn foundational concepts such as kinematics, Newton’s laws, energy conservation, and waves.
+
+The course emphasizes problem-solving and logical reasoning.
+
+It builds understanding of how physical laws explain real-world phenomena.`)">
+    <div class="course-title">Physics</div>
+    <div class="course-desc">Motion and forces</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Chemistry',
+`Chemistry studies the composition and behavior of matter.
+
+Topics include atoms, molecules, bonding, reactions, and periodic trends.
+
+Students connect microscopic structure to observable chemical behavior.
+
+The course builds strong conceptual reasoning about material changes.`)">
+    <div class="course-title">Chemistry</div>
+    <div class="course-desc">Matter and reactions</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Mental Health Awareness',
+`This course explores mental health, emotional well-being, and stress management.
+
+Topics include anxiety, depression, coping strategies, and self-awareness.
+
+Students learn how to recognize mental health challenges and support well-being.
+
+The goal is to promote awareness and reduce stigma around mental health.`)">
+    <div class="course-title">Mental Health Awareness</div>
+    <div class="course-desc">Well-being and awareness</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Computer Science',
+`Computer Science introduces programming fundamentals and computational thinking.
+
+Students learn variables, logic, algorithms, and problem-solving techniques.
+
+The course builds structured thinking and introduces core coding concepts.
+
+It prepares students for future study in technology and programming.`)">
+    <div class="course-title">Computer Science</div>
+    <div class="course-desc">Coding and logic</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Engineering',
+`Engineering focuses on designing and solving real-world problems using STEM principles.
+
+Students explore systems thinking, design processes, and applied problem-solving.
+
+The course emphasizes creativity and structured reasoning.
+
+It connects scientific knowledge to real-world applications.`)">
+    <div class="course-title">Engineering</div>
+    <div class="course-desc">Design and systems</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Quantum Physics',
+`Quantum Physics explores the behavior of matter and energy at atomic and subatomic scales.
+
+Topics include wave-particle duality, quantization, and uncertainty principles.
+
+Students are introduced to modern physics concepts beyond classical mechanics.
+
+The course builds conceptual understanding of advanced physical theory.`)">
+    <div class="course-title">Quantum Physics</div>
+    <div class="course-desc">Advanced physics</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Elementary Arithmetic',
+`Elementary Arithmetic builds foundational math skills including addition, subtraction, multiplication, and division.
+
+Students strengthen numerical fluency and mental math ability.
+
+The course develops confidence in basic mathematical reasoning.
+
+It forms the base for all future mathematics.`)">
+    <div class="course-title">Elementary Arithmetic</div>
+    <div class="course-desc">Basic math skills</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Pre Algebra',
+`Pre Algebra introduces foundational algebraic thinking.
+
+Students learn variables, expressions, integers, fractions, and equations.
+
+The course bridges arithmetic and formal algebra.
+
+It prepares students for structured mathematical reasoning.`)">
+    <div class="course-title">Pre Algebra</div>
+    <div class="course-desc">Intro to algebra</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Algebra 1',
+`Algebra 1 focuses on linear equations, functions, and graphing.
+
+Students learn how to represent relationships using variables.
+
+The course builds problem-solving and analytical thinking skills.
+
+It introduces real-world modeling through algebra.`)">
+    <div class="course-title">Algebra 1</div>
+    <div class="course-desc">Core algebra</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Algebra 2',
+`Algebra 2 expands into polynomials, logarithms, exponentials, and functions.
+
+Students solve more complex and abstract equations.
+
+The course strengthens advanced mathematical reasoning.
+
+It prepares students for higher-level math courses.`)">
+    <div class="course-title">Algebra 2</div>
+    <div class="course-desc">Advanced algebra</div>
+  </div>
+
+  <div class="course-card" onclick="openModal('Abstract Algebra',
+`Abstract Algebra introduces higher mathematical structures such as groups, rings, and fields.
+
+Students explore symmetry, structure, and abstract reasoning.
+
+The course focuses on theoretical thinking rather than computation.
+
+It is designed for advanced mathematical exploration.`)">
+    <div class="course-title">Abstract Algebra</div>
+    <div class="course-desc">Advanced theory</div>
+  </div>
+
+</div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal(event)">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<footer>© 2026 UN4STEM</footer>
+
+</div>
+
+<script>
+function openModal(title, text) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalText").innerText = text;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(e) {
+  if (e.target.id === "modal" || e.target.className === "close") {
+    document.getElementById("modal").style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
