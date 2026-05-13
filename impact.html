@@ -7,57 +7,33 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<script>
-  // fade in on load
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
-
-  // fade out on navigation
-  document.querySelectorAll("a").forEach(link => {
-    const url = link.getAttribute("href");
-
-    // ignore external links / anchors
-    if (!url || url.startsWith("#") || url.startsWith("http")) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.body.classList.remove("loaded");
-      document.body.classList.add("fade-out");
-
-      setTimeout(() => {
-        window.location.href = url;
-      }, 300);
-    });
-  });
-</script>
-
 <body>
 
-<div class="container">
+<!-- FIXED NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <strong>UN4STEM</strong>
 
-<!-- NAV -->
-<nav>
-  <div><strong>UN4STEM</strong></div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="impact.html">Impact</a>
-    <a href="apply.html">Apply</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="impact.html">Impact</a>
+      <a href="apply.html">Apply</a>
+    </div>
   </div>
 </nav>
 
-<!-- HEADER -->
+<div class="container">
+
 <header>
   <h1>Our Impact</h1>
   <p class="subtitle">
     UN4STEM is a student-led nonprofit dedicated to expanding access to STEM education through peer mentorship, structured learning, and accessible online instruction.
   </p>
+  <div class="image-placeholder hero-image">Insert Image Here</div>
 </header>
 
-<!-- CONTENT -->
 <section>
 
   <div style="max-width: 900px; margin: 0 auto; text-align: left; line-height: 1.8;">
@@ -66,6 +42,7 @@
     <p>
       UN4STEM was created to address a simple but important problem: many students do not have equal access to high-quality STEM education outside the classroom. By connecting motivated high school students with younger learners, we aim to provide clear, relatable instruction that helps bridge gaps in understanding. Our approach is centered around making complex subjects more approachable without oversimplifying the material.
     </p>
+    <div class="image-placeholder inline-image">Insert Image Here</div>
 
     <br><br>
 
@@ -73,6 +50,7 @@
     <p>
       What began as a small, informal tutoring effort has developed into a more organized program with multiple STEM courses. Over time, we have refined our curriculum to include mathematics, physics, chemistry, computer science, and interdisciplinary topics. This growth has allowed us to focus more intentionally on structured learning paths and consistent teaching methods that support long-term academic development.
     </p>
+    <div class="image-placeholder inline-image">Insert Image Here</div>
 
     <br><br>
 
@@ -106,19 +84,17 @@
 
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 UN4STEM
 </footer>
 
 </div>
+
 <script>
-  // Fade IN on load
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-  // Fade OUT on navigation
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
 
@@ -127,7 +103,6 @@
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      document.body.classList.remove("loaded");
       document.body.classList.add("fade-out");
 
       setTimeout(() => {
@@ -136,5 +111,6 @@
     });
   });
 </script>
+
 </body>
 </html>

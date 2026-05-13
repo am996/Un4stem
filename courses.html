@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses - UN4STEM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <strong>UN4STEM</strong>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="impact.html">Impact</a>
+      <a href="apply.html">Apply</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header>
+    <h1>Courses</h1>
+    <p class="subtitle">A full course catalog for UN4STEM programs.</p>
+    <div class="image-placeholder hero-image">Insert Image Here</div>
+  </header>
+
+  <section>
+    <div class="course-grid">
+      <a class="course-card" href="courses/cellular-biology.html">
+        <div class="course-title">Cellular Biology</div>
+        <div class="course-desc">Cell structure and biological systems</div>
+      </a>
+
+      <a class="course-card" href="courses/anatomy.html">
+        <div class="course-title">Anatomy and Physiology</div>
+        <div class="course-desc">Human body systems</div>
+      </a>
+
+      <a class="course-card" href="courses/psychology.html">
+        <div class="course-title">Psychology</div>
+        <div class="course-desc">Mind and behavior</div>
+      </a>
+
+      <a class="course-card" href="courses/physics.html">
+        <div class="course-title">Physics</div>
+        <div class="course-desc">Motion and forces</div>
+      </a>
+
+      <a class="course-card" href="courses/chemistry.html">
+        <div class="course-title">Chemistry</div>
+        <div class="course-desc">Matter and reactions</div>
+      </a>
+
+      <a class="course-card" href="courses/mental-health.html">
+        <div class="course-title">Mental Health Awareness</div>
+        <div class="course-desc">Well-being and awareness</div>
+      </a>
+
+      <a class="course-card" href="courses/computer-science.html">
+        <div class="course-title">Computer Science</div>
+        <div class="course-desc">Coding and logic</div>
+      </a>
+
+      <a class="course-card" href="courses/engineering.html">
+        <div class="course-title">Engineering</div>
+        <div class="course-desc">Design and systems</div>
+      </a>
+
+      <a class="course-card" href="courses/quantum-physics.html">
+        <div class="course-title">Quantum Physics</div>
+        <div class="course-desc">Advanced physics</div>
+      </a>
+
+      <a class="course-card" href="courses/arithmetic.html">
+        <div class="course-title">Elementary Arithmetic</div>
+        <div class="course-desc">Basic math skills</div>
+      </a>
+
+      <a class="course-card" href="courses/pre-algebra.html">
+        <div class="course-title">Pre Algebra</div>
+        <div class="course-desc">Intro to algebra</div>
+      </a>
+
+      <a class="course-card" href="courses/algebra-1.html">
+        <div class="course-title">Algebra 1</div>
+        <div class="course-desc">Core algebra</div>
+      </a>
+
+      <a class="course-card" href="courses/algebra-2.html">
+        <div class="course-title">Algebra 2</div>
+        <div class="course-desc">Advanced algebra</div>
+      </a>
+
+      <a class="course-card" href="courses/abstract-algebra.html">
+        <div class="course-title">Abstract Algebra</div>
+        <div class="course-desc">Advanced theory</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>© 2026 UN4STEM</footer>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  requestAnimationFrame(() => {
+    document.body.classList.add("loaded");
+  });
+
+  document.querySelectorAll("a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (!href || href.startsWith("#") || href.startsWith("http")) return;
+
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      document.body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 250);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

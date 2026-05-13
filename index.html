@@ -9,10 +9,11 @@
 
 <body>
 
-<div class="container">
-
-  <nav>
+<!-- FULL WIDTH NAV (FIXED) -->
+<nav class="nav">
+  <div class="nav-inner">
     <strong>UN4STEM</strong>
+
     <div>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -20,23 +21,33 @@
       <a href="impact.html">Impact</a>
       <a href="apply.html">Apply</a>
     </div>
-  </nav>
+  </div>
+</nav>
+
+<div class="container">
 
   <header>
-    <h1>Student-led STEM education.</h1>
+    <h1>STEM learning that actually makes sense.</h1>
 
     <p class="subtitle">
-      UN4STEM is a nonprofit organization connecting high school mentors with students to expand access to STEM education through peer-led learning and structured programs.
+      UN4STEM connects high school mentors with younger students to make STEM easier to understand, less stressful, and a lot more engaging.
+    </p>
+
+    <p style="margin-top: 10px; color: #64748b;">
+      Built by students, for students.
     </p>
 
     <a class="btn" href="programs.html">Explore Programs</a>
+
+    <div class="image-placeholder hero-image">Insert Image Here</div>
   </header>
 
   <section>
     <h2>Our Mission</h2>
     <p>
-      We aim to close educational gaps in STEM by creating accessible, student-led learning environments where mentorship drives understanding.
+      We want more students to feel confident in STEM. Instead of making learning overwhelming, we focus on clear explanations, supportive mentorship, and creating an environment where asking questions is encouraged.
     </p>
+    <div class="image-placeholder inline-image">Insert Image Here</div>
   </section>
 
   <section>
@@ -44,23 +55,27 @@
 
     <div class="grid">
       <div class="card">
-        <h3>Mentorship</h3>
-        <p>High school students teach STEM topics in a relatable way.</p>
+        <div class="image-placeholder small-image">Insert Image Here</div>
+        <h3>Peer Mentorship</h3>
+        <p>Students teach students, making concepts easier to understand and way more relatable.</p>
       </div>
 
       <div class="card">
+        <div class="image-placeholder small-image">Insert Image Here</div>
         <h3>Structured Learning</h3>
-        <p>Organized courses across math, science, and computing.</p>
+        <p>Step-by-step courses that break down difficult topics into manageable pieces.</p>
       </div>
 
       <div class="card">
-        <h3>Accessibility</h3>
-        <p>Programs designed for both online and in-person learning.</p>
+        <div class="image-placeholder small-image">Insert Image Here</div>
+        <h3>Flexible Access</h3>
+        <p>Programs designed to work both online and in person, so more students can participate.</p>
       </div>
 
       <div class="card">
-        <h3>Student Perspective</h3>
-        <p>Built by students who understand learning challenges firsthand.</p>
+        <div class="image-placeholder small-image">Insert Image Here</div>
+        <h3>Real Student Insight</h3>
+        <p>Built by students who understand what makes learning confusing—and how to fix it.</p>
       </div>
     </div>
   </section>
@@ -70,13 +85,12 @@
   </footer>
 
 </div>
+
 <script>
-  // Fade IN on load
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-  // Fade OUT on navigation
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
 
@@ -85,7 +99,6 @@
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      document.body.classList.remove("loaded");
       document.body.classList.add("fade-out");
 
       setTimeout(() => {
@@ -94,5 +107,6 @@
     });
   });
 </script>
+
 </body>
 </html>

@@ -1,53 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - UN4STEM</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<script>
-  // fade in on load
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
-
-  // fade out on navigation
-  document.querySelectorAll("a").forEach(link => {
-    const url = link.getAttribute("href");
-
-    // ignore external links / anchors
-    if (!url || url.startsWith("#") || url.startsWith("http")) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.body.classList.remove("loaded");
-      document.body.classList.add("fade-out");
-
-      setTimeout(() => {
-        window.location.href = url;
-      }, 300);
-    });
-  });
-</script>
-
 <body>
 
-<div class="container">
+<!-- FIXED NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <strong>UN4STEM</strong>
 
-<nav>
-  <div><strong>UN4STEM</strong></div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="impact.html">Impact</a>
-    <a href="apply.html">Apply</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="impact.html">Impact</a>
+      <a href="apply.html">Apply</a>
+    </div>
   </div>
 </nav>
 
+<div class="container">
+
 <header>
   <h1>About UN4STEM</h1>
+  <div class="image-placeholder hero-image">Insert Image Here</div>
 </header>
 
 <section>
@@ -56,6 +37,7 @@
     UN4STEM began as We Teach Scarsdale (WTS 2025), a student initiative in Westchester County focused on peer-led STEM tutoring.
     It has since evolved into a structured nonprofit with a growing educational network.
   </p>
+  <div class="image-placeholder inline-image">Insert Image Here</div>
 </section>
 
 <section>
@@ -64,6 +46,7 @@
     We have taught nearly 40 students across subjects including Cellular Biology, Anatomy, and Abstract Algebra.
     This experience has shaped our teaching philosophy and program design.
   </p>
+  <div class="image-placeholder inline-image">Insert Image Here</div>
 </section>
 
 <section>
@@ -77,6 +60,7 @@
 <footer>© 2026 UN4STEM</footer>
 
 </div>
+
 <script>
   // Fade IN on load
   window.addEventListener("load", () => {
@@ -92,7 +76,6 @@
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      document.body.classList.remove("loaded");
       document.body.classList.add("fade-out");
 
       setTimeout(() => {
@@ -101,5 +84,6 @@
     });
   });
 </script>
+
 </body>
 </html>

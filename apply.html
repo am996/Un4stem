@@ -7,33 +7,33 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-
-
 <body>
 
-<div class="container">
+<!-- NAV (CONSISTENT) -->
+<nav class="nav">
+  <div class="nav-inner">
+    <strong>UN4STEM</strong>
 
-<!-- NAV -->
-<nav>
-  <div><strong>UN4STEM</strong></div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="programs.html">Programs</a>
-    <a href="impact.html">Impact</a>
-    <a href="apply.html">Apply</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="impact.html">Impact</a>
+      <a href="apply.html">Apply</a>
+    </div>
   </div>
 </nav>
 
-<!-- HEADER -->
+<div class="container">
+
 <header>
   <h1>Apply to UN4STEM</h1>
   <p class="subtitle">
     Join our student-led initiative and help expand access to STEM education through peer mentorship.
   </p>
+  <div class="image-placeholder hero-image">Insert Image Here</div>
 </header>
 
-<!-- CONTENT -->
 <section>
 
   <div style="max-width: 800px; margin: 0 auto; text-align: center; line-height: 1.6;">
@@ -43,6 +43,8 @@
       Our program is fully online this year, making it flexible and accessible for all applicants.
     </p>
 
+    <div class="image-placeholder inline-image">Insert Image Here</div>
+
     <br>
 
     <p>
@@ -51,19 +53,11 @@
 
     <br><br>
 
-    <!-- APPLICATION BUTTON -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0sZ-1bCxxka-cZb_jIbwAINuXjW-Qy3hWLW9xqb71rFlG4w/viewform?usp=dialog" target="_blank">
-      <button style="
-        padding: 14px 24px;
-        background: #2b6cb0;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        cursor: pointer;
-      ">
-        Open Application Form
-      </button>
+    <!-- BUTTON -->
+    <a class="btn"
+       href="https://docs.google.com/forms/d/e/1FAIpQLSc0sZ-1bCxxka-cZb_jIbwAINuXjW-Qy3hWLW9xqb71rFlG4w/viewform?usp=dialog"
+       target="_blank">
+      Open Application Form
     </a>
 
     <p style="margin-top: 20px; font-size: 14px; color: gray;">
@@ -74,19 +68,17 @@
 
 </section>
 
-<!-- FOOTER -->
 <footer>
   © 2026 UN4STEM
 </footer>
 
 </div>
+
 <script>
-  // Fade IN on load
   window.addEventListener("load", () => {
     document.body.classList.add("loaded");
   });
 
-  // Fade OUT on navigation
   document.querySelectorAll("a").forEach(link => {
     const href = link.getAttribute("href");
 
@@ -95,7 +87,6 @@
     link.addEventListener("click", (e) => {
       e.preventDefault();
 
-      document.body.classList.remove("loaded");
       document.body.classList.add("fade-out");
 
       setTimeout(() => {
@@ -104,5 +95,6 @@
     });
   });
 </script>
+
 </body>
 </html>
