@@ -2,6 +2,8 @@ const UN4STEM_COURSES = {
   "cellular-biology": {
     title: "Cellular Biology",
     short: "Cell structure and biological systems",
+    image: "../assets/illustrations/science-lab.svg",
+    imageAlt: "Playful clipart biology learning scene",
     category: "Biology",
     level: "Introductory to intermediate",
     overview: "Cellular Biology helps students understand life at its smallest working scale. Students study how cells are organized, how organelles work together, how materials move across membranes, and how cellular processes support larger biological systems.",
@@ -23,6 +25,8 @@ const UN4STEM_COURSES = {
   "anatomy": {
     title: "Anatomy and Physiology",
     short: "Human body systems",
+    image: "../assets/illustrations/science-lab.svg",
+    imageAlt: "Playful clipart anatomy and physiology learning scene",
     category: "Biology",
     level: "Introductory",
     overview: "Anatomy and Physiology introduces the structure and function of the human body. Students learn how major body systems work independently and how they coordinate to keep the body stable, active, and healthy.",
@@ -44,6 +48,8 @@ const UN4STEM_COURSES = {
   "psychology": {
     title: "Psychology",
     short: "Mind and behavior",
+    image: "../assets/illustrations/wellness-talk.svg",
+    imageAlt: "Playful clipart psychology discussion scene",
     category: "Life Science",
     level: "Introductory",
     overview: "Psychology explores how people think, feel, learn, remember, and interact. The course connects major psychological ideas to school, relationships, motivation, stress, and decision-making.",
@@ -65,6 +71,8 @@ const UN4STEM_COURSES = {
   "physics": {
     title: "Physics",
     short: "Motion and forces",
+    image: "../assets/illustrations/math-board.svg",
+    imageAlt: "Playful clipart physics problem solving scene",
     category: "Physical Science",
     level: "Introductory to intermediate",
     overview: "Physics gives students a clear foundation in the rules that describe motion, energy, forces, and waves. Lessons focus on intuitive explanations first, then build toward equations and problem solving.",
@@ -86,6 +94,8 @@ const UN4STEM_COURSES = {
   "chemistry": {
     title: "Chemistry",
     short: "Matter and reactions",
+    image: "../assets/illustrations/science-lab.svg",
+    imageAlt: "Playful clipart chemistry experiment scene",
     category: "Physical Science",
     level: "Introductory",
     overview: "Chemistry helps students understand matter, atoms, bonding, and reactions. The course emphasizes patterns, models, and practical examples so students can make sense of formulas instead of memorizing them blindly.",
@@ -107,6 +117,8 @@ const UN4STEM_COURSES = {
   "mental-health": {
     title: "Mental Health Awareness",
     short: "Well-being and awareness",
+    image: "../assets/illustrations/wellness-talk.svg",
+    imageAlt: "Playful clipart mental health awareness scene",
     category: "Health",
     level: "Introductory",
     overview: "Mental Health Awareness gives students language and tools for understanding stress, emotional well-being, and support systems. The course is educational, practical, and focused on awareness rather than diagnosis.",
@@ -128,6 +140,8 @@ const UN4STEM_COURSES = {
   "computer-science": {
     title: "Computer Science",
     short: "Coding and logic",
+    image: "../assets/illustrations/laptop-tutoring.svg",
+    imageAlt: "Playful clipart computer science learning scene",
     category: "Technology",
     level: "Beginner friendly",
     overview: "Computer Science introduces students to programming, algorithms, logic, and problem solving. Students learn to break problems into steps, test their thinking, and build small programs with clear purpose.",
@@ -149,6 +163,8 @@ const UN4STEM_COURSES = {
   "engineering": {
     title: "Engineering",
     short: "Design and systems",
+    image: "../assets/illustrations/science-lab.svg",
+    imageAlt: "Playful clipart engineering challenge scene",
     category: "Design",
     level: "Introductory",
     overview: "Engineering teaches students how to define problems, design solutions, test ideas, and improve prototypes. The course connects science and math to real-world systems and creative problem solving.",
@@ -170,6 +186,8 @@ const UN4STEM_COURSES = {
   "quantum-physics": {
     title: "Quantum Physics",
     short: "Advanced physics",
+    image: "../assets/illustrations/math-board.svg",
+    imageAlt: "Playful clipart quantum physics ideas scene",
     category: "Physical Science",
     level: "Advanced introduction",
     overview: "Quantum Physics introduces students to the strange rules that describe matter and energy at tiny scales. The course focuses on conceptual clarity before math, helping students understand why quantum ideas changed modern science.",
@@ -191,6 +209,8 @@ const UN4STEM_COURSES = {
   "arithmetic": {
     title: "Elementary Arithmetic",
     short: "Basic math skills",
+    image: "../assets/illustrations/math-board.svg",
+    imageAlt: "Playful clipart arithmetic practice scene",
     category: "Mathematics",
     level: "Foundational",
     overview: "Elementary Arithmetic builds confidence with numbers, operations, and problem solving. Students practice accuracy while also learning why the operations work and how to choose the right strategy.",
@@ -212,6 +232,8 @@ const UN4STEM_COURSES = {
   "pre-algebra": {
     title: "Pre Algebra",
     short: "Intro to algebra",
+    image: "../assets/illustrations/math-board.svg",
+    imageAlt: "Playful clipart pre algebra scene",
     category: "Mathematics",
     level: "Foundational to intermediate",
     overview: "Pre Algebra bridges arithmetic and algebra by introducing variables, expressions, equations, ratios, and graphs. Students learn to see patterns and represent relationships symbolically.",
@@ -233,6 +255,8 @@ const UN4STEM_COURSES = {
   "algebra-1": {
     title: "Algebra 1",
     short: "Core algebra",
+    image: "../assets/illustrations/math-board.svg",
+    imageAlt: "Playful clipart algebra 1 scene",
     category: "Mathematics",
     level: "Intermediate",
     overview: "Algebra 1 develops the core language of modern math: equations, functions, graphs, and systems. Students learn how to represent relationships and solve problems in multiple ways.",
@@ -254,6 +278,8 @@ const UN4STEM_COURSES = {
   "algebra-2": {
     title: "Algebra 2",
     short: "Advanced algebra",
+    image: "../assets/illustrations/math-board.svg",
+    imageAlt: "Playful clipart algebra 2 scene",
     category: "Mathematics",
     level: "Advanced high school",
     overview: "Algebra 2 expands students' function toolkit with polynomials, exponentials, logarithms, rational expressions, and complex numbers. The course emphasizes connections between equations, graphs, and applications.",
@@ -275,6 +301,8 @@ const UN4STEM_COURSES = {
   "abstract-algebra": {
     title: "Abstract Algebra",
     short: "Advanced theory",
+    image: "../assets/illustrations/math-board.svg",
+    imageAlt: "Playful clipart abstract algebra scene",
     category: "Mathematics",
     level: "Advanced enrichment",
     overview: "Abstract Algebra introduces students to mathematical structures such as groups, rings, and fields. Instead of focusing only on calculation, students learn how mathematicians define systems and prove general truths about them.",

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="title desc">
+  <title id="title">Supportive teen-led discussion</title>
+  <desc id="desc">Playful clipart of teenage mentors and students in a supportive discussion with heart and speech bubble symbols.</desc>
+  <rect width="900" height="460" rx="42" fill="#ffd4e5"/>
+  <circle cx="770" cy="86" r="42" fill="#ffd166"/>
+  <circle cx="132" cy="95" r="34" fill="#c9f7df"/>
+  <path d="M260 92h292c35 0 64 29 64 64v50c0 35-29 64-64 64H416l-72 56 17-56H260c-35 0-64-29-64-64v-50c0-35 29-64 64-64z" fill="#fffaf0" stroke="#25364f" stroke-width="8"/>
+  <path d="M346 178c-38-31 13-77 48-36 35-41 86 5 48 36l-48 43z" fill="#ff8b7a" stroke="#25364f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M492 152h64M492 188h82" stroke="#44aa7f" stroke-width="11" stroke-linecap="round"/>
+  <g transform="translate(140 252)">
+    <circle cx="58" cy="42" r="34" fill="#ffd7b3" stroke="#25364f" stroke-width="7"/>
+    <path d="M28 36c7-36 56-41 63-5-16 7-40-9-51 9-5 7-9 6-12-4z" fill="#6f4a34"/>
+    <rect x="18" y="82" width="84" height="110" rx="26" fill="#8fd6ff" stroke="#25364f" stroke-width="7"/>
+  </g>
+  <g transform="translate(384 264)">
+    <circle cx="58" cy="38" r="32" fill="#f4bf96" stroke="#25364f" stroke-width="7"/>
+    <path d="M29 34c4-34 53-40 60-7-14 10-38-7-50 10-5 6-8 5-10-3z" fill="#30251f"/>
+    <rect x="16" y="78" width="84" height="108" rx="26" fill="#ffd166" stroke="#25364f" stroke-width="7"/>
+  </g>
+  <g transform="translate(626 246)">
+    <circle cx="62" cy="42" r="35" fill="#f7c9a1" stroke="#25364f" stroke-width="7"/>
+    <path d="M30 37c4-38 58-43 65-7-16 9-41-10-52 10-5 7-9 6-13-3z" fill="#8a4f3d"/>
+    <rect x="18" y="84" width="90" height="116" rx="28" fill="#c9f7df" stroke="#25364f" stroke-width="7"/>
+  </g>
+  <path d="M104 210l22 10 10 22 10-22 22-10-22-10-10-22-10 22-22 10z" fill="#fff" stroke="#25364f" stroke-width="5"/>
+  <path d="M714 174l22 10 10 22 10-22 22-10-22-10-10-22-10 22-22 10z" fill="#fff" stroke="#25364f" stroke-width="5"/>
+</svg>
