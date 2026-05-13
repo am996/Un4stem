@@ -10,10 +10,6 @@ function fillList(elementId, items) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  requestAnimationFrame(() => {
-    document.body.classList.add("loaded");
-  });
-
   const key = document.body.dataset.course;
   const course = window.UN4STEM_COURSES[key];
 
@@ -38,20 +34,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fillList("course-outcomes", course.outcomes);
   fillList("course-topics", course.topics);
-
-  document.querySelectorAll("a").forEach(link => {
-    const href = link.getAttribute("href");
-
-    if (!href || href.startsWith("#") || href.startsWith("http")) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.body.classList.add("fade-out");
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 250);
-    });
-  });
 });

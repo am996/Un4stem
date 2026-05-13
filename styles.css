@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -32,7 +32,7 @@
    BASE + PAGE TRANSITION
 ========================= */
 body {
-  font-family: "Nunito", system-ui, Arial, sans-serif;
+  font-family: "Quicksand", system-ui, Arial, sans-serif;
   background:
     linear-gradient(90deg, rgba(21, 31, 52, 0.055) 1px, transparent 1px),
     linear-gradient(rgba(21, 31, 52, 0.055) 1px, transparent 1px),
@@ -89,7 +89,7 @@ nav.nav {
 
 .nav-inner strong {
   color: var(--navy);
-  font-family: "Fredoka", system-ui, sans-serif;
+  font-family: "Quicksand", system-ui, sans-serif;
   font-size: 24px;
   letter-spacing: 0;
 }
@@ -104,7 +104,7 @@ nav.nav {
   text-decoration: none;
   color: var(--navy);
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   transition: color 0.15s ease, transform 0.15s ease;
@@ -134,7 +134,7 @@ header > :not(.hero-image) {
 }
 
 h1 {
-  font-family: "Fredoka", system-ui, sans-serif;
+  font-family: "Quicksand", system-ui, sans-serif;
   font-size: clamp(54px, 8vw, 104px);
   color: var(--navy);
   line-height: 0.92;
@@ -157,7 +157,7 @@ header .subtitle + p {
 .eyebrow {
   margin-top: 14px;
   color: var(--muted);
-  font-weight: 800;
+  font-weight: 700;
 }
 
 /* =========================
@@ -186,7 +186,7 @@ section > p {
 }
 
 h2 {
-  font-family: "Fredoka", system-ui, sans-serif;
+  font-family: "Quicksand", system-ui, sans-serif;
   color: var(--navy);
   margin-bottom: 18px;
   font-size: clamp(36px, 5vw, 74px);
@@ -195,7 +195,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Fredoka", system-ui, sans-serif;
+  font-family: "Quicksand", system-ui, sans-serif;
   color: var(--navy);
   margin-bottom: 8px;
   font-size: 25px;
@@ -284,6 +284,122 @@ p {
 }
 
 /* =========================
+   STATS GRID
+========================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 34px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 3px solid var(--border);
+  padding: 32px 24px;
+  border-radius: 0 34px 34px 34px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: riseIn 0.45s ease both;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--coral);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--coral);
+  box-shadow: 16px 16px 0 rgba(21, 31, 52, 0.15);
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-card:nth-child(2)::before {
+  background: var(--green);
+}
+
+.stat-card:nth-child(2):hover {
+  border-color: var(--green);
+}
+
+.stat-card:nth-child(3)::before {
+  background: var(--gold);
+}
+
+.stat-card:nth-child(3):hover {
+  border-color: var(--gold);
+}
+
+.stat-card:nth-child(4)::before {
+  background: var(--lavender);
+}
+
+.stat-card:nth-child(4):hover {
+  border-color: var(--lavender);
+}
+
+.stat-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.stat-number {
+  font-family: "Quicksand", system-ui, sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.stat-card:hover .stat-number {
+  color: var(--coral);
+}
+
+.stat-card:nth-child(2):hover .stat-number {
+  color: var(--green);
+}
+
+.stat-card:nth-child(3):hover .stat-number {
+  color: var(--gold);
+  color: #e6a817;
+}
+
+.stat-card:nth-child(4):hover .stat-number {
+  color: #9b8bff;
+}
+
+.stat-label {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.stat-detail {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* =========================
    BUTTON
 ========================= */
 .btn {
@@ -303,9 +419,9 @@ p {
   text-decoration: none;
   border-radius: 999px;
   border: 3px solid var(--navy);
-  font-family: "Fredoka", system-ui, sans-serif;
+  font-family: "Quicksand", system-ui, sans-serif;
   font-size: 17px;
-  font-weight: 800;
+  font-weight: 700;
 
   transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -411,7 +527,7 @@ header .image-frame {
 }
 
 .course-title {
-  font-family: "Fredoka", system-ui, sans-serif;
+  font-family: "Quicksand", system-ui, sans-serif;
   font-weight: 700;
   font-size: 25px;
   line-height: 1;
@@ -440,7 +556,7 @@ header .image-frame {
   border: 2px solid var(--navy);
   color: var(--navy);
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   padding: 8px 12px;
   border-radius: 999px;
 }
@@ -606,11 +722,27 @@ footer {
   .course-card {
     flex-basis: calc((100% - 16px) / 2);
   }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 800px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 24px 20px;
+  }
+
+  .stat-number {
+    font-size: 42px;
   }
 }
 

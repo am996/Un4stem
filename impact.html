@@ -42,7 +42,7 @@
 
     <h2>Building Access to STEM Education</h2>
     <p>
-      UN4STEM was created to address a simple but important problem: many students do not have equal access to high-quality STEM education outside the classroom. By connecting motivated high school students with younger learners, we aim to provide clear, relatable instruction that helps bridge gaps in understanding. Our approach is centered around making complex subjects more approachable without oversimplifying the material.
+      UN4STEM was established to bridge the educational divide, ensuring that high-quality STEM resources are available to all students, regardless of their background. By pairing motivated high school mentors with younger learners, we provide a structured support system that translates complex scientific theories into relatable, actionable knowledge.
     </p>
     <div class="image-frame inline-image">
       <img class="clipart-image" src="assets/illustrations/science-lab.svg" alt="Teen mentor expanding access to science learning">
@@ -52,10 +52,40 @@
 
     <h2>From Small Initiative to Structured Program</h2>
     <p>
-      What began as a small, informal tutoring effort has developed into a more organized program with multiple STEM courses. Over time, we have refined our curriculum to include mathematics, physics, chemistry, computer science, and interdisciplinary topics. This growth has allowed us to focus more intentionally on structured learning paths and consistent teaching methods that support long-term academic development.
+      Our evolution from a localized tutoring effort to a formal nonprofit has allowed us to develop a rigorous, multi-disciplinary curriculum. Today, our offerings span across Advanced Mathematics, Physics, Chemistry, and Computer Science, each utilizing standardized teaching methodologies designed to foster long-term academic growth.
     </p>
     <div class="image-frame inline-image">
       <img class="clipart-image" src="assets/illustrations/math-board.svg" alt="Teen mentor building a structured math program">
+    </div>
+
+    <br><br>
+
+    <h2>Our Reach in Numbers</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-icon">🎓</span>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Students Taught</div>
+        <div class="stat-detail">Summer 2025</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">🌍</span>
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Teachers Recruited</div>
+        <div class="stat-detail">From 4 countries</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">📚</span>
+        <div class="stat-number">10</div>
+        <div class="stat-label">Classes Taught</div>
+        <div class="stat-detail">Summer 2025</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">✨</span>
+        <div class="stat-number">Dozens</div>
+        <div class="stat-label">Courses Developed</div>
+        <div class="stat-detail">2025-2026</div>
+      </div>
     </div>
 
     <br><br>
@@ -96,27 +126,7 @@
 
 </div>
 
-<script>
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
-
-  document.querySelectorAll("a").forEach(link => {
-    const href = link.getAttribute("href");
-
-    if (!href || href.startsWith("#") || href.startsWith("http")) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.body.classList.add("fade-out");
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 250);
-    });
-  });
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>

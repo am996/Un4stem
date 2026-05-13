@@ -36,8 +36,7 @@
 <section>
   <h2>Our Origins</h2>
   <p>
-    UN4STEM began as We Teach Scarsdale (WTS 2025), a student initiative in Westchester County focused on peer-led STEM tutoring.
-    It has since evolved into a structured nonprofit with a growing educational network.
+    What began as "We Teach Scarsdale" (WTS 2025)—a localized initiative in Westchester County—has evolved into a structured nonprofit organization. Our transition to UN4STEM represents our commitment to scaling peer-led education into a professional and accessible network for all.
   </p>
   <div class="image-frame inline-image">
     <img class="clipart-image" src="assets/illustrations/laptop-tutoring.svg" alt="Teen tutor helping a younger student online">
@@ -47,8 +46,7 @@
 <section>
   <h2>Our Experience</h2>
   <p>
-    We have taught nearly 40 students across subjects including Cellular Biology, Anatomy, and Abstract Algebra.
-    This experience has shaped our teaching philosophy and program design.
+    With a track record of educating nearly 40 students in diverse fields ranging from Cellular Biology to Abstract Algebra, we have refined a pedagogical approach that balances academic rigor with student well-being.
   </p>
   <div class="image-frame inline-image">
     <img class="clipart-image" src="assets/illustrations/science-lab.svg" alt="Teen mentor teaching a friendly science activity">
@@ -58,8 +56,7 @@
 <section>
   <h2>Our Philosophy</h2>
   <p>
-    We believe students learn best from other students because they share a similar academic experience.
-    This allows for clearer explanations, stronger engagement, and more effective learning outcomes.
+    We operate on the belief that the "near-peer" model is the most effective way to learn. Because our mentors share a similar academic perspective with their students, they can anticipate points of confusion and provide explanations that resonate far more deeply than traditional lectures.
   </p>
 </section>
 
@@ -67,29 +64,7 @@
 
 </div>
 
-<script>
-  // Fade IN on load
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
-
-  // Fade OUT on navigation
-  document.querySelectorAll("a").forEach(link => {
-    const href = link.getAttribute("href");
-
-    if (!href || href.startsWith("#") || href.startsWith("http")) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.body.classList.add("fade-out");
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 250);
-    });
-  });
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>

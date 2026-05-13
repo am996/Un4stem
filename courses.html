@@ -26,7 +26,7 @@
 
   <header>
     <h1>Courses</h1>
-    <p class="subtitle">A full course catalog for UN4STEM programs.</p>
+    <p class="subtitle">A comprehensive catalog of peer-led STEM modules, designed to bridge the gap between classroom theory and practical understanding.</p>
     <div class="image-frame hero-image">
       <img class="clipart-image" src="assets/illustrations/science-lab.svg" alt="Teen mentor helping younger students explore STEM courses">
     </div>
@@ -110,29 +110,7 @@
 
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  requestAnimationFrame(() => {
-    document.body.classList.add("loaded");
-  });
-
-  document.querySelectorAll("a").forEach(link => {
-    const href = link.getAttribute("href");
-
-    if (!href || href.startsWith("#") || href.startsWith("http")) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.body.classList.add("fade-out");
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 250);
-    });
-  });
-});
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>

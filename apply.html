@@ -41,8 +41,7 @@
   <div class="content-block">
 
     <p>
-      UN4STEM is always looking for motivated students who are passionate about STEM and interested in teaching or learning in a collaborative environment.
-      Our program is fully online this year, making it flexible and accessible for all applicants.
+      We are actively seeking motivated high school leaders who are passionate about science and education. As a mentor, you will have the opportunity to shape the academic journey of younger students while developing your own leadership and communication skills within a professional nonprofit framework.
     </p>
 
     <div class="image-frame inline-image">
@@ -78,27 +77,7 @@
 
 </div>
 
-<script>
-  window.addEventListener("load", () => {
-    document.body.classList.add("loaded");
-  });
-
-  document.querySelectorAll("a").forEach(link => {
-    const href = link.getAttribute("href");
-
-    if (!href || href.startsWith("#") || href.startsWith("http")) return;
-
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      document.body.classList.add("fade-out");
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 250);
-    });
-  });
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>

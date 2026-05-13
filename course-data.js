@@ -6,7 +6,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart biology learning scene",
     category: "Biology",
     level: "Introductory to intermediate",
-    overview: "Cellular Biology helps students understand life at its smallest working scale. Students study how cells are organized, how organelles work together, how materials move across membranes, and how cellular processes support larger biological systems.",
+    overview: "Cellular Biology provides a comprehensive exploration of life at the microscopic level. By examining the intricate machinery of organelles and the dynamics of cellular transport, students gain a foundational understanding of the biological processes that drive all living organisms.",
     outcomes: [
       "Identify major cell structures and explain their functions.",
       "Compare plant, animal, and bacterial cells.",
@@ -29,7 +29,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart anatomy and physiology learning scene",
     category: "Biology",
     level: "Introductory",
-    overview: "Anatomy and Physiology introduces the structure and function of the human body. Students learn how major body systems work independently and how they coordinate to keep the body stable, active, and healthy.",
+    overview: "Anatomy and Physiology provides a detailed examination of the human body’s structural organization and functional mechanics. Students investigate how discrete biological systems integrate to maintain homeostasis and respond to external physiological stressors.",
     outcomes: [
       "Describe the roles of major organs and body systems.",
       "Explain how body systems maintain homeostasis.",
@@ -52,7 +52,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart psychology discussion scene",
     category: "Life Science",
     level: "Introductory",
-    overview: "Psychology explores how people think, feel, learn, remember, and interact. The course connects major psychological ideas to school, relationships, motivation, stress, and decision-making.",
+    overview: "Psychology examines the foundational principles of human cognition, emotional regulation, and social behavior. This course connects theoretical frameworks to practical applications in decision-making, interpersonal dynamics, and mental resilience.",
     outcomes: [
       "Explain basic concepts in cognition, emotion, and behavior.",
       "Recognize how memory, attention, and learning work.",
@@ -75,7 +75,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart physics problem solving scene",
     category: "Physical Science",
     level: "Introductory to intermediate",
-    overview: "Physics gives students a clear foundation in the rules that describe motion, energy, forces, and waves. Lessons focus on intuitive explanations first, then build toward equations and problem solving.",
+    overview: "Physics offers a rigorous exploration of the fundamental laws governing motion, energy, and force. Moving beyond simple equations, students develop an intuitive understanding of the physical world through conceptual analysis and quantitative problem-solving.",
     outcomes: [
       "Interpret motion using position, velocity, and acceleration.",
       "Use Newton's laws to analyze forces.",
@@ -98,7 +98,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart chemistry experiment scene",
     category: "Physical Science",
     level: "Introductory",
-    overview: "Chemistry helps students understand matter, atoms, bonding, and reactions. The course emphasizes patterns, models, and practical examples so students can make sense of formulas instead of memorizing them blindly.",
+    overview: "Chemistry investigates the properties of matter, atomic interactions, and the mechanics of chemical transformations. We emphasize structural patterns and molecular modeling to help students grasp the underlying logic of the physical sciences.",
     outcomes: [
       "Describe atomic structure and periodic table trends.",
       "Explain ionic and covalent bonding.",
@@ -121,7 +121,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart mental health awareness scene",
     category: "Health",
     level: "Introductory",
-    overview: "Mental Health Awareness gives students language and tools for understanding stress, emotional well-being, and support systems. The course is educational, practical, and focused on awareness rather than diagnosis.",
+    overview: "Mental Health Awareness provides a structured framework for understanding emotional well-being and psychological resilience. The curriculum focuses on identifying stress indicators, fostering healthy coping mechanisms, and navigating support systems with empathy and clarity.",
     outcomes: [
       "Recognize common signs of stress and emotional overload.",
       "Understand protective habits that support well-being.",
@@ -144,7 +144,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart computer science learning scene",
     category: "Technology",
     level: "Beginner friendly",
-    overview: "Computer Science introduces students to programming, algorithms, logic, and problem solving. Students learn to break problems into steps, test their thinking, and build small programs with clear purpose.",
+    overview: "Computer Science introduces the core principles of algorithmic thinking, logic design, and software development. Students learn to architect solutions to complex problems, moving from fundamental syntax to the creation of functional, purpose-driven applications.",
     outcomes: [
       "Write readable code using variables, loops, and conditionals.",
       "Use functions to organize repeated logic.",
@@ -167,7 +167,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart engineering challenge scene",
     category: "Design",
     level: "Introductory",
-    overview: "Engineering teaches students how to define problems, design solutions, test ideas, and improve prototypes. The course connects science and math to real-world systems and creative problem solving.",
+    overview: "Engineering explores the systematic process of problem-solving through design, prototyping, and iterative testing. By integrating mathematical precision with creative innovation, students learn to address real-world challenges within technical and structural constraints.",
     outcomes: [
       "Use the engineering design process from problem to prototype.",
       "Compare tradeoffs in cost, strength, safety, and usability.",
@@ -190,7 +190,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart quantum physics ideas scene",
     category: "Physical Science",
     level: "Advanced introduction",
-    overview: "Quantum Physics introduces students to the strange rules that describe matter and energy at tiny scales. The course focuses on conceptual clarity before math, helping students understand why quantum ideas changed modern science.",
+    overview: "Quantum Physics delves into the non-intuitive phenomena that govern matter and energy at the subatomic level. This advanced introduction focuses on the theoretical shift from classical mechanics to quantum probability, wave-particle duality, and modern technological applications.",
     outcomes: [
       "Explain wave-particle duality and quantized energy.",
       "Describe uncertainty and probability in quantum systems.",
@@ -213,7 +213,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart arithmetic practice scene",
     category: "Mathematics",
     level: "Foundational",
-    overview: "Elementary Arithmetic builds confidence with numbers, operations, and problem solving. Students practice accuracy while also learning why the operations work and how to choose the right strategy.",
+    overview: "Elementary Arithmetic establishes a robust mathematical foundation by focusing on operational fluency and number theory. Students move beyond rote calculation to understand the conceptual 'why' behind mathematical strategies and real-world problem-solving.",
     outcomes: [
       "Add, subtract, multiply, and divide with confidence.",
       "Use place value to understand larger numbers.",
@@ -236,7 +236,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart pre algebra scene",
     category: "Mathematics",
     level: "Foundational to intermediate",
-    overview: "Pre Algebra bridges arithmetic and algebra by introducing variables, expressions, equations, ratios, and graphs. Students learn to see patterns and represent relationships symbolically.",
+    overview: "Pre-Algebra serves as the critical transition from concrete arithmetic to abstract mathematical reasoning. Students develop proficiency in symbolic representation, variable manipulation, and the foundational logic required for advanced algebraic studies.",
     outcomes: [
       "Simplify expressions using order of operations.",
       "Solve one-step and two-step equations.",
@@ -259,7 +259,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart algebra 1 scene",
     category: "Mathematics",
     level: "Intermediate",
-    overview: "Algebra 1 develops the core language of modern math: equations, functions, graphs, and systems. Students learn how to represent relationships and solve problems in multiple ways.",
+    overview: "Algebra 1 introduces the formal language of functions, linear relationships, and systems analysis. By mastering multiple representations—tabular, graphical, and symbolic—students build the essential toolkit for all future high-level mathematics.",
     outcomes: [
       "Solve linear equations and inequalities.",
       "Graph and interpret linear functions.",
@@ -282,7 +282,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart algebra 2 scene",
     category: "Mathematics",
     level: "Advanced high school",
-    overview: "Algebra 2 expands students' function toolkit with polynomials, exponentials, logarithms, rational expressions, and complex numbers. The course emphasizes connections between equations, graphs, and applications.",
+    overview: "Algebra 2 extends mathematical modeling to complex functions, including polynomial, logarithmic, and rational systems. The course emphasizes the deep connections between algebraic transformations and their applications in data science and physical modeling.",
     outcomes: [
       "Analyze polynomial, exponential, logarithmic, and rational functions.",
       "Solve equations using factoring, transformations, and inverse operations.",
@@ -305,7 +305,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart abstract algebra scene",
     category: "Mathematics",
     level: "Advanced enrichment",
-    overview: "Abstract Algebra introduces students to mathematical structures such as groups, rings, and fields. Instead of focusing only on calculation, students learn how mathematicians define systems and prove general truths about them.",
+    overview: "Abstract Algebra provides a high-level introduction to the formal structures of groups, rings, and fields. This enrichment course shifts the focus from computation to the beauty of mathematical proof and the underlying symmetry of logical systems.",
     outcomes: [
       "Understand sets, operations, identity elements, and inverses.",
       "Recognize examples of groups, rings, and fields.",
