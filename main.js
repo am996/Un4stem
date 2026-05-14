@@ -12,6 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!href || href.startsWith("#") || href.startsWith("http")) return;
 
     link.addEventListener("click", (e) => {
+      // Check if navigating to the same page (ignoring the hash).
+      // If pathnames match, skip the fade transition to prevent a blank screen.
+      if (link.hostname === window.location.hostname && 
+          link.pathname === window.location.pathname) {
+        return;
+      }
+
       e.preventDefault();
 
       document.body.classList.add("fade-out");
