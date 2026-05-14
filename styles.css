@@ -961,6 +961,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow-y: auto;
     transition: 0.3s ease-in-out;
     z-index: 1000;
   }
@@ -979,14 +980,19 @@ footer {
     position: relative;
     top: 0;
     background: rgba(255, 255, 255, 0.05);
+    min-width: 260px;
     border: none;
     box-shadow: none;
-    display: block; /* Visible by default in mobile layout */
+    display: none; /* Hidden by default on mobile, toggled via JS */
+  }
+
+  .dropdown.active > .dropdown-content,
+  .category-parent.active > .sub-menu {
+    display: block !important;
   }
 
   .sub-menu {
     position: static;
-    display: block;
     background: transparent;
     border: none;
     min-width: unset;

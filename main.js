@@ -46,7 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Close menu when clicking a link (important for anchor navigation)
     navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", (e) => {
+        const isDropdownTrigger = link.parentElement.classList.contains("dropdown") || 
+                                 link.parentElement.classList.contains("category-parent");
+
+        // On mobile, if it's a dropdown trigger, toggle the menu instead of closing/navigating
+        if (window.innerWidth <= 900 && isDropdownTrigger) {
+          e.preventDefault();
+          e.stopPropagation();
+          link.parentElement.classList.toggle("active");
+          return;
+        }
+
         navLinks.classList.remove("active");
         mobileToggle.classList.remove("active");
         document.body.style.overflow = "";
@@ -60,6 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Only apply to internal links that are not anchors or external URLs
     if (!href || href.startsWith("#") || href.startsWith("http")) return;
+
+    // Skip fade-out for mobile dropdown triggers
+    if (window.innerWidth <= 900) {
+      const isTrigger = link.parentElement.classList.contains("dropdown") || 
+                        link.parentElement.classList.contains("category-parent");
+      if (isTrigger) return;
+    }
 
     link.addEventListener("click", (e) => {
       // Check if navigating to the same page (ignoring the hash).
