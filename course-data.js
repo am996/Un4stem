@@ -20,7 +20,27 @@ const UN4STEM_COURSES = {
       "DNA, proteins, and cell division"
     ],
     project: "Students build a visual model of a cell pathway and explain how one disruption can affect the whole system.",
-    bestFor: "Students who like biology, medicine, lab science, or understanding how living systems work."
+    bestFor: "Students who like biology, medicine, lab science, or understanding how living systems work.",
+    mentors: [
+      {
+        name: "Ayden Ta",
+        role: "Mentor (Grade 9)",
+        bio: "Ayden is a 14-year-old 9th-grade student from Vietnam (born in the U.S.) who joined UN4STEM to solidify his understanding of advanced subjects through teaching. He is an academic standout, projected to be in the Top 5 of his graduating class with a 4.36 GPA and a 1410 PSAT 8/9 score. Ayden is Fusion360 CAD Certified and earned the 'Distinguished' (470) score on the Introduction to Engineering EOC—the highest in his entire grade.",
+        image: "../assets/mentors/ayden-ta.jpg"
+      },
+      {
+        name: "Lian Guo",
+        role: "Mentor (Grade 10)",
+        bio: "Lian is a 15-year-old 10th-grade student from the United States with a strong dedication to academic excellence in both the sciences and humanities. She is an experienced tutor across multiple subjects including arithmetic, science, and English, which has allowed her to develop key skills in adaptability and focus. Lian holds leadership roles as the secretary of the Red Cross Club at Scarsdale High School and previously led a FASCA group in civic engagement. A highly accomplished musician, she has performed at Lincoln Center and Carnegie Hall, securing first place in the Golden Classical Music Awards and a Merit award for ABRSM level 8.",
+        image: "../assets/mentors/lian-guo.jpg"
+      },
+      {
+        name: "Lyla Rodrigues",
+        role: "Mentor (Grade 10)",
+        bio: "Lyla is a 16-year-old 10th-grade student from New York with a robust background in STEM and psychology. She has consistently achieved top grades in computer science, electrical engineering, and psychology, including a perfect score on her computer science final. Lyla serves as a chapter head and club officer for GEMS, leading STEM labs for elementary students. Her versatility is evidenced by her NYSSMA Level 6 piano performances at Lincoln Center and her experience as a camp counselor and lifeguard, which has honed her leadership, patience, and ability to perform under pressure.",
+        image: "../assets/mentors/lyla-rodrigues.jpg"
+      }
+    ]
   },
   "anatomy": {
     title: "Anatomy and Physiology",
@@ -43,7 +63,15 @@ const UN4STEM_COURSES = {
       "Digestive, immune, and reproductive systems"
     ],
     project: "Students trace one everyday activity, such as running or eating, through multiple body systems.",
-    bestFor: "Students interested in medicine, sports science, biology, or health careers."
+    bestFor: "Students interested in medicine, sports science, biology, or health careers.",
+    mentors: [
+      {
+        name: "Tista Bhatia",
+        role: "Mentor (Grade 12)",
+        bio: "Tista is a 16-year-old 12th-grade student from India who views STEM as a vital tool for global social impact. She holds the 2nd-place academic rank in her cohort and scored 89.2% on her Class 10 Board exams. Tista serves as a marketing lead for an AI healthcare project and a professional writer for two medical journals, specializing in simplifying technical STEM concepts. Her leadership as a House Captain and her experience as an Academic Mentor for anatomy and neuroscience allow her to guide peers with scientific precision and empathy.",
+        image: "../assets/mentors/tista-bhatia.jpg"
+      }
+    ]
   },
   "psychology": {
     title: "Psychology",
@@ -66,7 +94,15 @@ const UN4STEM_COURSES = {
       "Social psychology and development"
     ],
     project: "Students design a small observation or survey and present what it suggests about behavior.",
-    bestFor: "Students curious about people, the brain, communication, education, or mental health."
+    bestFor: "Students curious about people, the brain, communication, education, or mental health.",
+    mentors: [
+      {
+        name: "Lian Guo",
+        role: "Mentor (Grade 10)",
+        bio: "Lian is a 15-year-old 10th-grade student from the United States with a strong dedication to academic excellence in both the sciences and humanities. She is an experienced tutor across multiple subjects including arithmetic, science, and English, which has allowed her to develop key skills in adaptability and focus. Lian holds leadership roles as the secretary of the Red Cross Club at Scarsdale High School and previously led a FASCA group in civic engagement. A highly accomplished musician, she has performed at Lincoln Center and Carnegie Hall, securing first place in the Golden Classical Music Awards and a Merit award for ABRSM level 8.",
+        image: "../assets/mentors/lian-guo.jpg"
+      }
+    ]
   },
   "physics": {
     title: "Physics",
@@ -89,7 +125,15 @@ const UN4STEM_COURSES = {
       "Waves, sound, and electricity basics"
     ],
     project: "Students analyze a real motion scenario, create diagrams, and explain the physics behind it.",
-    bestFor: "Students preparing for physical science, engineering, robotics, or advanced STEM courses."
+    bestFor: "Students preparing for physical science, engineering, robotics, or advanced STEM courses.",
+    mentors: [
+      {
+        name: "Isabella Wu",
+        role: "Mentor (Grade 10)",
+        bio: "Isabella is a 15-year-old 10th-grade student from New York whose commitment to community service led her to UN4STEM. She maintains a 4.2 GPA and has consistently enrolled in honors mathematics. Isabella brings significant instructional experience to her roles, with over 70 volunteer hours as a Teaching Assistant for math and Chinese classes at a local weekend school, alongside experience coaching youth tennis.",
+        image: "../assets/mentors/isabella-wu.jpg"
+      }
+    ]
   },
   "chemistry": {
     title: "Chemistry",
@@ -112,7 +156,27 @@ const UN4STEM_COURSES = {
       "Acids, bases, and solutions"
     ],
     project: "Students investigate a household material and explain its properties using chemistry concepts.",
-    bestFor: "Students who want stronger chemistry foundations for school, biology, medicine, or engineering."
+    bestFor: "Students who want stronger chemistry foundations for school, biology, medicine, or engineering.",
+    mentors: [
+      {
+        name: "David Lim",
+        role: "Mentor (Grade 10)",
+        bio: "David is a 15-year-old 10th-grade student from New York passionate about creating global access to STEM education. He has extensive experience mentoring children through summer programs and regular youth leadership at his church. David is technically accomplished, having qualified for the NYC Robotics Championships and currently serves as the co-leader of his school's 3D printing club.",
+        image: "../assets/mentors/david-lim.jpg"
+      },
+      {
+        name: "Divyank Bajaj",
+        role: "Mentor (Grade 10)",
+        bio: "Divyank is a 15-year-old 10th-grade student from New Jersey who is passionate about combining his interests in STEM and education. He possesses a strong foundation in chemistry, currently maintaining an 'A' in AP Chemistry, the most advanced high school course in the subject. Divyank is also a key member of his high school VEX Robotics Team, where he helped lead the team to a Top 10 ranking in the state. His experience in competitive robotics has fostered advanced skills in collaborative engineering, teamwork, and technical problem-solving.",
+        image: "../assets/mentors/divyank-bajaj.jpg"
+      },
+      {
+        name: "Saad Rashid",
+        role: "Mentor (Grade 11)",
+        bio: "Saad is a 16-year-old Grade 11 (AS Level) student from Islamabad, Pakistan, attending on a 100% scholarship for academic excellence. He is deeply involved in interdisciplinary STEM research, having authored a paper on Rayleigh-Bénard Convection and interned with organizations tackling global educational challenges. Saad is building a STEM platform to bridge learning gaps and is dedicated to fostering a global student community through advanced scientific inquiry and research-driven mentorship.",
+        image: "../assets/mentors/saad-rashid.jpg"
+      }
+    ]
   },
   "mental-health": {
     title: "Mental Health Awareness",
@@ -135,7 +199,21 @@ const UN4STEM_COURSES = {
       "Support networks and communication"
     ],
     project: "Students create a realistic student wellness plan with routines, resources, and support steps.",
-    bestFor: "Students who want practical tools for school stress, self-awareness, and peer support."
+    bestFor: "Students who want practical tools for school stress, self-awareness, and peer support.",
+    mentors: [
+      {
+        name: "Emma Florence",
+        role: "Mentor (Grade 10)",
+        bio: "Emma is a 15-year-old 10th-grade student from Westchester, NY, who serves as the President of UN4STEM. She is deeply passionate about community leadership and specializes in Mental Health Awareness. Emma serves as the Co-President of the Mental Health Awareness Club at Scarsdale High School and is a Senior Girl Scout currently working on her Gold Award project, 'Peace of Mind: Navigating Mental Health in a Digital World.' Through UN4STEM, she aims to leverage her academic perspective to connect with and lead students both locally and globally.",
+        image: "../assets/mentors/emma-florence.jpg"
+      },
+      {
+        name: "Rachel Cai",
+        role: "Mentor (Grade 10)",
+        bio: "Rachel is a 16-year-old 10th-grade student from Westchester, NY, with a natural talent for mentoring and community service. She is an active member of her school's robotics club, where she teaches peers about emerging technologies like AI and online safety. Rachel has an extensive background in volunteerism and brings a joy for learning to UN4STEM. Her goal is to create an entertaining and supportive educational environment that encourages curiosity and helps students navigate STEM with confidence and enthusiasm.",
+        image: "../assets/mentors/rachel-cai.jpg"
+      }
+    ]
   },
   "computer-science": {
     title: "Computer Science",
@@ -158,7 +236,21 @@ const UN4STEM_COURSES = {
       "Debugging and project design"
     ],
     project: "Students build a small interactive program, such as a quiz, calculator, or study tool.",
-    bestFor: "Students interested in coding, apps, robotics, math, or computational thinking."
+    bestFor: "Students interested in coding, apps, robotics, math, or computational thinking.",
+    mentors: [
+      {
+        name: "Lillian Xiao",
+        role: "Mentor (Grade 10)",
+        bio: "Lillian is a 16-year-old 10th-grade student from Scarsdale, New York, with a versatile technical toolkit including proficiency in Python, C-languages, and Unity game development. Her commitment to the field is demonstrated by her selection for Carnegie Mellon University’s National High School Game Academy (NHSGA). As a mentor, Lillian aims to share her passion for technology and make complex computer science concepts accessible and engaging for the next generation of innovators.",
+        image: "../assets/mentors/lillian-xiao.jpg"
+      },
+      {
+        name: "Lyla Rodrigues",
+        role: "Mentor (Grade 10)",
+        bio: "Lyla is a 16-year-old 10th-grade student from New York with a robust background in STEM and psychology. She has consistently achieved top grades in computer science, electrical engineering, and psychology, including a perfect score on her computer science final. Lyla serves as a chapter head and club officer for GEMS, leading STEM labs for elementary students. Her versatility is evidenced by her NYSSMA Level 6 piano performances at Lincoln Center and her experience as a camp counselor and lifeguard, which has honed her leadership, patience, and ability to perform under pressure.",
+        image: "../assets/mentors/lyla-rodrigues.jpg"
+      }
+    ]
   },
   "engineering": {
     title: "Engineering",
@@ -181,7 +273,21 @@ const UN4STEM_COURSES = {
       "Prototyping and iteration"
     ],
     project: "Students design, sketch, and present a solution to a real community or school problem.",
-    bestFor: "Students who enjoy building, inventing, robotics, architecture, or applied science."
+    bestFor: "Students who enjoy building, inventing, robotics, architecture, or applied science.",
+    mentors: [
+      {
+        name: "Divyank Bajaj",
+        role: "Mentor (Grade 10)",
+        bio: "Divyank is a 15-year-old 10th-grade student from New Jersey who is passionate about combining his interests in STEM and education. He possesses a strong foundation in chemistry, currently maintaining an 'A' in AP Chemistry, the most advanced high school course in the subject. Divyank is also a key member of his high school VEX Robotics Team, where he helped lead the team to a Top 10 ranking in the state. His experience in competitive robotics has fostered advanced skills in collaborative engineering, teamwork, and technical problem-solving.",
+        image: "../assets/mentors/divyank-bajaj.jpg"
+      },
+      {
+        name: "Lyla Rodrigues",
+        role: "Mentor (Grade 10)",
+        bio: "Lyla is a 16-year-old 10th-grade student from New York with a robust background in STEM and psychology. She has consistently achieved top grades in computer science, electrical engineering, and psychology, including a perfect score on her computer science final. Lyla serves as a chapter head and club officer for GEMS, leading STEM labs for elementary students. Her versatility is evidenced by her NYSSMA Level 6 piano performances at Lincoln Center and her experience as a camp counselor and lifeguard, which has honed her leadership, patience, and ability to perform under pressure.",
+        image: "../assets/mentors/lyla-rodrigues.jpg"
+      }
+    ]
   },
   "quantum-physics": {
     title: "Quantum Physics",
@@ -204,7 +310,21 @@ const UN4STEM_COURSES = {
       "Quantum technologies and applications"
     ],
     project: "Students create a concept presentation that explains one quantum idea with visuals and analogies.",
-    bestFor: "Students who already like physics or math and want a challenging conceptual extension."
+    bestFor: "Students who already like physics or math and want a challenging conceptual extension.",
+    mentors: [
+      {
+        name: "Ayden Ta",
+        role: "Mentor (Grade 9)",
+        bio: "Ayden is a 14-year-old 9th-grade student from Vietnam (born in the U.S.) who joined UN4STEM to solidify his understanding of advanced subjects through teaching. He is an academic standout, projected to be in the Top 5 of his graduating class with a 4.36 GPA and a 1410 PSAT 8/9 score. Ayden is Fusion360 CAD Certified and earned the 'Distinguished' (470) score on the Introduction to Engineering EOC—the highest in his entire grade.",
+        image: "../assets/mentors/ayden-ta.jpg"
+      },
+      {
+        name: "Saad Rashid",
+        role: "Mentor (Grade 11)",
+        bio: "Saad is a 16-year-old Grade 11 (AS Level) student from Islamabad, Pakistan, attending on a 100% scholarship for academic excellence. He is deeply involved in interdisciplinary STEM research, having authored a paper on Rayleigh-Bénard Convection and interned with organizations tackling global educational challenges. Saad is building a STEM platform to bridge learning gaps and is dedicated to fostering a global student community through advanced scientific inquiry and research-driven mentorship.",
+        image: "../assets/mentors/saad-rashid.jpg"
+      }
+    ]
   },
   "arithmetic": {
     title: "Elementary Arithmetic",
@@ -227,7 +347,21 @@ const UN4STEM_COURSES = {
       "Percentages and word problems"
     ],
     project: "Students solve a real budgeting or measurement challenge using arithmetic skills.",
-    bestFor: "Students who need a stronger base before pre-algebra or want more math confidence."
+    bestFor: "Students who need a stronger base before pre-algebra or want more math confidence.",
+    mentors: [
+      {
+        name: "Emma Florence",
+        role: "Mentor (Grade 10)",
+        bio: "Emma is a 15-year-old 10th-grade student from Westchester, NY, who serves as the President of UN4STEM. She is deeply passionate about community leadership and specializes in Mental Health Awareness. Emma serves as the Co-President of the Mental Health Awareness Club at Scarsdale High School and is a Senior Girl Scout currently working on her Gold Award project, 'Peace of Mind: Navigating Mental Health in a Digital World.' Through UN4STEM, she aims to leverage her academic perspective to connect with and lead students both locally and globally.",
+        image: "../assets/mentors/emma-florence.jpg"
+      },
+      {
+        name: "Rachel Cai",
+        role: "Mentor (Grade 10)",
+        bio: "Rachel is a 16-year-old 10th-grade student from Westchester, NY, with a natural talent for mentoring and community service. She is an active member of her school's robotics club, where she teaches peers about emerging technologies like AI and online safety. Rachel has an extensive background in volunteerism and brings a joy for learning to UN4STEM. Her goal is to create an entertaining and supportive educational environment that encourages curiosity and helps students navigate STEM with confidence and enthusiasm.",
+        image: "../assets/mentors/rachel-cai.jpg"
+      }
+    ]
   },
   "pre-algebra": {
     title: "Pre Algebra",
@@ -250,7 +384,27 @@ const UN4STEM_COURSES = {
       "Coordinate plane and graphing basics"
     ],
     project: "Students model a real pattern, such as pricing or distance over time, with tables, equations, and graphs.",
-    bestFor: "Students preparing for Algebra 1 or looking to make math feel more organized."
+    bestFor: "Students preparing for Algebra 1 or looking to make math feel more organized.",
+    mentors: [
+      {
+        name: "Rohan Pandit",
+        role: "Mentor (Grade 8)",
+        bio: "Rohan is a 13-year-old 8th-grade student from Scarsdale, NY, with an exceptional aptitude for mathematics and a passion for peer education. A seasoned competitor, he placed 19th nationally in a math competition as a second grader in 2020. Rohan continues to advance his mathematical understanding through courses at the Russian School of Mathematics (RSM). He uses his strong analytical skills to help younger students navigate complex concepts with creativity and clarity, fostering both problem-solving ability and academic confidence.",
+        image: "../assets/mentors/rohan-pandit.jpg"
+      },
+      {
+        name: "Serena Zhu",
+        role: "Mentor (Grade 9)",
+        bio: "Serena is a 14-year-old 9th-grade student from New York who joined UN4STEM to inspire a love for mathematics in younger students. A dedicated scholar with a strong academic record, she focuses on making foundational algebraic concepts approachable and engaging. Her commitment to peer education and her ability to break down complex problems make her an ideal guide for students transitioning into higher-level mathematical reasoning.",
+        image: "../assets/mentors/serena-zhu.jpg"
+      },
+      {
+        name: "Yingyuan Fang",
+        role: "Mentor (Grade 9)",
+        bio: "Yingyuan is a 15-year-old 9th-grade student from New York who maintains high academic standards in honors coursework, evidenced by her 97 on the NYS Regents. She is an international finalist in the Middle Mathematical Contest in Modeling (MidMCM) and a state-level competitive swimmer. Yingyuan is also an accomplished musician (NYSSMA level 6 flute and piano) and a Tri-M music club volunteer. Her background in diverse academic and extracurricular fields allows her to bring patience and a collaborative spirit to her students.",
+        image: "../assets/mentors/yingyuan-fang.jpg"
+      }
+    ]
   },
   "algebra-1": {
     title: "Algebra 1",
@@ -273,7 +427,15 @@ const UN4STEM_COURSES = {
       "Exponents and introductory quadratics"
     ],
     project: "Students use a linear model to analyze a real-world trend and explain what the slope and intercept mean.",
-    bestFor: "Students taking Algebra 1, preparing for exams, or strengthening high school math foundations."
+    bestFor: "Students taking Algebra 1, preparing for exams, or strengthening high school math foundations.",
+    mentors: [
+      {
+        name: "Treya Nalabothu",
+        role: "Mentor (Grade 10)",
+        bio: "Treya is a 16-year-old 10th-grade student from Texas who is dedicated to empowering students through improved teaching experiences. She brings significant instructional expertise, having successfully prepared younger student groups for the STAAR tests. Treya was the official salutatorian of Universal Academy and has earned placements in UIL Ready Writing and Spelling competitions. Her strong background in communication and academic rigor helps her translate core algebraic concepts into manageable and relatable lessons.",
+        image: "../assets/mentors/treya-nalabothu.jpg"
+      }
+    ]
   },
   "algebra-2": {
     title: "Algebra 2",
@@ -296,7 +458,27 @@ const UN4STEM_COURSES = {
       "Complex numbers and function transformations"
     ],
     project: "Students compare two types of functions and decide which better models a real growth or change scenario.",
-    bestFor: "Students currently in Algebra 2 or preparing for precalculus, science, or standardized tests."
+    bestFor: "Students currently in Algebra 2 or preparing for precalculus, science, or standardized tests.",
+    mentors: [
+      {
+        name: "Ayden Ta",
+        role: "Mentor (Grade 9)",
+        bio: "Ayden is a 14-year-old 9th-grade student from Vietnam (born in the U.S.) who joined UN4STEM to solidify his understanding of advanced subjects through teaching. He is an academic standout, projected to be in the Top 5 of his graduating class with a 4.36 GPA and a 1410 PSAT 8/9 score. Ayden is Fusion360 CAD Certified and earned the 'Distinguished' (470) score on the Introduction to Engineering EOC—the highest in his entire grade.",
+        image: "../assets/mentors/ayden-ta.jpg"
+      },
+      {
+        name: "Isabella Wu",
+        role: "Mentor (Grade 10)",
+        bio: "Isabella is a 15-year-old 10th-grade student from New York whose commitment to community service led her to UN4STEM. She maintains a 4.2 GPA and has consistently enrolled in honors mathematics. Isabella brings significant instructional experience to her roles, with over 70 volunteer hours as a Teaching Assistant for math and Chinese classes at a local weekend school, alongside experience coaching youth tennis.",
+        image: "../assets/mentors/isabella-wu.jpg"
+      },
+      {
+        name: "Iris Yang",
+        role: "Mentor (Grade 10)",
+        bio: "Iris is a 16-year-old 10th-grade student from New York who strongly believes in making STEM education accessible through initiatives like free tutoring. She has achieved an A+ in every math course she has taken and is a two-time qualifier for the American Invitational Mathematics Examination (AIME). Demonstrating exceptional self-discipline and aptitude, Iris taught herself Algebra II during middle school. She is committed to sharing her expertise and helping other students master complex mathematical concepts.",
+        image: "../assets/mentors/iris-yang.jpg"
+      }
+    ]
   },
   "abstract-algebra": {
     title: "Abstract Algebra",
