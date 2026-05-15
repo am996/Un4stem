@@ -641,8 +641,10 @@ header .image-frame {
 }
 
 .inline-image {
-  max-width: 600px;
+  max-width: 500px;
+  max-height: 350px;
   margin: 36px auto 0;
+  overflow: hidden;
 }
 
 .card-image {
