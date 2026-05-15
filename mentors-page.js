@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   container.innerHTML = mentors.map(m => {
     // Adjust path for root level
-    const imagePath = m.image.startsWith('../') ? m.image.substring(3) : m.image;
+    const imagePath = m.image.replace('../', '');
     
     return `
       <div class="card mentor-card" style="text-align: center;">

@@ -1,5 +1,7 @@
 function fillList(elementId, items) {
   const list = document.getElementById(elementId);
+  if (!list) return; // Safety check: skip if element is missing
+
   list.innerHTML = "";
 
   items.forEach(item => {
@@ -51,4 +53,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   fillList("course-outcomes", course.outcomes);
   fillList("course-topics", course.topics);
+
+  // Render Mentors
+  const mentorContainer = document.getElementById("course-mentors");
+  if (mentorContainer && course.mentors) {
+    mentorContainer.innerHTML = course.mentors.map(m => `
+      <div class="card mentor-card" style="text-align: center;">
+        <img src="${m.image}" alt="${m.name}" class="mentor-photo">
+        <h3>${m.name}</h3>
+        <p class="mentor-role">${m.role}</p>
+        <p class="mentor-bio">${m.bio}</p>
+      </div>
+    `).join("");
+  }
 });

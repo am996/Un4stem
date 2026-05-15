@@ -775,8 +775,20 @@ header .image-frame {
 /* =========================
    MENTOR SPECIFIC
 ========================= */
+#course-mentors, #mentors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  grid-template-columns: none; /* Override the default grid behavior */
+}
+
 .mentor-card {
   padding: 40px 30px;
+  flex: 0 1 calc(50% - 12px); /* Set to 50% width minus half the gap to maintain 2-column look */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mentor-photo {
@@ -1021,6 +1033,11 @@ footer {
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Reset mentor cards to full width on mobile */
+  #course-mentors .mentor-card, #mentors-grid .mentor-card {
+    flex: 1 1 100%;
   }
 }
 
