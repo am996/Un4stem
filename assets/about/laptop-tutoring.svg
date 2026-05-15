@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="title desc">
+  <title id="title">Teen online tutor helping a student</title>
+  <desc id="desc">Playful clipart of a teenage tutor and younger student learning together on a laptop.</desc>
+  <rect width="900" height="460" rx="42" fill="#d7f4ff"/>
+  <circle cx="124" cy="88" r="42" fill="#ffd166"/>
+  <circle cx="772" cy="96" r="36" fill="#ffd4e5"/>
+  <rect x="272" y="246" width="356" height="120" rx="24" fill="#fffaf0" stroke="#25364f" stroke-width="8"/>
+  <rect x="316" y="276" width="268" height="64" rx="14" fill="#405b86"/>
+  <path d="M362 309h174" stroke="#8fd6ff" stroke-width="12" stroke-linecap="round"/>
+  <rect x="236" y="358" width="428" height="32" rx="16" fill="#25364f"/>
+  <g transform="translate(130 138)">
+    <circle cx="76" cy="48" r="40" fill="#ffd7b3" stroke="#25364f" stroke-width="8"/>
+    <path d="M38 40c7-45 76-50 86-5-21 9-48-15-68 8-7 8-12 7-18-3z" fill="#6f4a34"/>
+    <rect x="28" y="94" width="102" height="142" rx="32" fill="#ff8b7a" stroke="#25364f" stroke-width="8"/>
+    <path d="M121 139l76 33" stroke="#25364f" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(642 150)">
+    <circle cx="58" cy="42" r="34" fill="#f7c9a1" stroke="#25364f" stroke-width="7"/>
+    <path d="M28 38c4-38 57-40 64-7-16 9-39-9-51 8-5 7-9 7-13-1z" fill="#30251f"/>
+    <rect x="18" y="82" width="84" height="116" rx="26" fill="#c9f7df" stroke="#25364f" stroke-width="7"/>
+  </g>
+  <path d="M384 143h132c20 0 36 16 36 36v20H348v-20c0-20 16-36 36-36z" fill="#fff" stroke="#25364f" stroke-width="8"/>
+  <path d="M394 178h112M394 204h74" stroke="#44aa7f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M562 128l24 11 11 24 11-24 24-11-24-11-11-24-11 24-24 11z" fill="#fff" stroke="#25364f" stroke-width="5"/>
+</svg>

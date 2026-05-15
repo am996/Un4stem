@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" role="img" aria-labelledby="title desc">
+  <title id="title">Teen mentor teaching science</title>
+  <desc id="desc">Playful clipart of a teenage mentor helping students with beakers and science notes.</desc>
+  <rect width="900" height="460" rx="42" fill="#e8f8f1"/>
+  <circle cx="116" cy="92" r="44" fill="#ffd166"/>
+  <circle cx="770" cy="92" r="34" fill="#ffd4e5"/>
+  <rect x="158" y="302" width="584" height="48" rx="24" fill="#25364f"/>
+  <rect x="210" y="258" width="480" height="68" rx="22" fill="#fffaf0" stroke="#25364f" stroke-width="8"/>
+  <g transform="translate(363 96)">
+    <rect x="92" y="42" width="132" height="178" rx="24" fill="#fff" stroke="#25364f" stroke-width="8"/>
+    <path d="M124 88h68M124 122h48M124 156h76" stroke="#44aa7f" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="96" cy="83" r="12" fill="#ff8b7a"/>
+    <circle cx="96" cy="121" r="12" fill="#ffd166"/>
+    <circle cx="96" cy="157" r="12" fill="#8fd6ff"/>
+  </g>
+  <g transform="translate(136 120)">
+    <circle cx="78" cy="48" r="40" fill="#ffd7b3" stroke="#25364f" stroke-width="8"/>
+    <path d="M39 40c8-45 78-48 86-2-23 6-50-18-71 4-6 7-11 7-15-2z" fill="#6f4a34"/>
+    <rect x="28" y="94" width="104" height="142" rx="32" fill="#8fd6ff" stroke="#25364f" stroke-width="8"/>
+    <path d="M42 135L8 190M121 135l46 12" stroke="#25364f" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(640 134)">
+    <circle cx="58" cy="42" r="34" fill="#f7c9a1" stroke="#25364f" stroke-width="7"/>
+    <path d="M28 38c4-36 54-42 64-6-17 7-40-11-52 8-5 7-9 6-12-2z" fill="#30251f"/>
+    <rect x="18" y="82" width="82" height="116" rx="26" fill="#ffd4e5" stroke="#25364f" stroke-width="7"/>
+  </g>
+  <path d="M305 251h52l-17-86h-18z" fill="#bfeeff" stroke="#25364f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M302 251h58" stroke="#25364f" stroke-width="7" stroke-linecap="round"/>
+  <path d="M537 249h74l-22-92h-30z" fill="#ddd5ff" stroke="#25364f" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M550 214h48" stroke="#ff8b7a" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="390" cy="238" r="10" fill="#ff8b7a"/>
+  <circle cx="422" cy="226" r="8" fill="#44aa7f"/>
+  <circle cx="456" cy="239" r="12" fill="#ffd166"/>
+  <path d="M720 306l24 11 11 24 11-24 24-11-24-11-11-24-11 24-24 11z" fill="#fff" stroke="#25364f" stroke-width="5"/>
+</svg>
