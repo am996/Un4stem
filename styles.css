@@ -627,23 +627,28 @@ header .image-frame {
   display: block;
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .hero-image {
   max-width: 100%;
+  max-height: 500px;
   grid-column: 2;
   grid-row: 1 / span 5;
   transform: rotate(1deg);
   animation: float 8s ease-in-out infinite;
+  overflow: hidden;
 }
 
 .inline-image {
-  max-width: 820px;
+  max-width: 600px;
   margin: 36px auto 0;
 }
 
 .card-image {
   margin: 0 0 22px;
+  max-height: 250px;
+  overflow: hidden;
   border-radius: 0 28px 28px 28px;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.14); /* Dark shadow */
 }
