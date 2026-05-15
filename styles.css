@@ -995,10 +995,25 @@ footer {
     right: 0;
   }
 
+  .nav-links {
+    padding-top: 80px; /* Account for the nav bar height */
+  }
+
   .nav-links > a, 
   .nav-links > .dropdown {
-    margin: 15px 0 !important;
+    margin: 12px 0 !important;
     font-size: 18px !important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links > .dropdown {
+    width: auto;
+  }
+
+  .nav-links > .dropdown > a {
+    width: 100%;
+    text-align: center;
   }
 
   .dropdown-content {
