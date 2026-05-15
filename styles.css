@@ -156,11 +156,12 @@ nav.nav.scrolled {
 .nav-logo {
   color: var(--white);
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
   transition: color 0.15s ease;
+  line-height: 1;
 }
 
 .nav-logo:hover {
@@ -170,21 +171,21 @@ nav.nav.scrolled {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
 }
 
 .nav-social {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .nav-social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   color: var(--white);
@@ -197,8 +198,8 @@ nav.nav.scrolled {
 }
 
 .nav-social-link svg {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
 }
 
 .nav-links {
