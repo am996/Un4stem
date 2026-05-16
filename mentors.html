@@ -85,12 +85,53 @@
     <p class="subtitle">Meet the student leaders and experts dedicated to making STEM accessible, clear, and engaging for everyone.</p>
   </header>
   <section>
+    <h2 style="text-align: center; margin-bottom: 30px;">Administration</h2>
+    <div id="admin-grid" class="grid" style="margin-bottom: 60px;"></div>
+
+    <h2 style="text-align: center; margin-bottom: 30px;">Our Mentors</h2>
     <div id="mentors-grid" class="grid"></div>
   </section>
   <footer>© 2026 UN4STEM</footer>
 </div>
 <script src="course-data.js"></script>
-<script src="mentors-page.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (!window.UN4STEM_COURSES) return;
+
+    const allMentors = [];
+    Object.values(UN4STEM_COURSES).forEach(course => {
+      course.mentors.forEach(mentor => {
+        if (!allMentors.find(m => m.name === mentor.name)) {
+          // Adjust image path for root-level page
+          const fixedMentor = { ...mentor, image: mentor.image.replace("../", "") };
+          allMentors.push(fixedMentor);
+        }
+      });
+    });
+
+    const adminsOrder = ["Elliot Chang", "Emma Florence", "Lyla Rodrigues", "Aryan Mantena"];
+    const adminList = allMentors.filter(m => adminsOrder.includes(m.name))
+                                .sort((a, b) => adminsOrder.indexOf(a.name) - adminsOrder.indexOf(b.name));
+    const mentorList = allMentors.filter(m => !adminsOrder.includes(m.name));
+
+    const render = (containerId, list) => {
+      const container = document.getElementById(containerId);
+      if (container) {
+        container.innerHTML = list.map(m => `
+          <div class="card mentor-card" style="text-align: center;">
+            <img src="${m.image}" alt="${m.name}" class="mentor-photo">
+            <h3>${m.name}</h3>
+            <p class="mentor-role">${m.role}</p>
+            <p class="mentor-bio">${m.bio}</p>
+          </div>
+        `).join("");
+      }
+    };
+
+    render("admin-grid", adminList);
+    render("mentors-grid", mentorList);
+  });
+</script>
 <script src="main.js"></script>
 </body>
 </html>

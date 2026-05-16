@@ -85,7 +85,7 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Mentor (Grade 10)",
+        role: "Administration / Social Media",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       }
@@ -270,13 +270,13 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Mentor (Grade 10)",
+        role: "Administration / Social Media",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
         name: "Aryan Mantena",
-        role: "Mentor (Grade 10)",
+        role: "Administration / Web Dev",
         bio: "Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Computer Science and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.",
         image: "../assets/mentors/aryan-mantena.jpeg"
       }
@@ -313,13 +313,13 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Mentor (Grade 10)",
+        role: "Administration / Social Media",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
         name: "Aryan Mantena",
-        role: "Mentor (Grade 10)",
+        role: "Administration / Web Dev",
         bio: "Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Computer Science and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.",
         image: "../assets/mentors/aryan-mantena.jpeg"
       }
