@@ -87,7 +87,7 @@ body.fade-out {
 ========================= */
 nav.nav {
   width: 100%; /* Slightly lighter indigo than body for contrast */
-  background: #172554; /* Deeper midnight navy for a professional, weighted header */
+  background: #0e1f57; /* Deep navy background as requested */
   border-bottom: 3px solid var(--navy); /* Cohesive navy border */
   box-shadow: none;
   position: sticky;
@@ -97,7 +97,7 @@ nav.nav {
 }
 
 nav.nav.scrolled {
-  background: rgba(23, 37, 84, 0.95);
+  background: #0e1f57;
   backdrop-filter: blur(10px);
 }
 
@@ -149,23 +149,24 @@ nav.nav.scrolled {
   justify-content: space-between;
   align-items: center;
 
-  padding: 18px 60px 18px max(28px, calc((100vw - 1240px) / 2 + 28px)); /* Brand stays aligned with text below; buttons move to viewport edge with 1-button offset */
+  padding: 6px 60px 6px max(28px, calc((100vw - 1240px) / 2 + 28px)); /* Tight vertical padding for larger logo */
 }
 
-.nav-inner strong,
 .nav-logo {
-  color: var(--white);
-  font-family: var(--font-heading);
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-decoration: none;
-  transition: color 0.15s ease;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+  height: 100px; /* Increased size to make the logo and nav bar more prominent */
+}
+
+.nav-logo img {
+  height: 100%;
+  width: auto;
+  display: block;
 }
 
 .nav-logo:hover {
-  color: var(--navy-light);
+  transform: scale(1.05);
 }
 
 .nav-left {
@@ -184,22 +185,40 @@ nav.nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   color: var(--white);
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.nav-social-link:hover {
-  background: var(--navy-light);
-  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-social-link svg {
-  width: 18px;
-  height: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.nav-social-link:hover {
+  background: var(--gold);
+  color: var(--navy);
+  transform: translateY(-3px) scale(1.1);
+  border-color: var(--gold);
+  box-shadow: 0 4px 12px rgba(252, 211, 77, 0.3);
+}
+
+.nav-social-link:hover svg {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.nav-social-link svg {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
 .nav-links {
@@ -214,7 +233,7 @@ nav.nav.scrolled {
 
 .nav-inner a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--white); /* White text for contrast on dark background */
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -252,7 +271,7 @@ nav.nav.scrolled {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #172554;
+  background: #0e1f57;
   min-width: 220px;
   border: 1px solid var(--navy);
   padding: 10px 0;
@@ -692,11 +711,24 @@ header .image-frame {
 
 .card-image {
   margin: 0 0 22px;
-  max-height: 250px;
+  height: 320px; /* Increased height to give the images more vertical room */
   overflow: hidden;
   border-radius: 0 28px 28px 28px;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.14); /* Dark shadow */
 }
+
+.card-image .clipart-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Fills the container completely to remove whitespace */
+}
+
+/* Individual Crop Adjustments to focus on the best part of each image */
+/* Focus on the upper portion for the Peer Mentorship card */
+.grid .card:nth-child(1) .clipart-image { object-position: center 15%; }
+.grid .card:nth-child(2) .clipart-image { object-position: center center; }
+.grid .card:nth-child(3) .clipart-image { object-position: center center; }
+.grid .card:nth-child(4) .clipart-image { object-position: center center; }
 
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(1deg); }
@@ -956,41 +988,6 @@ footer {
   background: var(--bg-component); /* Footer also gets light blue tint background */
 }
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.footer-social {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--white);
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.social-link:hover {
-  background: var(--navy-light);
-  transform: translateY(-3px);
-}
-
-.social-link svg {
-  width: 20px;
-  height: 20px;
-}
-
 /* =========================
    SDG 4 BANNER
 ========================= */
@@ -1059,7 +1056,7 @@ footer {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: #172554;
+    background: #0e1f57;
     display: flex;
     flex-direction: column;
     align-items: center;
