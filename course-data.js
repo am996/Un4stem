@@ -85,7 +85,7 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Administration / Social Media",
+        role: "Administration / Social Media Manager",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       }
@@ -270,7 +270,7 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Administration / Social Media",
+        role: "Administration / Social Media Manager",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
@@ -313,7 +313,7 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Administration / Social Media",
+        role: "Administration / Social Media Manager",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
