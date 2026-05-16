@@ -57,7 +57,29 @@ document.addEventListener("DOMContentLoaded", () => {
   // Render Mentors
   const mentorContainer = document.getElementById("course-mentors");
   if (mentorContainer && course.mentors) {
-    mentorContainer.innerHTML = course.mentors.map(m => `
+    const getGradeNum = (role) => {
+      const r = role.toLowerCase();
+      if (r.includes("president") && !r.includes("vice")) return -2;
+      if (r.includes("vice president")) return -1;
+      const match = role.match(/Grade\s+(\d+)/i);
+      return match ? parseInt(match[1], 10) : 100;
+    };
+
+    // Sort: Lead vs Assistant, then Grade (9 to 12), then Alphabetical
+    const sortedMentors = [...course.mentors].sort((a, b) => {
+      const aIsAssistant = a.role.toLowerCase().includes("assistant");
+      const bIsAssistant = b.role.toLowerCase().includes("assistant");
+
+      if (aIsAssistant !== bIsAssistant) return aIsAssistant ? 1 : -1;
+
+      const gradeA = getGradeNum(a.role);
+      const gradeB = getGradeNum(b.role);
+      if (gradeA !== gradeB) return gradeA - gradeB;
+
+      return a.name.localeCompare(b.name);
+    });
+
+    mentorContainer.innerHTML = sortedMentors.map(m => `
       <div class="card mentor-card" style="text-align: center;">
         <img src="${m.image}" alt="${m.name}" class="mentor-photo">
         <h3>${m.name}</h3>

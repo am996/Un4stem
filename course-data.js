@@ -1,6 +1,6 @@
 const UN4STEM_COURSES = {
   "anatomy": {
-    title: "Anatomy and Physiology",
+    title: "Future Medics: Anatomy and Physiology",
     short: "Human body systems",
     image: "../assets/illustrations/science-lab.svg",
     imageAlt: "Playful clipart anatomy and physiology learning scene",
@@ -37,13 +37,19 @@ const UN4STEM_COURSES = {
       {
         name: "Tista Bhatia",
         role: "Mentor (Grade 12)",
-        bio: "Tista is a 16-year-old 12th-grade student from India who views STEM as a tool for global social change. Ranking 2nd in her cohort, she serves as a lead for an AI healthcare project and a professional medical writer. Tista simplifies dense anatomy and neuroscience concepts with scientific precision and empathy to make medical research accessible to all.",
+        bio: "Tista is 16-year-old 12th grader that ranks second in her female cohort and directs national operations as the India Chapter Lead for Together with Sports. Beyond her rigorous studies, she uses her leadership experience to mentor others through their own unique passion projects, while simultaneously writing for two medical magazines and managing marketing strategies for global journals and MUNs",
         image: "../assets/mentors/tista-bhatia.jpeg"
+      },
+      {
+        name: "Efsa-Hatice Andiç",
+        role: "Assistant Mentor (Grade 11)",
+        bio: "Efsa-Hatice is a 16-year-old 11th-grade student from Germany (NRW). Inspired by UN4STEM's 'students helping students' model, she is dedicated to making life sciences motivational and accessible. She aims to help her peers navigate the intricacies of anatomy and physiology with clarity and purpose.",
+        image: "../assets/mentors/efsa-hatice-andic.jpeg"
       }
     ]
   },
   "cellular-biology": {
-    title: "Cellular Biology",
+    title: "The World Within: Cellular Biology",
     short: "Cell structure and biological systems",
     image: "../assets/illustrations/science-lab.svg",
     imageAlt: "Playful clipart biology learning scene",
@@ -74,7 +80,7 @@ const UN4STEM_COURSES = {
       {
         name: "Ayden Ta",
         role: "Mentor (Grade 9)",
-        bio: "Ayden is a 14-year-old 9th-grade student from Vietnam, born in the U.S., who joined UN4STEM to bridge the gap between learning and mastery through peer teaching. An academic standout with a 4.36 GPA and a 1410 PSAT score, he is Fusion360 CAD Certified and earned a 'Distinguished' score on the Introduction to Engineering EOC. Ayden leverages his technical expertise to create a structured environment, focusing on clarifying complex concepts in biology and engineering.",
+        bio: "Ayden is a 14-year-old 9th-grade student from Texas who joined UN4STEM to bridge the gap between learning and mastery through peer teaching. An academic standout with a 4.36 GPA and a 1410 PSAT score, he is Fusion360 CAD Certified and earned a 'Distinguished' score on the Introduction to Engineering EOC. Ayden leverages his technical expertise to create a structured environment, focusing on clarifying complex concepts in biology and engineering.",
         image: "../assets/mentors/ayden-ta.jpeg"
       },
       {
@@ -88,42 +94,17 @@ const UN4STEM_COURSES = {
         role: "Administration / Social Media Manager",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
-      }
-    ]
-  },
-  "psychology": {
-    title: "Psychology",
-    short: "Mind and behavior",
-    image: "../assets/illustrations/wellness-talk.svg",
-    imageAlt: "Playful clipart psychology discussion scene",
-    category: "Life Science",
-    level: "Introductory",
-    overview: "Psychology examines the foundational principles of human cognition, emotional regulation, and social behavior. This course connects theoretical frameworks to practical applications in decision-making, interpersonal dynamics, and mental resilience.",
-    outcomes: [
-      "Explain basic concepts in cognition, emotion, and behavior.",
-      "Recognize how memory, attention, and learning work.",
-      "Discuss social influence and human development.",
-      "Apply psychology concepts to everyday student life."
-    ],
-    topics: [
-      "Brain basics and behavior",
-      "Learning, memory, and attention",
-      "Emotion, motivation, and personality",
-      "Social psychology and development"
-    ],
-    project: "Students design a small observation or survey and present what it suggests about behavior.",
-    bestFor: "Students curious about people, the brain, communication, education, or mental health.",
-    mentors: [
+      },
       {
-        name: "Lian Guo",
-        role: "Mentor (Grade 10)",
-        bio: "Lian is a 15-year-old 10th-grade student dedicated to excellence across the sciences and humanities. As an experienced tutor and Red Cross secretary, she has cultivated an adaptable teaching style focused on conceptual clarity. An accomplished musician who has performed at Carnegie Hall, Lian integrates discipline and creativity into her UN4STEM sessions to help students navigate psychology and math with confidence and purpose.",
-        image: "../assets/mentors/lian-guo.jpeg"
+        name: "Efsa-Hatice Andiç",
+        role: "Assistant Mentor (Grade 11)",
+        bio: "Efsa-Hatice is a 16-year-old 11th-grade student from Germany (NRW). Inspired by UN4STEM's 'students helping students' model, she is dedicated to making life sciences motivational and accessible. She aims to help her peers navigate the intricacies of cellular biology with clarity and purpose.",
+        image: "../assets/mentors/efsa-hatice-andic.jpeg"
       }
     ]
   },
   "physics": {
-    title: "Physics",
+    title: "F = Minds Accelerating: Intro to AP Physics 1",
     short: "Motion and forces",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart physics problem solving scene",
@@ -197,13 +178,13 @@ const UN4STEM_COURSES = {
       {
         name: "Saad Rashid",
         role: "Mentor (Grade 11)",
-        bio: "Saad is a 16-year-old Grade 11 student from Pakistan attending on a full scholarship for academic excellence. A published researcher in physics, he is building a STEM platform to bridge global learning gaps. At UN4STEM, he leads instruction in quantum physics and chemistry, providing students with high-level inquiry and mentorship.",
+        bio: "Saad is a 16-year-old Grade 11 student from Pakistan attending on a full scholarship for academic excellence. A published researcher in physics, he is building a STEM platform to bridge global learning gaps. At UN4STEM, he leads instruction in Chemistry, providing students with high-level inquiry and mentorship.",
         image: "../assets/mentors/saad-rashid.jpeg"
       }
     ]
   },
   "mental-health": {
-    title: "Mental Health Awareness",
+    title: "Peace of Mind: Navigating Mental Health in a Digital World",
     short: "Well-being and awareness",
     image: "../assets/illustrations/wellness-talk.svg",
     imageAlt: "Playful clipart mental health awareness scene",
@@ -270,13 +251,13 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Administration / Social Media Manager",
+        role: "Mentor / Social Media Manager",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
         name: "Aryan Mantena",
-        role: "Administration / Web Dev",
+        role: "Mentor / Web Dev",
         bio: "Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Computer Science and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.",
         image: "../assets/mentors/aryan-mantena.jpeg"
       }
@@ -313,57 +294,20 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lyla Rodrigues",
-        role: "Administration / Social Media Manager",
+        role: "Mentor / Social Media Manager",
         bio: "Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.",
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
         name: "Aryan Mantena",
-        role: "Administration / Web Dev",
+        role: "Mentor / Web Dev",
         bio: "Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Computer Science and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.",
         image: "../assets/mentors/aryan-mantena.jpeg"
       }
     ]
   },
-  "quantum-physics": {
-    title: "Quantum Physics",
-    short: "Advanced physics",
-    image: "../assets/illustrations/math-board.svg",
-    imageAlt: "Playful clipart quantum physics ideas scene",
-    category: "Physical Science",
-    level: "Advanced introduction",
-    overview: "Quantum Physics delves into the non-intuitive phenomena that govern matter and energy at the subatomic level. This advanced introduction focuses on the theoretical shift from classical mechanics to quantum probability, wave-particle duality, and modern technological applications.",
-    outcomes: [
-      "Explain wave-particle duality and quantized energy.",
-      "Describe uncertainty and probability in quantum systems.",
-      "Connect atomic structure to spectra and energy levels.",
-      "Discuss real technologies influenced by quantum physics."
-    ],
-    topics: [
-      "Light, photons, and energy packets",
-      "Electron behavior and atomic models",
-      "Probability and uncertainty",
-      "Quantum technologies and applications"
-    ],
-    project: "Students create a concept presentation that explains one quantum idea with visuals and analogies.",
-    bestFor: "Students who already like physics or math and want a challenging conceptual extension.",
-    mentors: [
-      {
-        name: "Ayden Ta",
-        role: "Mentor (Grade 9)",
-        bio: "Ayden is a 14-year-old 9th-grade student from Vietnam, born in the U.S., who joined UN4STEM to bridge the gap between learning and mastery through peer teaching. An academic standout with a 4.36 GPA and a 1410 PSAT score, he is Fusion360 CAD Certified and earned a 'Distinguished' score on the Introduction to Engineering EOC. Ayden leverages his technical expertise to create a structured environment, focusing on clarifying complex concepts in biology and engineering.",
-        image: "../assets/mentors/ayden-ta.jpeg"
-      },
-      {
-        name: "Saad Rashid",
-        role: "Mentor (Grade 11)",
-        bio: "Saad is a 16-year-old Grade 11 student from Pakistan attending on a full scholarship for academic excellence. A published researcher in physics, he is building a STEM platform to bridge global learning gaps. At UN4STEM, he leads instruction in quantum physics and chemistry, providing students with high-level inquiry and mentorship.",
-        image: "../assets/mentors/saad-rashid.jpeg"
-      }
-    ]
-  },
   "arithmetic": {
-    title: "Pre Algebra: Fundamentals",
+    title: "Building Bridges to Pre-Algebra",
     short: "Foundational math skills",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart arithmetic practice scene",
@@ -400,7 +344,7 @@ const UN4STEM_COURSES = {
     ]
   },
   "pre-algebra": {
-    title: "Pre Algebra",
+    title: "Future Algebra Survivors: Pre-Algebra",
     short: "Intro to algebra",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart pre algebra scene",
@@ -424,7 +368,7 @@ const UN4STEM_COURSES = {
     mentors: [
       {
         name: "Rohan Pandit",
-        role: "Mentor (Grade 8)",
+        role: "Assistant Mentor (Grade 8)",
         bio: "Rohan is a 13-year-old 8th-grade student and nationally ranked math competitor who placed 19th in a math competition as a second grader. An advanced student at the Russian School of Mathematics, he uses creative analogies to help younger students navigate abstract concepts. Rohan is dedicated to building academic confidence and ensuring students understand the logic behind the numbers in Pre-Algebra.",
         image: "../assets/mentors/rohan-pandit.jpeg"
       },
@@ -443,7 +387,7 @@ const UN4STEM_COURSES = {
     ]
   },
   "algebra-1": {
-    title: "Algebra 1",
+    title: "Finding X: Algebra I Expedition",
     short: "Core algebra",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart algebra 1 scene",
@@ -480,7 +424,7 @@ const UN4STEM_COURSES = {
     ]
   },
   "algebra-2": {
-    title: "Algebra 2",
+    title: "Algebra II & Trigonometry",
     short: "Advanced algebra",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart algebra 2 scene",
@@ -523,7 +467,7 @@ const UN4STEM_COURSES = {
     ]
   },
   "abstract-algebra": {
-    title: "Abstract Algebra",
+    title: "Introduction to the Art of Logic",
     short: "Advanced theory",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart abstract algebra scene",
