@@ -8,6 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const viewToggles = document.querySelectorAll(".view-toggle-link");
   const viewportMeta = document.querySelector('meta[name="viewport"]');
   
+  // MIGRATION: One-time clear of stuck views for version 1.1.1
+  const currentVersion = "1.1.1";
+  if (localStorage.getItem("view-logic-version") !== currentVersion) {
+    localStorage.removeItem("forced-view");
+    localStorage.setItem("view-logic-version", currentVersion);
+  }
+
   const updateViewUI = (isForced) => {
     viewToggles.forEach(btn => {
       if (window.innerWidth <= 900) {
