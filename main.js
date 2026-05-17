@@ -4,51 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loaded");
   });
 
-  // View Switcher Logic
-  const viewToggles = document.querySelectorAll(".view-toggle-link");
-  const viewportMeta = document.querySelector('meta[name="viewport"]');
-  
-  // MIGRATION: One-time clear of stuck views for version 1.1.1
-  const currentVersion = "1.1.1";
-  if (localStorage.getItem("view-logic-version") !== currentVersion) {
-    localStorage.removeItem("forced-view");
-    localStorage.setItem("view-logic-version", currentVersion);
-  }
-
-  const updateViewUI = (isForced) => {
-    viewToggles.forEach(btn => {
-      if (window.innerWidth <= 900) {
-        btn.textContent = isForced ? "Swap to Mobile" : "Swap to Computer";
-      } else {
-        btn.textContent = isForced ? "Swap to Computer" : "Swap to Mobile";
-      }
-    });
-  };
-
-  const applyView = () => {
-    const forcedView = localStorage.getItem("forced-view");
-    if (forcedView === "mobile" && window.innerWidth > 900) {
-      document.body.classList.add("forced-mobile");
-      updateViewUI(true);
-    } else if (forcedView === "desktop" && window.innerWidth <= 900) {
-      // Removed fixed width scaling that caused "zoomed in" feel
-      updateViewUI(true);
-    } else {
-      document.body.classList.remove("forced-mobile");
-      updateViewUI(false);
-    }
-  };
-
-  viewToggles.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const current = localStorage.getItem("forced-view");
-      localStorage.setItem("forced-view", current === "mobile" || current === "desktop" ? "default" : (window.innerWidth > 900 ? "mobile" : "desktop"));
-      applyView();
-    });
-  });
-  applyView();
-
   // Scroll Reveal Observer
   // We target specific content blocks instead of whole sections to prevent
   // empty background "voids" (blue space) before the reveal triggers.
