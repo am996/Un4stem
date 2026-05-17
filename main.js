@@ -5,16 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // View Switcher Logic
-  const viewToggle = document.getElementById("view-toggle");
+  const viewToggles = document.querySelectorAll(".view-toggle-link");
   const viewportMeta = document.querySelector('meta[name="viewport"]');
   
   const updateViewUI = (isForced) => {
-    if (!viewToggle) return;
-    if (window.innerWidth <= 900) {
-      viewToggle.textContent = isForced ? "Swap to Mobile" : "Swap to Computer";
-    } else {
-      viewToggle.textContent = isForced ? "Swap to Computer" : "Swap to Mobile";
-    }
+    viewToggles.forEach(btn => {
+      if (window.innerWidth <= 900) {
+        btn.textContent = isForced ? "Swap to Mobile" : "Swap to Computer";
+      } else {
+        btn.textContent = isForced ? "Swap to Computer" : "Swap to Mobile";
+      }
+    });
   };
 
   const applyView = () => {
@@ -32,15 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  if (viewToggle) {
-    viewToggle.addEventListener("click", (e) => {
+  viewToggles.forEach(btn => {
+    btn.addEventListener("click", (e) => {
       e.preventDefault();
       const current = localStorage.getItem("forced-view");
       localStorage.setItem("forced-view", current === "mobile" || current === "desktop" ? "default" : (window.innerWidth > 900 ? "mobile" : "desktop"));
       applyView();
     });
-    applyView();
-  }
+  });
+  applyView();
 
   // Scroll Reveal Observer
   // We target specific content blocks instead of whole sections to prevent
