@@ -1189,11 +1189,15 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
   .course-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
   .course-card {
-    min-height: 240px;
+    min-height: auto;
     padding: 32px;
   }
   .course-title { font-size: 24px; }
@@ -1212,21 +1216,6 @@ footer {
   }
 
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Reset mentor cards to full width on mobile */
-  #course-mentors .mentor-card, #mentors-grid .mentor-card {
-    flex: 1 1 100%;
-  }
-}
-
-@media (max-width: 800px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1236,6 +1225,11 @@ footer {
 
   .stat-number {
     font-size: 42px;
+  }
+
+  /* Reset mentor cards to full width on mobile */
+  #course-mentors .mentor-card, #mentors-grid .mentor-card {
+    flex: 1 1 100%;
   }
 }
 
