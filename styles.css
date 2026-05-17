@@ -48,6 +48,14 @@ html {
   --shadow: 12px 12px 0 rgba(0, 0, 0, 0.13); /* Dark shadow for light components */
 }
 
+/* Force Mobile View on Desktop */
+body.forced-mobile .container { max-width: 640px; }
+body.forced-mobile header { grid-template-columns: 1fr; text-align: center; }
+body.forced-mobile .hero-image { display: none; }
+body.forced-mobile .nav-links { display: none; }
+body.forced-mobile .mobile-nav-toggle { display: flex; }
+body.forced-mobile .course-grid, body.forced-mobile .grid { grid-template-columns: 1fr; }
+
 /* =========================
    BASE + PAGE TRANSITION
 ========================= */

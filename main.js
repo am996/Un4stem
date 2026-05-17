@@ -4,6 +4,44 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loaded");
   });
 
+  // View Switcher Logic
+  const viewToggle = document.getElementById("view-toggle");
+  const viewportMeta = document.querySelector('meta[name="viewport"]');
+  
+  const updateViewUI = (isForced) => {
+    if (!viewToggle) return;
+    if (window.innerWidth <= 900) {
+      viewToggle.textContent = isForced ? "Swap to Mobile" : "Swap to Computer";
+    } else {
+      viewToggle.textContent = isForced ? "Swap to Computer" : "Swap to Mobile";
+    }
+  };
+
+  const applyView = () => {
+    const forcedView = localStorage.getItem("forced-view");
+    if (forcedView === "mobile" && window.innerWidth > 900) {
+      document.body.classList.add("forced-mobile");
+      updateViewUI(true);
+    } else if (forcedView === "desktop" && window.innerWidth <= 900) {
+      if (viewportMeta) viewportMeta.setAttribute('content', 'width=1240');
+      updateViewUI(true);
+    } else {
+      if (viewportMeta) viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0');
+      document.body.classList.remove("forced-mobile");
+      updateViewUI(false);
+    }
+  };
+
+  if (viewToggle) {
+    viewToggle.addEventListener("click", (e) => {
+      e.preventDefault();
+      const current = localStorage.getItem("forced-view");
+      localStorage.setItem("forced-view", current === "mobile" || current === "desktop" ? "default" : (window.innerWidth > 900 ? "mobile" : "desktop"));
+      applyView();
+    });
+    applyView();
+  }
+
   // Scroll Reveal Observer
   // We target specific content blocks instead of whole sections to prevent
   // empty background "voids" (blue space) before the reveal triggers.
