@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mentors - UN4STEM</title>
-  <link rel="icon" href="assets/illustrations/logo.jpeg" type="image/jpeg">
-  <link rel="stylesheet" href="styles.css?v=1.1.0">
+  <link rel="icon" href="assets/illustrations/logo2.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css?v=1.1.1">
 </head>
 <body>
 
@@ -123,7 +123,7 @@
       const aIsAssistant = a.role.toLowerCase().includes("assistant");
       const bIsAssistant = b.role.toLowerCase().includes("assistant");
 
-      // Push assistants to the bottom
+      // Tier 1: Lead Mentors, Tier 2: Assistant Mentors (at the bottom)
       if (aIsAssistant !== bIsAssistant) return aIsAssistant ? 1 : -1;
 
       // Sort by grade ascending (9 to 12)
@@ -152,6 +152,6 @@
     render("mentors-grid", mentorList);
   });
 </script>
-<script src="main.js?v=1.1.0"></script>
+<script src="main.js?v=1.1.1"></script>
 </body>
 </html>

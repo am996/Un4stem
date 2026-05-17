@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Course Detail - UN4STEM</title>
-  <link rel="icon" href="../assets/illustrations/logo.jpeg" type="image/jpeg">
+  <link rel="icon" href="../assets/illustrations/logo2.jpeg" type="image/jpeg">
   <!-- Note the ../ to reach the root directory -->
-  <link rel="stylesheet" href="../styles.css?v=1.1.0">
+  <link rel="stylesheet" href="../styles.css?v=1.1.1">
 </head>
 
 <!-- Update data-course to match the key in course-data.js (e.g., "physics", "chemistry") -->
@@ -99,6 +99,9 @@
   </header>
 
   <section>
+    <!-- Registration Section (populated by course-page.js) -->
+    <div id="course-registration"></div>
+
     <div class="detail-grid">
       <!-- Overview -->
       <div class="detail-panel full">
@@ -136,11 +139,6 @@
       <h2 style="text-align: center; margin-bottom: 30px;">Your Mentors</h2>
       <div id="course-mentors" class="grid"></div>
     </div>
-
-    <div style="text-align: center; margin-top: 60px;">
-      <h3>Ready to join us?</h3>
-      <a class="btn" href="../apply.html">Apply Now</a>
-    </div>
   </section>
 
   <footer>© 2026 UN4STEM</footer>
@@ -148,9 +146,9 @@
 </div>
 
 <!-- IMPORTANT: Load data first, then logic, then the transition script -->
-<script src="../course-data.js?v=1.1.0"></script>
-<script src="../course-page.js?v=1.1.0"></script>
-<script src="../main.js?v=1.1.0"></script>
+<script src="../course-data.js?v=1.1.1"></script>
+<script src="../course-page.js?v=1.1.1"></script>
+<script src="../main.js?v=1.1.1"></script>
 
 </body>
 </html>

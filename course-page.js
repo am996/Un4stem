@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const aIsAssistant = a.role.toLowerCase().includes("assistant");
       const bIsAssistant = b.role.toLowerCase().includes("assistant");
 
+      // Assistants always go to the bottom
       if (aIsAssistant !== bIsAssistant) return aIsAssistant ? 1 : -1;
 
       const gradeA = getGradeNum(a.role);
@@ -87,5 +88,26 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="mentor-bio">${m.bio}</p>
       </div>
     `).join("");
+  }
+
+  // Render Registration CTA
+  const registerContainer = document.getElementById("course-registration");
+  if (registerContainer) {
+    if (course.registrationLink) {
+      registerContainer.innerHTML = `
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h3>Ready to start learning?</h3>
+          <p style="margin-bottom: 20px; margin-left: auto; margin-right: auto;">Secure your spot in this course by filling out our student registration form.</p>
+          <a class="btn btn-red" href="${course.registrationLink}" target="_blank">Register for Class</a>
+        </div>
+      `;
+    } else {
+      registerContainer.innerHTML = `
+        <div style="text-align: center; margin-bottom: 50px;">
+          <h3>Ready to join us?</h3>
+          <a class="btn btn-red" href="../apply.html">Apply Now</a>
+        </div>
+      `;
+    }
   }
 });
