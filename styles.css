@@ -301,7 +301,7 @@ nav.nav.scrolled {
 }
 
 .category-parent > a span {
-  font-size: 16px;
+    font-size: 22px;
   margin-left: 10px;
   opacity: 0.7;
   transition: transform 0.3s ease;
@@ -1129,6 +1129,10 @@ footer {
     text-align: center;
   }
 
+  .dropdown-arrow {
+    font-size: 1.1em;
+  }
+
   .nav-links > .dropdown {
     width: auto;
   }
@@ -1189,6 +1193,15 @@ footer {
     opacity: 1;
     padding: 5px 0;
     transform: translateY(0);
+  }
+
+  .sub-menu a {
+    display: block !important;
+    padding: 12px 24px !important;
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    text-transform: none !important;
   }
 
   .category-parent.active > a span {
