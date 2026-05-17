@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imagePath = m.image.replace('../', '');
     
     return `
-      <div class="card mentor-card" style="text-align: center;">
+      <div class="card mentor-card">
         <img src="${imagePath}" alt="${m.name}" class="mentor-photo">
         <h3>${m.name}</h3>
         <p class="mentor-role">${m.role}</p>

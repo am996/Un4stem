@@ -31,10 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.add("forced-mobile");
       updateViewUI(true);
     } else if (forcedView === "desktop" && window.innerWidth <= 900) {
-      if (viewportMeta) viewportMeta.setAttribute('content', 'width=1240');
+      // Removed fixed width scaling that caused "zoomed in" feel
       updateViewUI(true);
     } else {
-      if (viewportMeta) viewportMeta.setAttribute('content', 'width=device-width, initial-scale=1.0');
       document.body.classList.remove("forced-mobile");
       updateViewUI(false);
     }
