@@ -1130,6 +1130,14 @@ footer {
     text-align: center;
   }
 
+  .nav-logo {
+    max-width: 180px;
+  }
+
+  .nav-social {
+    display: none; /* Hide social icons on mobile to make room for the menu toggle */
+  }
+
   .category-parent > a {
     font-size: 21px !important;
     font-weight: 700 !important;

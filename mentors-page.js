@@ -22,7 +22,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const mentors = Array.from(mentorMap.values());
 
-  container.innerHTML = mentors.map(m => {
+  // Helper to extract grade number from role string
+  const getGrade = (role) => {
+    const match = role.match(/Grade (\d+)/);
+    return match ? parseInt(match[1]) : 13; // Default for non-grade roles like Founder/VP
+  };
+
+  const sortedMentors = mentors.sort((a, b) => {
+    const aIsAssistant = a.role.toLowerCase().includes("assistant");
+    const bIsAssistant = b.role.toLowerCase().includes("assistant");
+
+    // If one is assistant and the other is not, non-assistant comes first
+    if (aIsAssistant !== bIsAssistant) {
+      return aIsAssistant ? 1 : -1;
+    }
+
+    // Within each group, sort by grade from 12 to 9
+    const aGrade = getGrade(a.role);
+    const bGrade = getGrade(b.role);
+
+    if (aGrade !== bGrade) {
+      return bGrade - aGrade; // Higher grade first (12, 11, 10, 9)
+    }
+
+    // If same grade or same type, maintain alphabetical order by name
+    return a.name.localeCompare(b.name);
+  });
+
+  container.innerHTML = sortedMentors.map(m => {
     // Adjust path for root level
     const imagePath = m.image.replace('../', '');
     
