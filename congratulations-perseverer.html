@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congratulations, Perseverer! - UN4STEM</title> <!-- Updated title -->
+  <link rel="icon" href="assets/illustrations/logo2.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css?v=1.1.2">
+  <style>
+    body.secret-dark {
+      background: #0a0f1e;
+      color: #ffffff;
+    }
+    .reveal-card {
+      background: #161e2e;
+      border: 3px solid #fcd34d;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      width: 95%;
+      max-width: 900px;
+      animation: riseIn 0.8s ease both;
+    }
+  </style>
+</head>
+<body class="loaded secret-dark">
+
+<div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 40px 20px; max-width: none;">
+  
+  <div class="reveal-card">
+    <h1 style="color: #fff; margin-bottom: 10px; margin-left: auto; margin-right: auto;">Presidential Archives: Final File</h1>
+    <p class="subtitle" style="margin-bottom: 30px; color: #bae6fd; margin-left: auto; margin-right: auto;">You have reached the end of the journey. Your perseverance has been rewarded!</p>
+    
+    <div class="final-video-container">
+      <div class="flower-side">🌻</div>
+      
+      <div class="image-frame" style="max-width: 700px; background: #000; border-color: #fcd34d;">
+        <video id="secret-video" controls style="width: 100%; display: block; border-radius: inherit;" autoplay> <!-- Added autoplay -->
+          <source src="assets/videos/lol-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="flower-side">🌻</div>
+    </div>
+    
+    <div style="margin-top: 40px;"> 
+        <h2 style="color: #fcd34d; margin-left: auto; margin-right: auto;">Puzzle Master Confirmed.</h2> 
+        <p style="color: rgba(255,255,255,0.6); font-size: 14px; margin-left: auto; margin-right: auto;">The Archives are now secure. Farewell.</p> 
+        <br>
+        <a href="index.html" class="btn" style="min-width: 250px;">Return to Main Site</a>
+    </div>
+  </div>
+
+</div>
+<script>
+  // Auto-play the video when the page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    const video = document.getElementById('secret-video');
+    if (video) {
+      video.play().catch(error => {
+        console.log("Autoplay prevented:", error);
+        // Optionally show a play button if autoplay fails
+      });
+    }
+  });
+</script>
+</body>
+</html>

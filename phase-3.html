@@ -3,51 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ph@se-3: Final Reveal - UN4STEM</title>
+  <title>ph@se-3: Terminal Override - UN4STEM</title>
   <link rel="icon" href="assets/illustrations/logo2.jpeg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css?v=1.1.2">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
   <style>
     body.secret-dark {
       background: #0a0f1e;
       color: #ffffff;
+      font-family: 'Courier New', Courier, monospace;
     }
-    .reveal-card {
+    .puzzle-container {
+      max-width: 750px;
+      width: 90%;
+      background: rgba(10, 15, 30, 0.9);
+      border: 2px solid #2a3b66;
+      box-shadow: 0 0 20px rgba(0, 100, 255, 0.2);
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      margin: auto;
+    }
+    h1 {
+      color: #4a90e2;
+      font-size: 24px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+    }
+    .input-box {
       background: #161e2e;
       border: 3px solid #fcd34d;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      max-width: 900px;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 18px;
       width: 100%;
-      animation: riseIn 0.8s ease both;
+      max-width: 300px;
+      outline: none;
+      transition: all 0.3s ease;
+      text-align: center;
+      margin-top: 15px;
+    }
+    .input-box:focus {
+      border-color: #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    .error-msg {
+      color: #fca5a5;
+      font-weight: 600;
+      margin-top: 15px;
+      min-height: 24px;
+    }
+    .kh-panel {
+      text-align: left;
+      background: #070b14;
+      border: 1px solid #1c2d52;
+      padding: 20px;
+      border-radius: 6px;
+      margin-top: 25px;
+    }
+    .puzzle-section {
+      border-bottom: 1px dashed #20335e;
+      padding: 15px 0;
+    }
+    .puzzle-section:last-child { border-bottom: none; }
+    .puzzle-title { color: #fcd34d; font-weight: bold; margin-bottom: 5px; }
+    .hidden { display: none !important; }
+    .magical-text {
+      font-family: 'Dancing Script', cursive;
+      color: #fcd34d;
+      font-size: 24px;
+      margin: 20px 0;
+      text-shadow: 0 0 10px rgba(252, 211, 77, 0.8);
+      animation: magicPulse 3s ease-in-out infinite;
+    }
+    @keyframes magicPulse {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.03); text-shadow: 0 0 20px rgba(252, 211, 77, 1); }
     }
   </style>
 </head>
-<body class="loaded secret-dark">
+<body class="loaded secret-dark" style="display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;">
 
-<div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 40px 20px;">
-  
-  <div class="reveal-card">
-    <h1 style="color: #fff; margin-bottom: 10px;">ph@se-3: Presidential Archives</h1>
-    <p class="subtitle" style="margin-bottom: 30px; color: #bae6fd;">Access Granted. Decryption Complete. Viewing: <em>lol-video.mp4</em></p>
-    
-    <div class="image-frame" style="max-width: 800px; background: #000; margin-left: auto; margin-right: auto; border-color: #fcd34d;">
-      <video id="secret-video" controls style="width: 100%; display: block; border-radius: inherit;">
-        <source src="assets/videos/lol-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    
-    <div style="margin-top: 30px;">
-        <h3 style="color: #fcd34d;">You've Found Everything.</h3>
-        <p style="color: rgba(255,255,255,0.7); font-size: 14px;">The Archives are now closed. Thank you for your service.</p>
+  <div class="puzzle-container">
+    <!-- THE GAUNTLET -->
+    <div id="phase2">
+      <h1>🗝️ THE SEVEN LIGHTS & THIRTEEN DARKNESSES</h1>
+      <p style="color: #4a90e2; font-weight: bold;">CRITICAL ERROR: DIRECTORY ENCRYPTED BY THE RECUSANT'S SIGN.</p>
+      <p style="font-size: 14px; color: #a0aed0;">The path to the archives has been fractured into seven echoes of a lost world. Resolve the fragments below, concatenate them in chronological sequence, and inject the result into the Override Terminal.</p>
+      <div class="magical-text">May your heart be your guiding key</div>
+      
+      <div class="kh-panel">
+        <div class="puzzle-section">
+          <div class="puzzle-title">Fragment I: The Organization's Order</div>
+          <p style="font-size: 14px; color: #a0aed0;">A moon-touched berserker sits in the high council of thirteen. Identify the Roman numeral of his station and extract its integer essence.</p>
+        </div>
+        <div class="puzzle-section">
+          <div class="puzzle-title">Fragment II: World Boundaries</div>
+          <p style="font-size: 14px; color: #a0aed0;">Navigate the original stars where the door first opened. Count every physical destination etched upon the cosmic map, including the place where all paths converge at the end of the world.</p>
+        </div>
+        <div class="puzzle-section">
+          <div class="puzzle-title">Fragment III: The Recusant's Truth</div>
+          <p style="font-size: 14px; color: #a0aed0;">The Seeker of Darkness bore a name forged in shadows and bound by the Recusant's Sign. Purge the mark of the cross from his essence. Rearrange the remaining fragments to name the void that hollows a chest. (lowercase, no space)</p>
+        </div>
+        <div class="puzzle-section">
+          <div class="puzzle-title">Fragment IV: The Broken Mathematical Split</div>
+          <p style="font-size: 14px; color: #a0aed0;">A replica forged of memories held a seat never meant to be. Divide her station's number by the diverging paths carved into the graveyard where light and dark clashed in the third great war.</p>
+        </div>
+        <div class="puzzle-section">
+          <div class="puzzle-title">Fragment V: Alphanumeric Nobody</div>
+          <p style="font-size: 14px; color: #a0aed0;">The boy of the summer sunset bears a name of five. Transmute his letters into their positions within the alphabet and calculate their collective weight. (Note: Implicit key offset).</p>
+        </div>
+        <div class="puzzle-section">
+          <div class="puzzle-title">Fragment VI: The Mythological Weapon</div>
+          <p style="font-size: 14px; color: #a0aed0;">The blueprint of all legends, the key that preceded the crown. Forged in the crucible of perfect equilibrium, it shares its name with the twenty-second letter of the old tongue. (lowercase, spell the Greek letter, no symbols)</p>
+        </div>
+        <div class="puzzle-section">
+          <div class="puzzle-title">Fragment VII: The Unchanging World</div>
+          <p style="font-size: 14px; color: #a0aed0;">A city trapped in perpetual sunset, where a digital shadow once sought the truth of his origin. Name the place that served as the nexus for a vacation that never truly was. (lowercase, no space)</p>
+        </div>
+      </div>
+
+      <input type="text" id="p2-input" class="input-box" placeholder="[Frag I]+[II]+[III]+[IV]+[V]+[VI]+[VII]">
+      <br>
+      <button class="btn" style="margin-top: 20px; background: #fcd34d; color: #0a0f1e;" onclick="checkPhase2()">Override Terminal</button>
+      <div id="p2-error" class="error-msg"></div>
     </div>
 
-    <br>
-    <a href="index.html" class="btn" style="min-width: 250px;">Return to Main Site</a>
+    <!-- PART 3: SUCCESS -->
+    <div id="phase3-redirect" class="hidden">
+      <h1 style="color: #00ffcc;">✔️ OVERRIDE SUCCESSFUL.</h1>
+      <p style="color: #a0aed0;">The archives have been reassembled. May your heart be your guiding key.</p>
+      <button class="btn" style="margin-top: 20px; background: #00ffcc; color: #0a0f1e; border-color: #00ffcc;" onclick="window.location.href='congratulations-perseverer.html'">View Final Archives</button>
+    </div>
   </div>
 
-</div>
+<script>
+  function checkPhase2() {
+    const val = document.getElementById('p2-input').value.trim().toLowerCase();
+    const screen = document.getElementById('phase2');
+    const masterKey = "713noheart772chibladetwilighttown";
+    if (val === masterKey) {
+      screen.classList.add('unlock-animation');
+      setTimeout(() => {
+        screen.classList.add('hidden');
+        document.getElementById('phase3-redirect').classList.remove('hidden');
+      }, 600);
+    } else {
+      document.getElementById('p2-error').innerText = "CRITICAL EXCEPTION: SEQUENCE DISCONNECTED.";
+      screen.classList.remove('shake');
+      void screen.offsetWidth; 
+      screen.classList.add('shake');
+    }
+  }
 
+  document.getElementById('p2-input').addEventListener('keypress', (e) => { if (e.key === 'Enter') checkPhase2(); });
+</script>
 </body>
 </html>
