@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ph@se-2 - UN4STEM</title>
+  <link rel="icon" href="assets/illustrations/logo2.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css?v=1.1.2">
+  <style>
+    body.secret-dark {
+      background: #0a0f1e;
+      color: #ffffff;
+    }
+    .lock-input {
+      background: #161e2e;
+      border: 3px solid #fcd34d;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 12px;
+      font-size: 18px;
+      width: 100%;
+      max-width: 300px;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .lock-input:focus {
+      border-color: #ffffff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+    #error-msg {
+      color: #fca5a5;
+      font-weight: 600;
+      margin-top: 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="loaded secret-dark">
+
+<div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 40px 20px;">
+  
+  <div id="lock-screen">
+    <div style="font-size: 60px; margin-bottom: 20px;">🗝️</div>
+    <h1 style="color: #fff;">ph@se-2: The Researcher's Path</h1>
+    <p class="subtitle" style="margin-bottom: 30px; color: rgba(255,255,255,0.7);">The journey deepens. Consult the <a href="https://docs.google.com/document/d/1CmCIsxUPau2FkMvFpW_PkQLTC3iKatMkRO1phP8sMaE/edit?tab=t.0" target="_blank" style="color: #fcd34d; text-decoration: underline;">Classified Research Log</a> to find the next key. <br>Enter the secondary decryption key to proceed to the next phase.</p>
+    
+    <input type="password" id="passcode" class="lock-input" placeholder="Secondary Key">
+    <br>
+    <button class="btn" style="margin-top: 20px; background: #fcd34d; color: #0a0f1e; border-color: #fcd34d;" onclick="checkPasscode()">Finalize Access</button>
+    <p id="error-msg">Key Mismatch. System Lockdown Imminent.</p>
+  </div>
+
+</div>
+
+<script>
+  function checkPasscode() {
+    const code = document.getElementById('passcode').value.toLowerCase();
+    const lockScreen = document.getElementById('lock-screen');
+    const errorMsg = document.getElementById('error-msg');
+
+    if (code === 'd3rlord3leftaveryyellow') {
+      lockScreen.classList.add('unlock-animation');
+      setTimeout(() => {
+        window.location.href = 'phase-3.html';
+      }, 600);
+    } else {
+      errorMsg.style.opacity = "1";
+      lockScreen.classList.remove('shake');
+      void lockScreen.offsetWidth; 
+      lockScreen.classList.add('shake');
+    }
+  }
+
+  document.getElementById('passcode').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') checkPasscode();
+  });
+</script>
+</body>
+</html>
