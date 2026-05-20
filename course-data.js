@@ -4,7 +4,7 @@ const UN4STEM_COURSES = {
     short: "Human body systems",
     image: "../assets/illustrations/science-lab.svg",
     imageAlt: "Playful clipart anatomy and physiology learning scene",
-    category: "Biology",
+    category: "Health",
     level: "Introductory",
     overview: "Anatomy and Physiology provides a detailed examination of the human body’s structural organization and functional mechanics. Students investigate how discrete biological systems integrate to maintain homeostasis and respond to external physiological stressors.",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd02tjN6sn-DhPL3td9hS1LjAWy8L79BYmrXvBASHUkTNzK7Q/viewform?usp=publish-editor",
@@ -429,6 +429,13 @@ const UN4STEM_COURSES = {
         bio: `Treya is a 16-year-old 10th-grade student from Texas and a former salutatorian with significant experience in STAAR test preparation. A UIL competition winner in writing and spelling, she translates core algebraic concepts into manageable, effective lessons. Treya provides Algebra 1 students with the structured guidance and clear explanations needed to master functions and build a lasting foundation for success.`,
         image: "../assets/mentors/treya-nalabothu.jpeg"
       }
+      ,
+      {
+        name: "Arjun Zagade",
+        role: "Mentor (Grade 9)",
+        bio: `Arjun is a mathematics instructor at UN4STEM, passionate about AI and quantitative finance. A student at Princeton Day School, he actively participates in Mathletes, leading his team to the MAA MathMadness quarterfinals, and engages in computer science and robotics. Outside of school, Arjun develops coding projects in financial analytics and AI, and runs a mathematics Instagram page (@arjunmathswhiz) to make advanced concepts accessible and engaging.`,
+        image: "../assets/mentors/arjun-zagade.jpeg"
+      }
     ]
   },
   "algebra-2": {
@@ -476,7 +483,7 @@ const UN4STEM_COURSES = {
     ]
   },
   "abstract-algebra": {
-    title: "Introduction to the Art of Logic",
+    title: "∃ ¬ (¬ (Introduction to the Art of Logic))",
     short: "Advanced theory",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart abstract algebra scene",

@@ -54,8 +54,8 @@
               <a href="courses/arithmetic.html">Building Bridges to Pre-Algebra</a>
               <a href="courses/pre-algebra.html">Future Algebra Survivors: Pre-Algebra</a>
               <a href="courses/algebra-1.html">Finding X: Algebra I Expedition</a>
-              <a href="courses/algebra-2.html">Algebra II & Trigonometry</a> 
-              <a href="courses/abstract-algebra.html">∃ ¬ (¬ (Introduction to the Art of Logic))</a> 
+              <a href="courses/algebra-2.html">Algebra II & Trigonometry</a>
+              <a href="courses/abstract-algebra.html">∃ ¬ (¬ (Introduction to the Art of Logic))</a>
             </div>
           </div>
           <div class="category-parent">
@@ -73,7 +73,7 @@
           </div>
         </div>
       </div>
-      <a href="mentors.html">Staff</a>
+      <a href="mentors.html">Mentors</a>
       <a href="apply.html">Apply</a>
       <a href="donate.html">Donate</a>
     </div>
@@ -82,7 +82,7 @@
 
 <div class="container">
   <header class="mentors-header-no-hero">
-    <h1>Meet our Staff</h1>
+    <h1>Meet our Student Mentors</h1>
     <p class="subtitle">Meet the student leaders and experts dedicated to making STEM accessible, clear, and engaging for everyone.</p>
   </header>
   <section>
@@ -125,20 +125,23 @@
       const aIsAssistant = a.role.toLowerCase().includes("assistant");
       const bIsAssistant = b.role.toLowerCase().includes("assistant");
 
-      // Primary sort: By grade, descending (12 down to 9)
+      // Rule: Assistant mentors at the bottom
+      if (aIsAssistant !== bIsAssistant) {
+        return aIsAssistant ? 1 : -1;
+      }
+
+      // Rule: Sort by grade descending (12 down to 9)
       const gradeA = getGradeNum(a.role);
       const gradeB = getGradeNum(b.role);
       if (gradeA !== gradeB) {
+        // Handle 100 as special case (e.g. Mentor / Web Dev) - should they be with 10th graders?
+        // If it's 100, we can treat it as 10 for consistency if that's the intention, 
+        // but for now let's just stick to the requested 12 -> 9.
         return gradeB - gradeA; 
       }
 
-      // Secondary sort: Non-assistant first, then Assistant (if grades are the same)
-      if (aIsAssistant !== bIsAssistant) {
-        return aIsAssistant ? 1 : -1; // Assistant comes after non-assistant
-      }
-
-      // Tertiary sort: Alphabetical by name if grades and assistant status are the same
-      return a.name.localeCompare(b.name); 
+      // Tertiary sort: Alphabetical by name
+      return a.name.localeCompare(b.name);
     });
 
     const render = (containerId, list) => {
@@ -149,7 +152,7 @@
             <img src="${m.image}" alt="${m.name}" class="mentor-photo">
             <h3>${m.name}</h3>
             <p class="mentor-role">${m.role}</p>
-            <p class="mentor-bio">${m.shortBio || m.bio}</p>
+            <p class="mentor-bio">${m.bio}</p>
           </div>
         `).join("");
       }

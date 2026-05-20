@@ -32,20 +32,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const aIsAssistant = a.role.toLowerCase().includes("assistant");
     const bIsAssistant = b.role.toLowerCase().includes("assistant");
 
-    // If one is assistant and the other is not, non-assistant comes first
+    // Rule: Assistant mentors at the bottom
     if (aIsAssistant !== bIsAssistant) {
       return aIsAssistant ? 1 : -1;
     }
 
-    // Within each group, sort by grade from 12 to 9
+    // Rule: Sort by grade descending (12 down to 9)
     const aGrade = getGrade(a.role);
     const bGrade = getGrade(b.role);
-
     if (aGrade !== bGrade) {
-      return bGrade - aGrade; // Higher grade first (12, 11, 10, 9)
+      return bGrade - aGrade;
     }
 
-    // If same grade or same type, maintain alphabetical order by name
+    // Tertiary sort: Alphabetical by name
     return a.name.localeCompare(b.name);
   });
 
@@ -58,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${imagePath}" alt="${m.name}" class="mentor-photo">
         <h3>${m.name}</h3>
         <p class="mentor-role">${m.role}</p>
-        <p class="mentor-bio">${m.bio}</p>
+        <p class="mentor-bio">${m.shortBio || m.bio}</p>
         <div class="mentor-footer">Mentoring: ${m.teaching.join(', ')}</div>
       </div>
     `;
