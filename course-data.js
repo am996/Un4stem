@@ -233,7 +233,7 @@ const UN4STEM_COURSES = {
     category: "Technology",
     level: "Beginner friendly",
     overview: "Computer Science introduces the core principles of algorithmic thinking, logic design, and software development. Students learn to architect solutions to complex problems, moving from fundamental syntax to the creation of functional, purpose-driven applications.",
-    schedule: "Registration Open for Fall 2026",
+    schedule: "Scheduling will be provided soon",
     prerequisites: "Basic Computer Literacy",
     outcomes: [
       "Write readable code using variables, loops, and conditionals.",
@@ -276,7 +276,7 @@ const UN4STEM_COURSES = {
     category: "Design",
     level: "Introductory",
     overview: "Engineering explores the systematic process of problem-solving through design, prototyping, and iterative testing. By integrating mathematical precision with creative innovation, students learn to address real-world challenges within technical and structural constraints.",
-    schedule: "Registration Open for Fall 2026",
+    schedule: "Scheduling will be provided soon",
     prerequisites: "Foundational Math Skills",
     outcomes: [
       "Use the engineering design process from problem to prototype.",
