@@ -40,7 +40,6 @@
             <a href="#">Sciences <span>›</span></a>
             <div class="sub-menu">
               <a href="cellular-biology.html">Cellular Biology</a>
-              <a href="anatomy.html">Anatomy & Physiology</a>
               <a href="psychology.html">Psychology</a>
               <a href="physics.html">Physics</a>
               <a href="chemistry.html">Future Lab: Chemistry</a>
@@ -83,10 +82,7 @@
   <header>
     <h1 id="course-title">Computer Science</h1>
     <p class="subtitle" id="course-subtitle"></p>
-    <div class="course-meta">
-      <span class="pill" id="course-category"></span>
-      <span class="pill" id="course-level"></span>
-    </div>
+    <a href="../programs.html" class="back-link">← Back to all programs</a>
     <div class="image-frame hero-image">
       <img id="course-illustration" class="clipart-image" src="" alt="">
     </div>
@@ -96,6 +92,18 @@
     <div id="course-registration"></div>
 
     <div class="detail-grid">
+      <!-- Schedule Panel -->
+      <div class="detail-panel full" style="background: rgba(252, 211, 77, 0.12); border-color: var(--gold); border-width: 4px;">
+        <h2 style="font-size: 32px;">🗓️ Course Schedule</h2>
+        <p style="white-space: pre-line; font-weight: 800; font-size: 24px; color: var(--navy); line-height: 1.4;" id="course-schedule"></p>
+      </div>
+
+      <!-- Prerequisites Panel -->
+      <div class="detail-panel full" style="background: rgba(186, 230, 253, 0.15); border-color: var(--navy); border-width: 4px;">
+        <h2 style="font-size: 32px;">✅ Prerequisites</h2>
+        <p style="font-size: 22px; font-weight: 700; color: #000;" id="course-prerequisites"></p>
+      </div>
+
       <div class="detail-panel full">
         <h2>Course Overview</h2>
         <p id="course-overview"></p>
@@ -108,19 +116,7 @@
         <h2>Core Topics</h2>
         <ul id="course-topics"></ul>
       </div>
-      <div class="detail-panel">
-        <h2>Sample Project</h2>
-        <p id="course-project"></p>
-      </div>
-      <div class="detail-panel">
-        <h2>Best For</h2>
-        <p id="course-best-for"></p>
-      </div>
     </div>
-  <section class="course-detail">
-    <!-- Registration Section -->
-    <div id="course-registration"></div>
-@@ -101,0 +104,7 @@
     <!-- Mentors Section -->
     <div style="margin-top: 60px;">
       <h2 style="text-align: center; margin-bottom: 30px;">Your Mentors</h2>

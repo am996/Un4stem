@@ -153,14 +153,14 @@ nav.nav.scrolled {
   justify-content: space-between;
   align-items: center;
 
-  padding: 6px 28px; /* Tight vertical padding for larger logo */
+  padding: 12px 28px; /* Slightly more room for the large logo */
 }
 
 .nav-logo {
   display: flex;
   align-items: center;
   transition: transform 0.2s ease;
-  height: 70px; /* Reduced from 100px to feel less "zoomed in" */
+  height: 115px; /* Further increased logo size */
 }
 
 .nav-logo img {
@@ -339,7 +339,7 @@ header {
   align-items: center;
   gap: 60px;
   text-align: left;
-  padding: 40px 0 20px;
+  padding: 40px 0 20px; /* Restored balance to the header height */
   animation: riseIn 0.55s ease both;
 }
 
@@ -384,9 +384,9 @@ h1 {
 }
 
 .hero-title {
-  font-size: clamp(40px, 6vw, 80px) !important; /* Reduced further for better desktop fit */
-  margin-bottom: 20px;
-  margin-top: 40px;
+  font-size: clamp(40px, 6vw, 80px) !important;
+  margin-bottom: 15px;
+  margin-top: 20px; /* Better separation from the top */
   letter-spacing: -0.04em;
 }
 
@@ -412,7 +412,7 @@ header .subtitle + p {
    SECTIONS
 ========================= */
 section {
-  padding: 60px 32px; /* Reduced from 90px */
+  padding: 60px 32px; /* Rebalanced padding to give content room to breathe */
   text-align: left;
   border-top: 1px solid var(--border); /* Subtle divider for a smoother transition */
   background: var(--bg-component);
@@ -451,7 +451,7 @@ h3 {
 
 p {
   max-width: 800px;
-  margin: 0; /* Muted text color on light background */
+  margin-bottom: 1.25rem; /* Added consistent paragraph spacing */
   color: var(--muted);
   font-size: 18px;
 }
@@ -463,6 +463,8 @@ p {
   margin-right: calc(50% - 50vw);
   padding-left: 28px;
   padding-right: 28px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media (min-width: 1240px) {
@@ -732,14 +734,14 @@ header .image-frame {
 
 .inline-image {
   max-width: 500px;
-  max-height: 350px;
+  max-height: 450px; /* Increased to prevent weird cropping on portrait photos */
   margin: 36px auto 0;
   overflow: hidden;
 }
 
 .card-image {
   margin: 0 0 22px;
-  height: 320px; /* Increased height to give the images more vertical room */
+  height: 300px;
   overflow: hidden;
   border-radius: 0 28px 28px 28px;
   box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.14); /* Dark shadow */
@@ -858,20 +860,16 @@ header .image-frame {
   text-align: left;
 }
 
-.course-detail p {
-  margin: 0;
-}
-
 .detail-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
-  margin-top: 36px;
+  margin-top: 40px; /* More space above course cards */
 }
 
 .detail-panel {
   background: var(--bg-component);
-  border: 3px solid var(--border);
+  border: 2px solid var(--border);
   padding: 30px;
   border-radius: 0 30px 30px 30px;
   box-shadow: 7px 7px 0 rgba(0, 0, 0, 0.12);
@@ -1043,7 +1041,7 @@ footer {
   background: var(--navy);
   border-left: 8px solid #e5243b; /* Accent stripe using official SDG 4 red */
   color: var(--white);
-  padding: 45px 55px;
+  padding: 30px 45px; /* Reduced padding to fix clunky appearance */
   border-radius: 0 40px 40px 40px;
   margin: 60px auto 20px; 
   max-width: 1000px;

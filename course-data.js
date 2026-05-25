@@ -1,12 +1,14 @@
 const UN4STEM_COURSES = {
   "anatomy": {
     title: "Future Medics: Anatomy and Physiology",
-    short: "Human body systems",
+    short: "Human Body Systems",
     image: "../assets/illustrations/science-lab.svg",
     imageAlt: "Playful clipart anatomy and physiology learning scene",
     category: "Health",
     level: "Introductory",
     overview: "Anatomy and Physiology provides a detailed examination of the human body’s structural organization and functional mechanics. Students investigate how discrete biological systems integrate to maintain homeostasis and respond to external physiological stressors.",
+    schedule: "Session 1: June 29 – August 7 | 12:00 PM – 1:30 PM EDT (Tue, Thu, Sat)\nSession 2: June 29 – August 7 | 5:45 PM – 7:15 PM EDT (Mon, Wed, Fri)",
+    prerequisites: "Fundamental understanding of human biology or general science recommended",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd02tjN6sn-DhPL3td9hS1LjAWy8L79BYmrXvBASHUkTNzK7Q/viewform?usp=publish-editor",
     outcomes: [
       "Describe the roles of major organs and body systems.",
@@ -20,8 +22,6 @@ const UN4STEM_COURSES = {
       "Nervous and endocrine systems",
       "Digestive, immune, and reproductive systems"
     ],
-    project: "Students trace one everyday activity, such as running or eating, through multiple body systems.",
-    bestFor: "Students interested in medicine, sports science, biology, or health careers.",
     mentors: [
       {
         name: "Elliot Chang",
@@ -51,12 +51,14 @@ const UN4STEM_COURSES = {
   },
   "cellular-biology": {
     title: "The World Within: Cellular Biology",
-    short: "Cell structure and biological systems",
+    short: "Cell Structure And Biological Systems",
     image: "../assets/illustrations/science-lab.svg",
     imageAlt: "Playful clipart biology learning scene",
     category: "Biology",
     level: "Introductory to intermediate",
     overview: "Cellular Biology provides a comprehensive exploration of life at the microscopic level. By examining the intricate machinery of organelles and the dynamics of cellular transport, students gain a foundational understanding of the biological processes that drive all living organisms.",
+    schedule: "🗓️ June 22 – July 31 | ⏰ 5:00 PM – 6:30 PM EDT | 📍 Mondays & Thursdays | Total Classes: 12",
+    prerequisites: "Basic Science Literacy",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSctq2-l61ZpOnVNYCiKexcl1oqVQnM_U5bJMEoxMTh2wAoUsA/viewform?usp=publish-editor",
     outcomes: [
       "Identify major cell structures and explain their functions.",
@@ -70,8 +72,6 @@ const UN4STEM_COURSES = {
       "Photosynthesis and cellular respiration",
       "DNA, proteins, and cell division"
     ],
-    project: "Students build a visual model of a cell pathway and explain how one disruption can affect the whole system.",
-    bestFor: "Students who like biology, medicine, lab science, or understanding how living systems work.",
     mentors: [
       {
         name: "Emma Florence",
@@ -94,7 +94,7 @@ const UN4STEM_COURSES = {
       {
         name: "Lyla Rodrigues",
         role: "Administration / Social Media Manager",
-        bio: `Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.`,
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
@@ -107,12 +107,14 @@ const UN4STEM_COURSES = {
   },
   "physics": {
     title: "F = Minds Accelerating: Intro to AP Physics 1",
-    short: "Motion and forces",
+    short: "Motion And Forces",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart physics problem solving scene",
     category: "Physical Science",
     level: "Introductory to intermediate",
     overview: "Physics offers a rigorous exploration of the fundamental laws governing motion, energy, and force. Moving beyond simple equations, students develop an intuitive understanding of the physical world through conceptual analysis and quantitative problem-solving.",
+    schedule: "🗓️ June 22 – July 29 | ⏰ 9:00 PM - 10:00 PM EDT | 📍 Mondays, Wednesdays & Fridays | Total Classes: 15",
+    prerequisites: "Algebra I or II Proficiency; Strong Foundation in Basic Trigonometry Required",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdcKr4i_jBlYsOQS2khJTQpN1JgpK6qDd2mcFX-AOrdhmmUGg/viewform?usp=publish-editor",
     outcomes: [
       "Interpret motion using position, velocity, and acceleration.",
@@ -126,8 +128,6 @@ const UN4STEM_COURSES = {
       "Work, energy, and momentum",
       "Waves, sound, and electricity basics"
     ],
-    project: "Students analyze a real motion scenario, create diagrams, and explain the physics behind it.",
-    bestFor: "Students preparing for physical science, engineering, robotics, or advanced STEM courses.",
     mentors: [
       {
         name: "Isabella Wu",
@@ -145,12 +145,14 @@ const UN4STEM_COURSES = {
   },
   "chemistry": {
     title: "Future Lab: Chemistry",
-    short: "Matter and reactions",
+    short: "Matter And Reactions",
     image: "../assets/illustrations/science-lab.svg",
     imageAlt: "Playful clipart chemistry experiment scene",
     category: "Physical Science",
     level: "Introductory",
     overview: "Chemistry investigates the properties of matter, atomic interactions, and the mechanics of chemical transformations. We emphasize structural patterns and molecular modeling to help students grasp the underlying logic of the physical sciences.",
+    schedule: "🗓️ August 3 – August 27 | ⏰ 1:00 PM – 2:00 PM EDT | 📍 Mondays, Wednesdays & Thursdays | Total Classes: 12",
+    prerequisites: "Foundational Understanding of Basic Arithmetic",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdjnwL7VNZOrGnIzS8HctfsVy8zYAEd28WNXdYKuqJ9112QOA/viewform?usp=publish-editor",
     outcomes: [
       "Describe atomic structure and periodic table trends.",
@@ -164,8 +166,6 @@ const UN4STEM_COURSES = {
       "Chemical reactions and equations",
       "Acids, bases, and solutions"
     ],
-    project: "Students investigate a household material and explain its properties using chemistry concepts.",
-    bestFor: "Students who want stronger chemistry foundations for school, biology, medicine, or engineering.",
     mentors: [
       {
         name: "David Lim",
@@ -189,12 +189,14 @@ const UN4STEM_COURSES = {
   },
   "mental-health": {
     title: "Peace of Mind: Navigating Mental Health in a Digital World",
-    short: "Well-being and awareness",
+    short: "Well-Being And Awareness",
     image: "../assets/illustrations/wellness-talk.svg",
     imageAlt: "Playful clipart mental health awareness scene",
     category: "Health",
     level: "Introductory",
     overview: "Mental Health Awareness provides a structured framework for understanding emotional well-being and psychological resilience. The curriculum focuses on identifying stress indicators, fostering healthy coping mechanisms, and navigating support systems with empathy and clarity.",
+    schedule: "🗓️ July 1 – July 17 | ⏰ 11:30 AM – 12:30 PM EDT | 📍 Wednesdays – Fridays | Total Classes: 10",
+    prerequisites: "N/A",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdaiClFG4EEDgpGmILVZNwmpcyzfldxzP3F1YCpaK0e4flGkQ/viewform?usp=publish-editor",
     outcomes: [
       "Recognize common signs of stress and emotional overload.",
@@ -208,8 +210,6 @@ const UN4STEM_COURSES = {
       "Sleep, routines, and academic pressure",
       "Support networks and communication"
     ],
-    project: "Students create a realistic student wellness plan with routines, resources, and support steps.",
-    bestFor: "Students who want practical tools for school stress, self-awareness, and peer support.",
     mentors: [
       {
         name: "Emma Florence",
@@ -227,12 +227,14 @@ const UN4STEM_COURSES = {
   },
   "computer-science": {
     title: "Computer Science",
-    short: "Coding and logic",
+    short: "Coding And Logic",
     image: "../assets/illustrations/laptop-tutoring.svg",
     imageAlt: "Playful clipart computer science learning scene",
     category: "Technology",
     level: "Beginner friendly",
     overview: "Computer Science introduces the core principles of algorithmic thinking, logic design, and software development. Students learn to architect solutions to complex problems, moving from fundamental syntax to the creation of functional, purpose-driven applications.",
+    schedule: "Registration Open for Fall 2026",
+    prerequisites: "Basic Computer Literacy",
     outcomes: [
       "Write readable code using variables, loops, and conditionals.",
       "Use functions to organize repeated logic.",
@@ -245,8 +247,6 @@ const UN4STEM_COURSES = {
       "Data, lists, and simple algorithms",
       "Debugging and project design"
     ],
-    project: "Students build a small interactive program, such as a quiz, calculator, or study tool.",
-    bestFor: "Students interested in coding, apps, robotics, math, or computational thinking.",
     mentors: [
       {
         name: "Lillian Xiao",
@@ -257,7 +257,7 @@ const UN4STEM_COURSES = {
       {
         name: "Lyla Rodrigues",
         role: "Mentor / Social Media Manager",
-        bio: `Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.`,
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
@@ -269,13 +269,15 @@ const UN4STEM_COURSES = {
     ]
   },
   "engineering": {
-    title: "Engineering",
-    short: "Design and systems",
+    title: "From Sparks to Bots: Electrical Engineering and Robotics",
+    short: "Design And Systems",
     image: "../assets/illustrations/science-lab.svg",
     imageAlt: "Playful clipart engineering challenge scene",
     category: "Design",
     level: "Introductory",
     overview: "Engineering explores the systematic process of problem-solving through design, prototyping, and iterative testing. By integrating mathematical precision with creative innovation, students learn to address real-world challenges within technical and structural constraints.",
+    schedule: "Registration Open for Fall 2026",
+    prerequisites: "Foundational Math Skills",
     outcomes: [
       "Use the engineering design process from problem to prototype.",
       "Compare tradeoffs in cost, strength, safety, and usability.",
@@ -288,8 +290,6 @@ const UN4STEM_COURSES = {
       "Systems thinking",
       "Prototyping and iteration"
     ],
-    project: "Students design, sketch, and present a solution to a real community or school problem.",
-    bestFor: "Students who enjoy building, inventing, robotics, architecture, or applied science.",
     mentors: [
       {
         name: "Divyank Bajaj",
@@ -300,7 +300,7 @@ const UN4STEM_COURSES = {
       {
         name: "Lyla Rodrigues",
         role: "Mentor / Social Media Manager",
-        bio: `Lyla is a 16-year-old 10th-grade student from New York with a multifaceted background in engineering, computer science, and psychology. A GEMS club officer and certified lifeguard, she has substantial experience leading hands-on STEM labs for younger students. Lyla aims to break down intimidating topics into manageable components, empowering students to explore the intersection of technology and the human mind.`,
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
@@ -313,12 +313,14 @@ const UN4STEM_COURSES = {
   },
   "arithmetic": {
     title: "Building Bridges to Pre-Algebra",
-    short: "Foundational math skills",
+    short: "Foundational Math Skills",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart arithmetic practice scene",
     category: "Mathematics",
     level: "Foundational",
     overview: "Elementary Arithmetic establishes a robust mathematical foundation by focusing on operational fluency and number theory. Students move beyond rote calculation to understand the conceptual 'why' behind mathematical strategies and real-world problem-solving.",
+    schedule: "🗓️ June 29 – July 16 | ⏰ 10:00 AM – 11:15 AM EDT | 📍 Mondays – Thursdays | Total Classes: 12",
+    prerequisites: "N/A",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScETGmVOJSH9xTqlnhkKwUdoqqihges9hj2W3eS0-BKFs07XQ/viewform?usp=publish-editor",
     outcomes: [
       "Add, subtract, multiply, and divide with confidence.",
@@ -332,8 +334,6 @@ const UN4STEM_COURSES = {
       "Fractions and decimals",
       "Percentages and word problems"
     ],
-    project: "Students solve a real budgeting or measurement challenge using arithmetic skills.",
-    bestFor: "Students who need a stronger base before pre-algebra or want more math confidence.",
     mentors: [
       {
         name: "Emma Florence",
@@ -351,12 +351,14 @@ const UN4STEM_COURSES = {
   },
   "pre-algebra": {
     title: "Future Algebra Survivors: Pre-Algebra",
-    short: "Intro to algebra",
+    short: "Intro To Pre-Algebra",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart pre algebra scene",
     category: "Mathematics",
     level: "Foundational to intermediate",
     overview: "Pre-Algebra serves as the critical transition from concrete arithmetic to abstract mathematical reasoning. Students develop proficiency in symbolic representation, variable manipulation, and the foundational logic required for advanced algebraic studies.",
+    schedule: "Session 1: July 13 – August 17 | 3:30 PM – 4:45 PM EDT (Mon, Wed, Fri)\nSession 2: July 20 – August 24 | 8:00 PM – 9:00 PM EDT (Mon, Wed, Fri)",
+    prerequisites: "N/A",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScGUgGH4hvic1zXamtUgyreOP-a2WZKfF9VjjZCruYe5MWLuA/viewform?usp=publish-editor",
     outcomes: [
       "Simplify expressions using order of operations.",
@@ -370,8 +372,6 @@ const UN4STEM_COURSES = {
       "Ratios, rates, and proportions",
       "Coordinate plane and graphing basics"
     ],
-    project: "Students model a real pattern, such as pricing or distance over time, with tables, equations, and graphs.",
-    bestFor: "Students preparing for Algebra 1 or looking to make math feel more organized.",
     mentors: [
       {
         name: "Rohan Pandit",
@@ -395,12 +395,14 @@ const UN4STEM_COURSES = {
   },
   "algebra-1": {
     title: "Finding X: Algebra I Expedition",
-    short: "Core algebra",
+    short: "Core Algebra",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart algebra 1 scene",
     category: "Mathematics",
     level: "Intermediate",
     overview: "Algebra 1 introduces the formal language of functions, linear relationships, and systems analysis. By mastering multiple representations—tabular, graphical, and symbolic—students build the essential toolkit for all future high-level mathematics.",
+    schedule: "🗓️ June 29 – August 7 | ⏰ 4:00 PM – 5:30 PM EDT | 📍 Mondays, Wednesdays & Fridays | Total Classes: 18",
+    prerequisites: "Proficiency in Pre-Algebra Concepts",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdwBZYT4rMXHPMjBu9_jNRq3vsrroidu3X4CfVGLsGCoEoWYg/viewform?usp=header",
     outcomes: [
       "Solve linear equations and inequalities.",
@@ -414,8 +416,6 @@ const UN4STEM_COURSES = {
       "Systems of equations",
       "Exponents and introductory quadratics"
     ],
-    project: "Students use a linear model to analyze a real-world trend and explain what the slope and intercept mean.",
-    bestFor: "Students taking Algebra 1, preparing for exams, or strengthening high school math foundations.",
     mentors: [
       {
         name: "Elliot Chang",
@@ -434,18 +434,20 @@ const UN4STEM_COURSES = {
         name: "Arjun Zagade",
         role: "Mentor (Grade 9)",
         bio: `Arjun is a mathematics instructor at UN4STEM, passionate about AI and quantitative finance. A student at Princeton Day School, he actively participates in Mathletes, leading his team to the MAA MathMadness quarterfinals, and engages in computer science and robotics. Outside of school, Arjun develops coding projects in financial analytics and AI, and runs a mathematics Instagram page (@arjunmathswhiz) to make advanced concepts accessible and engaging.`,
-        image: "../assets/mentors/arjun-zagade.jpeg"
+        image: "../assets/mentors/arjun-zagade.jpg"
       }
     ]
   },
   "algebra-2": {
     title: "Algebra II & Trigonometry",
-    short: "Advanced algebra",
+    short: "Advanced Algebra",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart algebra 2 scene",
     category: "Mathematics",
     level: "Advanced high school",
     overview: "Algebra 2 extends mathematical modeling to complex functions, including polynomial, logarithmic, and rational systems. The course emphasizes the deep connections between algebraic transformations and their applications in data science and physical modeling.",
+    schedule: "🗓️ July 8 – August 10 | ⏰ 10:00 AM - 11:00 AM EDT | 📍 Mondays, Wednesdays, Fridays & Saturdays | Total Classes: 20",
+    prerequisites: "Completion of Algebra I; Geometry Proficiency, particularly Coordinate Geometry",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSeazf8IzFjbqMgMEQsGGGqMWr3gFFP3inu7HJsd4cfcZEL65A/viewform?usp=publish-editor",
     outcomes: [
       "Analyze polynomial, exponential, logarithmic, and rational functions.",
@@ -459,8 +461,6 @@ const UN4STEM_COURSES = {
       "Rational expressions and equations",
       "Complex numbers and function transformations"
     ],
-    project: "Students compare two types of functions and decide which better models a real growth or change scenario.",
-    bestFor: "Students currently in Algebra 2 or preparing for precalculus, science, or standardized tests.",
     mentors: [
       {
         name: "Ayden Ta",
@@ -484,12 +484,14 @@ const UN4STEM_COURSES = {
   },
   "abstract-algebra": {
     title: "∃ ¬ (¬ (Introduction to the Art of Logic))",
-    short: "Advanced theory",
+    short: "Advanced Theory",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart abstract algebra scene",
     category: "Mathematics",
     level: "Advanced enrichment",
     overview: "Abstract Algebra provides a high-level introduction to the formal structures of groups, rings, and fields. This enrichment course shifts the focus from computation to the beauty of mathematical proof and the underlying symmetry of logical systems.",
+    schedule: "🗓️ July 5 – August 8 | ⏰ 9:00 AM – 11:00 AM EDT | 📍 Saturdays & Sundays | Total Classes: 10",
+    prerequisites: "Solid Understanding of Algebra I Fundamentals",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSemC9w2Zk31i0cw8v6J-YNxB_29P2x0kzx9K2tJyPDbfiYRvw/viewform?usp=publish-editor",
     outcomes: [
       "Understand sets, operations, identity elements, and inverses.",
@@ -503,8 +505,6 @@ const UN4STEM_COURSES = {
       "Rings and fields",
       "Proof strategies and structure"
     ],
-    project: "Students analyze the symmetries of an object and describe the group structure behind them.",
-    bestFor: "Students who enjoy advanced math, proofs, contests, or theoretical problem solving.",
     mentors: [
       {
         name: "Elliot Chang",

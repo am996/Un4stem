@@ -39,11 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setText("course-title", course.title);
   setText("course-subtitle", course.short);
-  setText("course-category", course.category);
-  setText("course-level", course.level);
   setText("course-overview", course.overview);
-  setText("course-project", course.project);
-  setText("course-best-for", course.bestFor);
+  setText("course-schedule", course.schedule);
+  setText("course-prerequisites", course.prerequisites);
 
   const illustration = document.getElementById("course-illustration");
   if (illustration) {
