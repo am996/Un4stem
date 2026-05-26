@@ -57,7 +57,7 @@ const UN4STEM_COURSES = {
     category: "Biology",
     level: "Introductory to intermediate",
     overview: "Cellular Biology provides a comprehensive exploration of life at the microscopic level. By examining the intricate machinery of organelles and the dynamics of cellular transport, students gain a foundational understanding of the biological processes that drive all living organisms.",
-    schedule: "🗓️ June 22 – July 31 | ⏰ 5:00 PM – 6:30 PM EDT | 📍 Mondays & Thursdays | Total Classes: 12",
+    schedule: "🗓️ June 22 – July 31 | ⏰ 5:00 PM – 6:30 PM EDT | 📍 Mondays & Fridays | Total Classes: 12",
     prerequisites: "Basic Science Literacy",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSctq2-l61ZpOnVNYCiKexcl1oqVQnM_U5bJMEoxMTh2wAoUsA/viewform?usp=publish-editor",
     outcomes: [
