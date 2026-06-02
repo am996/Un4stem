@@ -1,14 +1,27 @@
-function fillList(elementId, items) {
-  const list = document.getElementById(elementId);
-  if (!list) return; // Safety check: skip if element is missing
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
 
-  list.innerHTML = "";
+function formatCourseInfo(text) {
+  if (!text) return "";
 
-  items.forEach(item => {
-    const li = document.createElement("li");
-    li.textContent = item;
-    list.appendChild(li);
-  });
+  return String(text)
+    .split(/\n\s*\n/)
+    .map(group => {
+      const rows = group
+        .split("\n")
+        .filter(Boolean)
+        .map(line => `<span>${escapeHtml(line)}</span>`)
+        .join("");
+
+      return `<span class="course-info-row">${rows}</span>`;
+    })
+    .join("");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -40,8 +53,21 @@ document.addEventListener("DOMContentLoaded", () => {
   setText("course-title", course.title);
   setText("course-subtitle", course.short);
   setText("course-overview", course.overview);
-  setText("course-schedule", course.schedule);
-  setText("course-prerequisites", course.prerequisites);
+  const scheduleEl = document.getElementById("course-schedule");
+  if (scheduleEl) {
+    scheduleEl.innerHTML = `<div class="course-info-list">${formatCourseInfo(course.schedule)}</div>`;
+  }
+
+  const prerequisitesEl = document.getElementById("course-prerequisites");
+  if (prerequisitesEl) {
+    prerequisitesEl.innerHTML = `<div class="course-info-list">${formatCourseInfo(course.prerequisites)}</div>`;
+  }
+
+  const detailGrid = document.querySelector(".detail-grid");
+  const registerContainer = document.getElementById("course-registration");
+  if (detailGrid && registerContainer && registerContainer.parentNode) {
+    registerContainer.parentNode.insertBefore(detailGrid, registerContainer);
+  }
 
   const illustration = document.getElementById("course-illustration");
   if (illustration) {
@@ -49,36 +75,10 @@ document.addEventListener("DOMContentLoaded", () => {
     illustration.alt = course.imageAlt;
   }
 
-  fillList("course-outcomes", course.outcomes);
-  fillList("course-topics", course.topics);
-
   // Render Mentors
   const mentorContainer = document.getElementById("course-mentors");
   if (mentorContainer && course.mentors) {
-    const getGradeNum = (role) => {
-      const r = role.toLowerCase();
-      if (r.includes("president") && !r.includes("vice")) return -2;
-      if (r.includes("vice president")) return -1;
-      const match = role.match(/Grade\s+(\d+)/i);
-      return match ? parseInt(match[1], 10) : 100;
-    };
-
-    // Sort: Lead vs Assistant, then Grade (9 to 12), then Alphabetical
-    const sortedMentors = [...course.mentors].sort((a, b) => {
-      const aIsAssistant = a.role.toLowerCase().includes("assistant");
-      const bIsAssistant = b.role.toLowerCase().includes("assistant");
-
-      // Assistants always go to the bottom
-      if (aIsAssistant !== bIsAssistant) return aIsAssistant ? 1 : -1;
-
-      const gradeA = getGradeNum(a.role);
-      const gradeB = getGradeNum(b.role);
-      if (gradeA !== gradeB) return gradeA - gradeB;
-
-      return a.name.localeCompare(b.name);
-    });
-
-    mentorContainer.innerHTML = sortedMentors.map(m => `
+    mentorContainer.innerHTML = course.mentors.map(m => `
       <div class="card mentor-card">
         <img src="${m.image}" alt="${m.name}" class="mentor-photo">
         <h3>${m.name}</h3>
@@ -89,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Render Registration CTA
-  const registerContainer = document.getElementById("course-registration");
   if (registerContainer) {
     if (course.registrationLink) {
       registerContainer.innerHTML = `
@@ -103,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
       registerContainer.innerHTML = `
         <div style="text-align: center; margin-bottom: 50px;">
           <h3>Ready to join us?</h3>
-          <a class="btn btn-red" href="../apply.html">Apply Now</a>
+          <a class="btn btn-red" href="../apply.html">Volunteer Now</a>
         </div>
       `;
     }
