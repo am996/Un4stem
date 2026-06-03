@@ -339,7 +339,7 @@ const UN4STEM_COURSES = {
     category: "Mathematics",
     level: "Foundational to intermediate",
     overview: "This course provides students with a comprehensive foundation for success in Algebra I and higher-level mathematics. Students will explore real numbers, rational and irrational numbers, expressions, equations, inequalities, ratios, rates, proportions, percentages, probability, statistics, geometry, and measurement. The course emphasizes algebraic thinking through solving increasingly complex equations, interpreting mathematical relationships, and applying mathematics to real-world situations. Students will also develop strong problem-solving strategies, logical reasoning skills, and mathematical communication abilities while building confidence with both numerical and abstract concepts. By the end of the course, students will be well-prepared for the transition into formal algebra and advanced mathematical studies.",
-    schedule: "Session 1\n🗓️ July 13 – August 17\n⏰ 3:30 PM – 4:45 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15\n\nSession 2\n🗓️ July 20 – August 24\n⏰ 8:00 PM – 9:00 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15",
+    schedule: "🗓️ July 6 – August 10\n⏰ 10:00 AM – 11:15 AM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15",
     prerequisites: "N/A",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScGUgGH4hvic1zXamtUgyreOP-a2WZKfF9VjjZCruYe5MWLuA/viewform?usp=publish-editor",
     outcomes: [
