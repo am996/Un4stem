@@ -51,7 +51,7 @@ const UN4STEM_COURSES = {
     category: "Biology",
     level: "Introductory to intermediate",
     overview: "This course introduces students to the fundamental principles that govern living organisms and biological systems. Students will explore the chemistry of life, including water, biological molecules, and the building blocks that make life possible. They will learn about cell structure and function, how materials move in and out of cells, and how cells communicate to maintain balance within organisms. The course also covers photosynthesis, cellular respiration, genetics, heredity, gene expression, evolution, and ecology. Through these topics, students will develop a deeper understanding of how living things grow, reproduce, adapt, and interact with their environments while strengthening their scientific reasoning, analytical thinking, and problem-solving skills.",
-    schedule: "🗓️ June 22 – July 31\n⏰ 5:00 PM – 6:30 PM EDT\n📍 Mondays & Fridays\nTotal Classes: 12",
+    schedule: "🗓️ June 22 – July 31\n⏰ 5:00 PM – 6:30 PM EDT\n📍 Mondays & Thursdays\nTotal Classes: 12",
     prerequisites: "Basic Science Literacy",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSctq2-l61ZpOnVNYCiKexcl1oqVQnM_U5bJMEoxMTh2wAoUsA/viewform?usp=publish-editor",
     outcomes: [
@@ -339,7 +339,7 @@ const UN4STEM_COURSES = {
     category: "Mathematics",
     level: "Foundational to intermediate",
     overview: "This course provides students with a comprehensive foundation for success in Algebra I and higher-level mathematics. Students will explore real numbers, rational and irrational numbers, expressions, equations, inequalities, ratios, rates, proportions, percentages, probability, statistics, geometry, and measurement. The course emphasizes algebraic thinking through solving increasingly complex equations, interpreting mathematical relationships, and applying mathematics to real-world situations. Students will also develop strong problem-solving strategies, logical reasoning skills, and mathematical communication abilities while building confidence with both numerical and abstract concepts. By the end of the course, students will be well-prepared for the transition into formal algebra and advanced mathematical studies.",
-    schedule: "🗓️ July 6 – August 10\n⏰ 10:00 AM – 11:15 AM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15",
+    schedule: "Session 1\n🗓️ July 13 – August 17\n⏰ 3:30 PM – 4:45 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15\n\nSession 2\n🗓️ July 20 – August 24\n⏰ 8:00 PM – 9:00 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15",
     prerequisites: "N/A",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLScGUgGH4hvic1zXamtUgyreOP-a2WZKfF9VjjZCruYe5MWLuA/viewform?usp=publish-editor",
     outcomes: [
