@@ -891,6 +891,13 @@ header .image-frame {
   text-align: left;
 }
 
+.detail-panel #course-overview {
+  max-width: none;
+  line-height: 1.75;
+  column-count: 2;
+  column-gap: 36px;
+}
+
 .detail-panel ul {
   margin: 12px 0 0 18px;
   color: var(--muted); /* Muted text color */
@@ -1231,6 +1238,10 @@ footer {
 
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .detail-panel #course-overview {
+    column-count: 1;
   }
 
   .grid {

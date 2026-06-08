@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Render Mentors
   const mentorContainer = document.getElementById("course-mentors");
-  if (mentorContainer && course.mentors) {
+  if (mentorContainer && Array.isArray(course.mentors) && course.mentors.length) {
     mentorContainer.innerHTML = course.mentors.map(m => `
       <div class="card mentor-card">
         <img src="${m.image}" alt="${m.name}" class="mentor-photo">
@@ -86,6 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="mentor-bio">${m.bio}</p>
       </div>
     `).join("");
+  } else if (mentorContainer && mentorContainer.parentElement) {
+    mentorContainer.parentElement.hidden = true;
   }
 
   // Render Registration CTA

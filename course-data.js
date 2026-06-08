@@ -7,7 +7,7 @@ const UN4STEM_COURSES = {
     category: "Health",
     level: "Introductory",
     overview: "This course is designed for students interested in understanding the structure and function of the human body. Students will explore the major body systems, including the cardiovascular, pulmonary, nervous, digestive, endocrine, skeletal, reproductive, and immune systems, while learning how these systems work together to maintain health and support everyday life. The course will examine key biological processes, organ functions, and the body's ability to respond to internal and external changes. Through scientific exploration and real-world examples, students will develop a deeper appreciation for human biology while strengthening their analytical thinking, scientific literacy, and understanding of health-related concepts. This course provides an excellent foundation for students interested in medicine, healthcare, biology, or life sciences.",
-    schedule: "Session 1\n🗓️ June 29 – August 7\n⏰ 12:00 PM – 1:30 PM EDT\n📍 Tuesdays, Thursdays & Saturdays\nTotal Classes: 18\n\nSession 2\n🗓️ June 29 – August 7\n⏰ 5:45 PM – 7:15 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 18",
+    schedule: "Session 1\n🗓️ June 30 – August 8\n⏰ 12:00 PM – 1:15 PM EDT\n📍 Tuesdays, Thursdays & Saturdays\nTotal Classes: 18\n\nSession 2\n🗓️ June 29 – August 7\n⏰ 6:30 PM – 8:00 PM EDT\n📍 Mondays, Wednesdays & Fridays\nNo Class Week of July 6th\nTotal Classes: 18",
     prerequisites: "Fundamental understanding of human biology or general science recommended",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd02tjN6sn-DhPL3td9hS1LjAWy8L79BYmrXvBASHUkTNzK7Q/viewform?usp=publish-editor",
     outcomes: [
@@ -51,7 +51,7 @@ const UN4STEM_COURSES = {
     category: "Biology",
     level: "Introductory to intermediate",
     overview: "This course introduces students to the fundamental principles that govern living organisms and biological systems. Students will explore the chemistry of life, including water, biological molecules, and the building blocks that make life possible. They will learn about cell structure and function, how materials move in and out of cells, and how cells communicate to maintain balance within organisms. The course also covers photosynthesis, cellular respiration, genetics, heredity, gene expression, evolution, and ecology. Through these topics, students will develop a deeper understanding of how living things grow, reproduce, adapt, and interact with their environments while strengthening their scientific reasoning, analytical thinking, and problem-solving skills.",
-    schedule: "🗓️ June 22 – July 31\n⏰ 5:00 PM – 6:30 PM EDT\n📍 Mondays & Thursdays\nTotal Classes: 12",
+    schedule: "🗓️ June 22 – July 31\n⏰ 5:00 PM – 6:30 PM EDT\n📍 Mondays & Fridays\nTotal Classes: 12",
     prerequisites: "Basic Science Literacy",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSctq2-l61ZpOnVNYCiKexcl1oqVQnM_U5bJMEoxMTh2wAoUsA/viewform?usp=publish-editor",
     outcomes: [
@@ -207,6 +207,67 @@ const UN4STEM_COURSES = {
       }
     ]
   },
+  "psychology": {
+    title: "Psychology",
+    short: "Mind, Behavior, And Well-Being",
+    image: "../assets/illustrations/wellness-talk.svg",
+    imageAlt: "Playful clipart psychology learning scene",
+    category: "Health",
+    level: "Introductory",
+    overview: "Psychology introduces students to the scientific study of the mind, behavior, emotion, and human development. Students explore how people think, learn, communicate, respond to stress, form relationships, and make decisions. The course emphasizes real-world examples, respectful discussion, and evidence-based thinking so students can better understand themselves and the people around them.",
+    schedule: "Scheduling will be provided soon",
+    prerequisites: "N/A",
+    outcomes: [
+      "Describe major areas of psychology and behavioral science.",
+      "Connect thoughts, emotions, and behavior to everyday examples.",
+      "Discuss stress, learning, memory, and communication respectfully.",
+      "Use evidence-based reasoning when thinking about human behavior."
+    ],
+    topics: [
+      "Introduction to psychology",
+      "Learning, memory, and development",
+      "Emotion, stress, and coping",
+      "Social behavior and communication"
+    ],
+    mentors: [
+      {
+        name: "Lian Guo",
+        role: "Mentor (Grade 10)",
+        bio: `Lian is a 15-year-old 10th-grade student dedicated to excellence across the sciences and humanities. As an experienced tutor and Red Cross secretary, she has cultivated an adaptable teaching style focused on conceptual clarity. An accomplished musician who has performed at Carnegie Hall, Lian integrates discipline and creativity into her UN4STEM sessions to help students navigate psychology and math with confidence and purpose.`,
+        image: "../assets/mentors/lian-guo.jpeg"
+      },
+      {
+        name: "Lyla Rodrigues",
+        role: "Administration / Social Media Manager",
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
+        image: "../assets/mentors/lyla-rodrigues.jpeg"
+      }
+    ]
+  },
+  "quantum-physics": {
+    title: "Quantum Physics",
+    short: "Modern Physics Concepts",
+    image: "../assets/illustrations/physics.svg",
+    imageAlt: "Playful clipart quantum physics learning scene",
+    category: "Physical Science",
+    level: "Advanced enrichment",
+    overview: "Quantum Physics introduces students to the strange and fascinating ideas that shape modern physics, including wave-particle duality, uncertainty, quantization, and atomic models. The course focuses on conceptual understanding, scientific reasoning, and careful discussion of how quantum ideas changed the way scientists understand matter, light, and measurement.",
+    schedule: "Scheduling will be provided soon",
+    prerequisites: "Strong foundation in algebra and introductory physics recommended",
+    outcomes: [
+      "Explain why classical physics needed quantum ideas.",
+      "Describe wave-particle duality and quantized energy.",
+      "Interpret simple models of atoms, light, and measurement.",
+      "Connect quantum concepts to modern technology."
+    ],
+    topics: [
+      "Light, waves, and particles",
+      "Atomic models and quantized energy",
+      "Uncertainty and measurement",
+      "Quantum ideas in modern technology"
+    ],
+    mentors: []
+  },
   "computer-science": {
     title: "Computer Science",
     short: "Coding And Logic",
@@ -215,7 +276,7 @@ const UN4STEM_COURSES = {
     category: "Technology",
     level: "Beginner friendly",
     overview: "Computer Science introduces the core principles of algorithmic thinking, logic design, and software development. Students learn to architect solutions to complex problems, moving from fundamental syntax to the creation of functional, purpose-driven applications.",
-    schedule: "Scheduling will be provided soon",
+    schedule: "Summer Session 2026\n🗓️ July 5 – August 1\n⏰ 3:00 PM – 4:00 PM EDT\n📍 Saturdays & Sundays\nTotal Classes: 8",
     prerequisites: "Basic Computer Literacy",
     outcomes: [
       "Write readable code using variables, loops, and conditionals.",
@@ -258,7 +319,7 @@ const UN4STEM_COURSES = {
     category: "Design",
     level: "Introductory",
     overview: "Engineering explores the systematic process of problem-solving through design, prototyping, and iterative testing. By integrating mathematical precision with creative innovation, students learn to address real-world challenges within technical and structural constraints.",
-    schedule: "Scheduling will be provided soon",
+    schedule: "Summer Session 2026\n🗓️ July 5 – August 1\n⏰ 1:00 PM – 2:00 PM EDT\n📍 Saturdays & Sundays\nTotal Classes: 8\n\nSessions 1–4: Electrical Engineering (Aryan M.)\nSessions 5–8: Robotics & Structural Engineering (Divyank B.)",
     prerequisites: "Foundational Math Skills",
     outcomes: [
       "Use the engineering design process from problem to prototype.",
@@ -383,7 +444,7 @@ const UN4STEM_COURSES = {
     category: "Mathematics",
     level: "Intermediate",
     overview: "This Algebra I course introduces students to the language of mathematics through the study of functions, equations, inequalities, and mathematical modeling. Students will learn how to represent and analyze relationships using graphs, tables, equations, and real-world applications. Major topics include linear equations and inequalities, systems of equations, functions, exponents, polynomials, factoring, quadratic equations, rational expressions, radicals, and introductory statistics. Throughout the course, students will develop critical problem-solving skills, strengthen algebraic reasoning, and learn how mathematics can be used to model and interpret real-life situations. This course establishes the essential foundation required for future success in Algebra II, precalculus, and other advanced STEM courses.",
-    schedule: "🗓️ June 29 – August 7\n⏰ 4:00 PM – 5:30 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 18",
+    schedule: "🗓️ June 29 – August 7\n⏰ 5:00 PM – 6:30 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 18",
     prerequisites: "Proficiency in Pre-Algebra Concepts",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdwBZYT4rMXHPMjBu9_jNRq3vsrroidu3X4CfVGLsGCoEoWYg/viewform?usp=header",
     outcomes: [
