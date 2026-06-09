@@ -833,15 +833,23 @@ header .image-frame {
   align-self: flex-start;
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 3px 6px;
   min-height: 28px;
-  padding: 5px 12px;
+  max-width: 100%;
+  padding: 6px 12px;
   border: 1px solid rgba(30, 58, 138, 0.2);
   border-radius: 999px;
   background: #fff;
   color: var(--navy);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   line-height: 1.2;
+}
+
+.course-grade-label {
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .course-desc {
