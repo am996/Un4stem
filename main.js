@@ -1,7 +1,15 @@
+function restorePageTransitionState() {
+  document.body.classList.remove("fade-out");
+  document.body.classList.add("loaded");
+  document.body.style.overflow = "";
+}
+
+window.addEventListener("pageshow", restorePageTransitionState);
+
 document.addEventListener("DOMContentLoaded", () => {
   // Fade IN on load
   requestAnimationFrame(() => {
-    document.body.classList.add("loaded");
+    restorePageTransitionState();
   });
 
   // Scroll Reveal Observer
