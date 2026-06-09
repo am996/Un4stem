@@ -204,6 +204,12 @@ const UN4STEM_COURSES = {
         role: "Vice President (Grade 10)",
         bio: `Emma is a 15-year-old 10th-grade student and the Vice President of UN4STEM. A mental health advocate and Girl Scout Gold Award candidate, she serves as the Co-President of her school's Mental Health Awareness Club. Emma integrates her leadership experience to mentor students in wellness and arithmetic, fostering a supportive global network.`,
         image: "../assets/mentors/emma-florence.jpeg"
+      },
+      {
+        name: "Rachel Cai",
+        role: "Mentor (Grade 10)",
+        bio: `Rachel is a 16-year-old 10th-grade student from New York with a natural talent for community service and a contagious joy for learning. An active member of her school’s robotics club focused on AI and online safety, she creates engaging educational environments. Rachel leads sessions in wellness and arithmetic, helping students navigate STEM with confidence.`,
+        image: "../assets/mentors/rachel-cai.jpeg"
       }
     ]
   },

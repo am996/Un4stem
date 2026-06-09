@@ -829,6 +829,21 @@ header .image-frame {
   margin-bottom: 16px;
 }
 
+.course-grade-tag {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 12px;
+  border: 1px solid rgba(30, 58, 138, 0.2);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 .course-desc {
   font-size: 18px;
   color: var(--muted); /* Muted text color */
