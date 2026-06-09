@@ -967,6 +967,7 @@ header .image-frame {
 #course-mentors, #mentors-grid {
   display: flex;
   flex-wrap: wrap;
+  align-items: stretch;
   justify-content: center;
   gap: 24px;
   grid-template-columns: none; /* Override the default grid behavior */
@@ -974,10 +975,15 @@ header .image-frame {
 
 .mentor-card {
   padding: 40px 30px;
-  flex: 0 1 calc(50% - 12px); /* Set to 50% width minus half the gap to maintain 2-column look */
+  flex: 0 1 min(100%, 520px);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+#course-mentors .mentor-card {
+  flex-basis: min(100%, 560px);
 }
 
 .mentor-photo {
