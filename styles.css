@@ -949,6 +949,18 @@ header .image-frame {
   margin-bottom: 8px;
 }
 
+.course-mentor-section {
+  margin-top: 76px;
+  text-align: center;
+}
+
+.course-mentor-section h2 {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
 .back-link {
   display: inline-block;
   margin-top: 22px;
@@ -1423,6 +1435,14 @@ footer {
   .course-registration-cta {
     margin: 64px auto 44px;
     padding: 24px 18px 28px;
+  }
+
+  .course-mentor-section {
+    margin-top: 54px;
+  }
+
+  .course-mentor-section h2 {
+    margin-bottom: 26px;
   }
 
   footer {
