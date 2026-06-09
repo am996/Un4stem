@@ -82,7 +82,7 @@ const UN4STEM_COURSES = {
       {
         name: "Lyla Rodrigues",
         role: "Administration / Social Media Manager",
-        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in Python Programming for Beginners, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       },
       {
@@ -245,7 +245,7 @@ const UN4STEM_COURSES = {
       {
         name: "Lyla Rodrigues",
         role: "Administration / Social Media Manager",
-        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in Python Programming for Beginners, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       }
     ]
@@ -275,15 +275,16 @@ const UN4STEM_COURSES = {
     mentors: []
   },
   "computer-science": {
-    title: "Computer Science",
+    title: "Python Programming for Beginners",
     short: "Coding And Logic",
     image: "../assets/illustrations/laptop-tutoring.svg",
-    imageAlt: "Playful clipart computer science learning scene",
+    imageAlt: "Playful clipart Python Programming for Beginners learning scene",
     category: "Technology",
     level: "Beginner friendly",
-    overview: "Computer Science introduces the core principles of algorithmic thinking, logic design, and software development. Students learn to architect solutions to complex problems, moving from fundamental syntax to the creation of functional, purpose-driven applications.",
+    overview: "Python Programming for Beginners introduces the core principles of algorithmic thinking, logic design, and software development. Students learn to architect solutions to complex problems, moving from fundamental syntax to the creation of functional, purpose-driven applications.",
     schedule: "Summer Session 2026\n🗓️ July 5 – August 1\n⏰ 3:00 PM – 4:00 PM EDT\n📍 Saturdays & Sundays\nTotal Classes: 8",
     prerequisites: "Basic Computer Literacy",
+    registrationLink: "https://forms.gle/kxhBi9dNpNYBwMeN6",
     outcomes: [
       "Write readable code using variables, loops, and conditionals.",
       "Use functions to organize repeated logic.",
@@ -300,7 +301,7 @@ const UN4STEM_COURSES = {
       {
         name: "Aryan Mantena",
         role: "Mentor / Web Dev",
-        bio: `Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Computer Science and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.`,
+        bio: `Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Python Programming for Beginners and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.`,
         image: "../assets/mentors/aryan-mantena.jpeg"
       },
       {
@@ -312,7 +313,7 @@ const UN4STEM_COURSES = {
       {
         name: "Lyla Rodrigues",
         role: "Mentor / Social Media Manager",
-        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in Python Programming for Beginners, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       }
     ]
@@ -327,6 +328,7 @@ const UN4STEM_COURSES = {
     overview: "Engineering explores the systematic process of problem-solving through design, prototyping, and iterative testing. By integrating mathematical precision with creative innovation, students learn to address real-world challenges within technical and structural constraints.",
     schedule: "Summer Session 2026\n🗓️ July 5 – August 1\n⏰ 1:00 PM – 2:00 PM EDT\n📍 Saturdays & Sundays\nTotal Classes: 8\n\nSessions 1–4: Electrical Engineering (Aryan M.)\nSessions 5–8: Robotics & Structural Engineering (Divyank B.)",
     prerequisites: "Foundational Math Skills",
+    registrationLink: "https://forms.gle/6usavcaWQ7UPWxm29",
     outcomes: [
       "Use the engineering design process from problem to prototype.",
       "Compare tradeoffs in cost, strength, safety, and usability.",
@@ -343,7 +345,7 @@ const UN4STEM_COURSES = {
       {
         name: "Aryan Mantena",
         role: "Mentor / Web Dev",
-        bio: `Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Computer Science and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.`,
+        bio: `Aryan is a 15-year-old 10th-grade student who joined UN4STEM to translate his interest in technology into impactful peer mentorship. A Python developer and three-year FIRST Lego League finalist with an A+ in engineering studies, he leads instruction for Python Programming for Beginners and Engineering 101, helping younger learners navigate technical hurdles with curiosity and resilience.`,
         image: "../assets/mentors/aryan-mantena.jpeg"
       },
       {
@@ -355,7 +357,7 @@ const UN4STEM_COURSES = {
       {
         name: "Lyla Rodrigues",
         role: "Mentor / Social Media Manager",
-        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in computer science, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
+        bio: `Lyla is a 16-year-old student from New York with strong experience in STEM, leadership, and teaching. She is working on independent research projects in Python Programming for Beginners, electrical engineering, and psychology, and has earned an A doing coursework in each. As a chapter head and club officer in GEMS, she has led hands-on STEM labs for 4th- and 5th-grade students. Beyond academics, Lyla volunteers at her local church and library, works as a lifeguard and camp counselor, and has studied piano for many years, completing NYSSMA Level 6 with an A+ and performing at Lincoln Center.`,
         image: "../assets/mentors/lyla-rodrigues.jpeg"
       }
     ]
@@ -475,7 +477,7 @@ const UN4STEM_COURSES = {
       {
         name: "Arjun Zagade",
         role: "Mentor (Grade 9)",
-        bio: `Arjun is a mathematics instructor at UN4STEM, passionate about AI and quantitative finance. A student at Princeton Day School, he actively participates in Mathletes, leading his team to the MAA MathMadness quarterfinals, and engages in computer science and robotics. Outside of school, Arjun develops coding projects in financial analytics and AI, and runs a mathematics Instagram page (@arjunmathswhiz) to make advanced concepts accessible and engaging.`,
+        bio: `Arjun is a mathematics instructor at UN4STEM, passionate about AI and quantitative finance. A student at Princeton Day School, he actively participates in Mathletes, leading his team to the MAA MathMadness quarterfinals, and engages in Python Programming for Beginners and robotics. Outside of school, Arjun develops coding projects in financial analytics and AI, and runs a mathematics Instagram page (@arjunmathswhiz) to make advanced concepts accessible and engaging.`,
         image: "../assets/mentors/arjun-zagade.jpeg"
       },
       {
@@ -537,7 +539,7 @@ const UN4STEM_COURSES = {
     imageAlt: "Playful clipart abstract algebra scene",
     category: "Mathematics",
     level: "Advanced enrichment",
-    overview: "This course introduces students to the foundations of mathematical reasoning and formal proof, focusing on how mathematicians and computer scientists analyze arguments, identify patterns, and determine the validity of statements. Students will study propositional logic, truth tables, quantifiers, modular arithmetic, and introductory abstract algebra concepts such as groups and fields. Drawing inspiration from the work of mathematician Richard T. Bumby, whose problem-solving and mathematical reasoning approaches have influenced generations of students, the course emphasizes rigorous thinking, logical structure, and creative problem-solving. Through challenging exercises and discussions, students will learn how to construct clear arguments, analyze complex ideas systematically, and develop the precise reasoning skills that form the foundation of advanced mathematics, computer science, philosophy, and theoretical sciences.",
+    overview: "This course introduces students to the foundations of mathematical reasoning and formal proof, focusing on how mathematicians and computer scientists analyze arguments, identify patterns, and determine the validity of statements. Students will study propositional logic, truth tables, quantifiers, modular arithmetic, and introductory abstract algebra concepts such as groups and fields. Drawing inspiration from the work of mathematician Richard T. Bumby, whose problem-solving and mathematical reasoning approaches have influenced generations of students, the course emphasizes rigorous thinking, logical structure, and creative problem-solving. Through challenging exercises and discussions, students will learn how to construct clear arguments, analyze complex ideas systematically, and develop the precise reasoning skills that form the foundation of advanced mathematics, Python Programming for Beginners, philosophy, and theoretical sciences.",
     schedule: "🗓️ July 5 – August 8\n⏰ 9:00 AM – 11:00 AM EDT\n📍 Saturdays & Sundays\nTotal Classes: 10",
     prerequisites: "Solid Understanding of Algebra I Fundamentals",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSemC9w2Zk31i0cw8v6J-YNxB_29P2x0kzx9K2tJyPDbfiYRvw/viewform?usp=publish-editor",
