@@ -94,15 +94,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (registerContainer) {
     if (course.registrationLink) {
       registerContainer.innerHTML = `
-        <div style="text-align: center; margin-bottom: 50px;">
+        <div class="course-registration-cta">
           <h3>Ready to start learning?</h3>
-          <p style="margin-bottom: 20px; margin-left: auto; margin-right: auto;">Secure your spot in this course by filling out our student registration form.</p>
+          <p>Secure your spot in this course by filling out our student registration form.</p>
           <a class="btn btn-red" href="${course.registrationLink}" target="_blank">Register for Class</a>
         </div>
       `;
     } else {
       registerContainer.innerHTML = `
-        <div style="text-align: center; margin-bottom: 50px;">
+        <div class="course-registration-cta">
           <h3>Ready to join us?</h3>
           <a class="btn btn-red" href="../apply.html">Volunteer Now</a>
         </div>
