@@ -103,7 +103,7 @@ const UN4STEM_COURSES = {
     overview: "This course is designed to provide students with a rigorous introduction to the core principles of mechanics and the foundational concepts emphasized in AP Physics 1. Students will learn how to analyze motion using vectors, kinematics, and graphical representations before exploring Newton's Laws of Motion, forces, free-body diagrams, friction, and real-world applications of dynamics. The course continues with the study of circular motion, energy, momentum, collisions, simple harmonic motion, rotational dynamics, and selected fluid mechanics topics. Emphasis is placed on conceptual understanding, mathematical modeling, problem-solving strategies, and scientific reasoning, helping students develop the analytical skills needed for advanced high school physics courses, AP Physics 1, and future STEM studies.",
     schedule: "🗓️ June 22 – July 29\n⏰ 9:00 PM - 10:00 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15",
     prerequisites: "Algebra I or II Proficiency\nStrong Foundation in Basic Trigonometry Required\nStudents in Algebra I may find the course challenging but are still eligible",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdcKr4i_jBlYsOQS2khJTQpN1JgpK6qDd2mcFX-AOrdhmmUGg/viewform?usp=publish-editor",
+    registrationClosedMessage: "Registration for this class has officially closed as we have reached maximum capacity. Thank you for your interest and support! Please visit un4stem.org to explore our other available courses and opportunities. We hope to see you in another class!",
     outcomes: [
       "Interpret motion using position, velocity, and acceleration.",
       "Use Newton's laws to analyze forces.",

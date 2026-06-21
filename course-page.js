@@ -53,6 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
   setText("course-title", course.title);
   setText("course-subtitle", course.short);
   setText("course-overview", course.overview);
+
+  const subtitleEl = document.getElementById("course-subtitle");
+  if (subtitleEl) {
+    const formatEl = document.createElement("p");
+    formatEl.className = "course-format-badge";
+    formatEl.textContent = "💻 Live online class · 100% free";
+    subtitleEl.insertAdjacentElement("afterend", formatEl);
+  }
+
   const scheduleEl = document.getElementById("course-schedule");
   if (scheduleEl) {
     scheduleEl.innerHTML = `<div class="course-info-list">${formatCourseInfo(course.schedule)}</div>`;
@@ -92,7 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Render Registration CTA
   if (registerContainer) {
-    if (course.registrationLink) {
+    if (course.registrationClosedMessage) {
+      registerContainer.innerHTML = `
+        <div class="course-registration-cta course-registration-closed">
+          <h3>Registration Closed</h3>
+          <p>${course.registrationClosedMessage}</p>
+        </div>
+      `;
+    } else if (course.registrationLink) {
       registerContainer.innerHTML = `
         <div class="course-registration-cta">
           <h3>Ready to start learning?</h3>

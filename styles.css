@@ -408,6 +408,14 @@ header .subtitle + p {
   font-weight: 700;
 }
 
+.home-tagline {
+  font-size: clamp(34px, 5vw, 64px);
+  line-height: 1.08;
+  max-width: 760px;
+  margin-top: 18px;
+  margin-bottom: 24px;
+}
+
 /* =========================
    SECTIONS
 ========================= */
@@ -877,6 +885,23 @@ header .image-frame {
 
 .course-registration-cta p {
   margin: 0 auto 20px;
+}
+
+.course-registration-closed p {
+  max-width: 720px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.course-format-badge {
+  display: inline-block;
+  margin: 8px 0 18px;
+  padding: 10px 16px;
+  border: 2px solid var(--gold);
+  border-radius: 999px;
+  background: rgba(252, 211, 77, 0.16);
+  color: var(--navy);
+  font-weight: 800;
 }
 
 .course-registration-cta .btn {
