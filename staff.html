@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Staff - UN4STEM</title>
   <link rel="icon" href="assets/illustrations/logo2.jpeg" type="image/jpeg">
-  <link rel="stylesheet" href="styles.css?v=1.1.6">
+  <link rel="stylesheet" href="styles.css?v=1.1.7">
   <script data-goatcounter="https://amantena28.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -94,75 +94,9 @@
   </section>
   <footer>© 2026 UN4STEM</footer>
 </div>
-<script src="course-data.js?v=1.1.6"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    if (!window.UN4STEM_COURSES) return;
-
-    const allMentors = [];
-    Object.values(UN4STEM_COURSES).forEach(course => {
-      course.mentors.forEach(mentor => {
-        if (!allMentors.find(m => m.name === mentor.name)) {
-          // Adjust image path for root-level page
-          const fixedMentor = { ...mentor, image: mentor.image.replace("../", "") };
-          allMentors.push(fixedMentor);
-        }
-      });
-    });
-
-    const adminsOrder = ["Elliot Chang", "Emma Florence", "Lyla Rodrigues", "Aryan Mantena"];
-    const adminList = allMentors.filter(m => adminsOrder.includes(m.name))
-                                .sort((a, b) => adminsOrder.indexOf(a.name) - adminsOrder.indexOf(b.name));
-    const mentorList = allMentors.filter(m => !adminsOrder.includes(m.name));
-
-    // Sort mentors: Lead vs Assistant, then Grade (9 to 12), then Alphabetical
-    const getGradeNum = (role) => {
-      const match = role.match(/Grade\s+(\d+)/i);
-      return match ? parseInt(match[1], 10) : 100;
-    };
-
-    mentorList.sort((a, b) => {
-      const aIsAssistant = a.role.toLowerCase().includes("assistant");
-      const bIsAssistant = b.role.toLowerCase().includes("assistant");
-
-      // Rule: Assistant mentors at the bottom
-      if (aIsAssistant !== bIsAssistant) {
-        return aIsAssistant ? 1 : -1;
-      }
-
-      // Rule: Sort by grade descending (12 down to 9)
-      const gradeA = getGradeNum(a.role);
-      const gradeB = getGradeNum(b.role);
-      if (gradeA !== gradeB) {
-        // Handle 100 as special case (e.g. Mentor / Web Dev) - should they be with 10th graders?
-        // If it's 100, we can treat it as 10 for consistency if that's the intention, 
-        // but for now let's just stick to the requested 12 -> 9.
-        return gradeB - gradeA; 
-      }
-
-      // Tertiary sort: Alphabetical by name
-      return a.name.localeCompare(b.name);
-    });
-
-    const render = (containerId, list) => {
-      const container = document.getElementById(containerId);
-      if (container) {
-        container.innerHTML = list.map(m => `
-          <div class="card mentor-card" style="text-align: center;">
-            <img src="${m.image}" alt="${m.name}" class="mentor-photo">
-            <h3>${m.name}</h3>
-            <p class="mentor-role">${m.role}</p>
-            <p class="mentor-bio">${m.bio}</p>
-          </div>
-        `).join("");
-      }
-    };
-
-    render("admin-grid", adminList);
-    render("mentors-grid", mentorList);
-  });
-</script>
-<script src="main.js?v=1.1.6"></script>
+<script src="course-data.js?v=1.1.7"></script>
+<script src="mentors-page.js?v=1.1.7"></script>
+<script src="main.js?v=1.1.7"></script>
 </body>
 <div class="secret-step-1" style="color: var(--bg-body); font-size: 10px; text-align: center; padding: 20px; user-select: all; cursor: default;">
   Navigate to: /secret-video.html | 
