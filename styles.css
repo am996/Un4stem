@@ -289,6 +289,20 @@ nav.nav.scrolled {
   display: block;
 }
 
+/* Simple (non-category) links inside a dropdown menu */
+.dropdown-content > a {
+  display: block;
+  padding: 10px 20px;
+  margin: 0;
+  color: var(--white);
+  white-space: nowrap;
+}
+
+.dropdown-content > a:hover {
+  background: #1e3a8a;
+  color: var(--white);
+}
+
 .category-parent {
   position: relative;
 }
@@ -357,6 +371,41 @@ header {
   margin-left: auto; /* Center block elements with max-width */
   margin-right: auto; /* Center block elements with max-width */
 }
+
+/* About page sector tabs (Our Mission / Our Team) */
+.sector-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0 8px;
+}
+
+.sector-tab {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 999px;
+  border: 2px solid var(--navy);
+  color: var(--navy) !important;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.sector-tab:hover {
+  background: var(--navy);
+  color: var(--white) !important;
+  transform: translateY(-1px);
+}
+
+.sector-tab.active {
+  background: var(--navy);
+  color: var(--white) !important;
+}
 /* REVEAL ON SCROLL */
 .reveal {
   opacity: 0;
@@ -402,6 +451,15 @@ h1 {
 
 header .subtitle + p {
   max-width: 560px;
+}
+
+.hero-stat {
+  font-size: clamp(24px, 3.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  max-width: 760px;
 }
 
 .eyebrow {
