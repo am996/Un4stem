@@ -1008,6 +1008,55 @@ p {
   text-decoration: none;
 }
 
+.join-role-links {
+  margin: 0 0 20px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px dashed rgba(30, 58, 138, 0.3);
+  border-radius: 14px;
+}
+
+.join-role-links-label {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+
+.join-role-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 8px;
+  display: grid;
+  gap: 6px;
+}
+
+.join-role-links li {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+}
+
+.join-role-links li strong {
+  color: var(--navy);
+}
+
+.join-role-links a {
+  color: var(--navy-light);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.join-role-links a:hover {
+  color: var(--navy);
+}
+
+.join-role-links-apply {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
 /* =========================
    BUTTON
 ========================= */
