@@ -101,11 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Render Registration CTA
   if (registerContainer) {
-    if (course.registrationClosedMessage) {
+    if (course.registrationClosed || course.registrationClosedMessage) {
       registerContainer.innerHTML = `
         <div class="course-registration-cta course-registration-closed">
           <h3>Registration Closed</h3>
-          <p>${course.registrationClosedMessage}</p>
+          <p>Registration for this class has officially closed, as we have either reached maximum capacity or the registration deadline has passed.</p>
+          <p>Thank you for your interest and support!</p>
+          <p>Please visit <a href="https://un4stem.org/">un4stem.org</a> to explore our other available courses and opportunities. For any questions, please email <a href="mailto:un4stem@gmail.com">un4stem@gmail.com</a>.</p>
+          <p>We hope to see you in another class!</p>
         </div>
       `;
     } else if (course.registrationLink) {

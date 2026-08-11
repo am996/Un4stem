@@ -53,7 +53,7 @@ const UN4STEM_COURSES = {
     overview: "This course introduces students to the fundamental principles that govern living organisms and biological systems. Students will explore the chemistry of life, including water, biological molecules, and the building blocks that make life possible. They will learn about cell structure and function, how materials move in and out of cells, and how cells communicate to maintain balance within organisms. The course also covers photosynthesis, cellular respiration, genetics, heredity, gene expression, evolution, and ecology. Through these topics, students will develop a deeper understanding of how living things grow, reproduce, adapt, and interact with their environments while strengthening their scientific reasoning, analytical thinking, and problem-solving skills.",
     schedule: "🗓️ June 22 – July 31\n⏰ 5:00 PM – 6:30 PM EDT\n📍 Mondays & Fridays\nTotal Classes: 12",
     prerequisites: "Basic Science Literacy",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSctq2-l61ZpOnVNYCiKexcl1oqVQnM_U5bJMEoxMTh2wAoUsA/viewform?usp=publish-editor",
+    registrationClosed: true,
     outcomes: [
       "Identify major cell structures and explain their functions.",
       "Compare plant, animal, and bacterial cells.",
@@ -103,7 +103,7 @@ const UN4STEM_COURSES = {
     overview: "This course is designed to provide students with a rigorous introduction to the core principles of mechanics and the foundational concepts emphasized in AP Physics 1. Students will learn how to analyze motion using vectors, kinematics, and graphical representations before exploring Newton's Laws of Motion, forces, free-body diagrams, friction, and real-world applications of dynamics. The course continues with the study of circular motion, energy, momentum, collisions, simple harmonic motion, rotational dynamics, and selected fluid mechanics topics. Emphasis is placed on conceptual understanding, mathematical modeling, problem-solving strategies, and scientific reasoning, helping students develop the analytical skills needed for advanced high school physics courses, AP Physics 1, and future STEM studies.",
     schedule: "🗓️ June 22 – July 29\n⏰ 9:00 PM - 10:00 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 15",
     prerequisites: "Algebra I or II Proficiency\nStrong Foundation in Basic Trigonometry Required\nStudents in Algebra I may find the course challenging but are still eligible",
-    registrationClosedMessage: "Registration for this class has officially closed as we have reached maximum capacity. Thank you for your interest and support! Please visit un4stem.org to explore our other available courses and opportunities. We hope to see you in another class!",
+    registrationClosed: true,
     outcomes: [
       "Interpret motion using position, velocity, and acceleration.",
       "Use Newton's laws to analyze forces.",
