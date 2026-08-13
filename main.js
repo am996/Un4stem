@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let isAnimating = false;
     let touchStartX = 0;
     let touchEndX = 0;
+    let autoAdvanceInterval;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     // Create pagination dots
     slides.forEach((_, index) => {
@@ -101,29 +103,29 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateDots() {
       dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === currentIndex);
+        dot.setAttribute("aria-current", index === currentIndex ? "true" : "false");
+      });
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("is-active", index === currentIndex);
       });
     }
 
     function goToSlide(index) {
       if (isAnimating || index === currentIndex) return;
-      
-      // Calculate the slide width including gap
-      const slideWidth = slides[0].offsetWidth + 20; // 20px gap
-      const targetScroll = index * slideWidth;
-      
+
       isAnimating = true;
-      carouselTrack.scrollTo({
-        left: targetScroll,
-        behavior: "smooth"
+      slides[index].scrollIntoView({
+        behavior: reduceMotion.matches ? "auto" : "smooth",
+        block: "nearest",
+        inline: "center"
       });
-      
+
       currentIndex = index;
       updateDots();
-      
-      // Reset animation flag after scroll completes
+
       setTimeout(() => {
         isAnimating = false;
-      }, 500);
+      }, reduceMotion.matches ? 0 : 550);
     }
 
     function nextSlide() {
@@ -173,15 +175,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Update dots on scroll (for drag scrolling)
+    // Keep the centered slide in sync with pointer/trackpad scrolling.
     let scrollTimeout;
     carouselTrack.addEventListener("scroll", () => {
       clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
         if (!isAnimating) {
-          const slideWidth = slides[0].offsetWidth + 20;
-          const newIndex = Math.round(carouselTrack.scrollLeft / slideWidth);
-          if (newIndex !== currentIndex && newIndex >= 0 && newIndex < slides.length) {
+          const trackCenter = carouselTrack.getBoundingClientRect().left + carouselTrack.clientWidth / 2;
+          const newIndex = Array.from(slides).reduce((closestIndex, slide, index) => {
+            const rect = slide.getBoundingClientRect();
+            const slideCenter = rect.left + rect.width / 2;
+            const closestRect = slides[closestIndex].getBoundingClientRect();
+            const closestCenter = closestRect.left + closestRect.width / 2;
+            return Math.abs(slideCenter - trackCenter) < Math.abs(closestCenter - trackCenter) ? index : closestIndex;
+          }, 0);
+          if (newIndex !== currentIndex) {
             currentIndex = newIndex;
             updateDots();
           }
@@ -189,9 +197,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 100);
     }, { passive: true });
 
-    // Auto-advance (optional - pause on hover)
-    let autoAdvanceInterval;
     function startAutoAdvance() {
+      if (reduceMotion.matches || document.hidden) return;
+      stopAutoAdvance();
       autoAdvanceInterval = setInterval(nextSlide, 5000);
     }
     
@@ -199,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(autoAdvanceInterval);
     }
 
-    carouselContainer = document.querySelector(".carousel-container");
+    const carouselContainer = document.querySelector(".carousel-container");
     if (carouselContainer) {
       carouselContainer.addEventListener("mouseenter", stopAutoAdvance);
       carouselContainer.addEventListener("mouseleave", startAutoAdvance);
@@ -207,7 +215,12 @@ document.addEventListener("DOMContentLoaded", () => {
       carouselContainer.addEventListener("focusout", startAutoAdvance);
     }
 
-    // Start auto-advance
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stopAutoAdvance();
+      else startAutoAdvance();
+    });
+
+    updateDots();
     startAutoAdvance();
   }
 
