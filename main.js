@@ -150,12 +150,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function nextSlide() {
-      const nextIndex = (currentIndex + 1) % slides.length;
+      const nextIndex = (currentIndex + 1) % originalSlides.length;
       goToSlide(nextIndex);
     }
 
     function prevSlide() {
-      const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+      const prevIndex = (currentIndex - 1 + originalSlides.length) % originalSlides.length;
       goToSlide(prevIndex);
     }
 

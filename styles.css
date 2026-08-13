@@ -727,11 +727,14 @@ p {
 ========================= */
 .carousel-section {
   padding: 40px 0 56px;
-  margin: 0 -40px;
+  margin: 0;
+  overflow: hidden;
 }
 
 .carousel-container {
   position: relative;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 76px;
@@ -821,11 +824,11 @@ p {
 }
 
 .carousel-btn--prev {
-  left: -18px;
+  left: 8px;
 }
 
 .carousel-btn--next {
-  right: -18px;
+  right: 8px;
 }
 
 .carousel-dots {
@@ -879,7 +882,6 @@ p {
 
 @media (max-width: 768px) {
   .carousel-section {
-    margin: 0 -28px;
     padding: 32px 0 48px;
   }
   
