@@ -314,21 +314,28 @@ document.addEventListener("DOMContentLoaded", () => {
       lightboxImage.alt = "";
     }
 
-    function updateLightboxImage() {
+    function updateLightboxImage(direction) {
       const slide = lightboxSlides[lightboxCurrentIndex];
+      lightboxImage.classList.remove("lightbox-image--next", "lightbox-image--prev");
       lightboxImage.src = slide.src;
       lightboxImage.alt = slide.alt;
       lightboxCounter.textContent = `${lightboxCurrentIndex + 1} / ${lightboxSlides.length}`;
+
+      if (direction) {
+        // Restart the directional animation whenever a lightbox control is used.
+        void lightboxImage.offsetWidth;
+        lightboxImage.classList.add(`lightbox-image--${direction}`);
+      }
     }
 
     function showPrevLightbox() {
       lightboxCurrentIndex = (lightboxCurrentIndex - 1 + lightboxSlides.length) % lightboxSlides.length;
-      updateLightboxImage();
+      updateLightboxImage("prev");
     }
 
     function showNextLightbox() {
       lightboxCurrentIndex = (lightboxCurrentIndex + 1) % lightboxSlides.length;
-      updateLightboxImage();
+      updateLightboxImage("next");
     }
 
     // Event listeners
