@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let touchStartX = 0;
     let touchEndX = 0;
     let autoAdvanceInterval;
+    let carouselIsVisible = true;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     // Create pagination dots
@@ -230,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: true });
 
     function startAutoAdvance() {
-      if (reduceMotion.matches || document.hidden) return;
+      if (reduceMotion.matches || document.hidden || !carouselIsVisible) return;
       stopAutoAdvance();
       autoAdvanceInterval = setInterval(nextSlide, 4000);
     }
@@ -245,6 +246,13 @@ document.addEventListener("DOMContentLoaded", () => {
       carouselContainer.addEventListener("mouseleave", startAutoAdvance);
       carouselContainer.addEventListener("focusin", stopAutoAdvance);
       carouselContainer.addEventListener("focusout", startAutoAdvance);
+
+      const carouselVisibilityObserver = new IntersectionObserver((entries) => {
+        carouselIsVisible = entries[0].isIntersecting;
+        if (carouselIsVisible) startAutoAdvance();
+        else stopAutoAdvance();
+      }, { threshold: 0.15 });
+      carouselVisibilityObserver.observe(carouselContainer);
     }
 
     document.addEventListener("visibilitychange", () => {
