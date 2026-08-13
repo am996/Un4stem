@@ -266,7 +266,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const closestSlide = slides[physicalIndex];
         const closestRect = closestSlide.getBoundingClientRect();
         const centerDistance = Math.abs((closestRect.left + closestRect.width / 2) - trackCenter);
-        const centerZone = closestRect.width * 0.08;
+        
+        // During continuous auto-scrolling, use a wider center zone (35% instead of 8%)
+        // because slides move through the center quickly and never stay in the tight zone long enough.
+        const isAutoScrolling = carouselTrack.classList.contains("is-auto-scrolling");
+        const centerZone = closestRect.width * (isAutoScrolling ? 0.35 : 0.08);
 
         // Keep the current feature card highlighted until the next photo has
         // genuinely arrived at the middle, instead of swapping at the midpoint.
