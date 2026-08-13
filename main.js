@@ -80,7 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const carouselDotsContainer = document.getElementById("carouselDots");
 
   if (carouselTrack && carouselPrev && carouselNext && carouselDotsContainer) {
-    const slides = carouselTrack.querySelectorAll(".carousel-slide");
+    const originalSlides = Array.from(carouselTrack.querySelectorAll(".carousel-slide"));
+    const firstClone = originalSlides[0].cloneNode(true);
+    const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
+    [firstClone, lastClone].forEach((clone) => {
+      clone.classList.add("carousel-slide--clone");
+      clone.setAttribute("aria-hidden", "true");
+      clone.querySelectorAll("img").forEach((image) => image.alt = "");
+    });
+    carouselTrack.prepend(lastClone);
+    carouselTrack.append(firstClone);
+    const slides = Array.from(carouselTrack.querySelectorAll(".carousel-slide"));
     let currentIndex = 0;
     let isAnimating = false;
     let touchStartX = 0;
@@ -89,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     // Create pagination dots
-    slides.forEach((_, index) => {
+    originalSlides.forEach((_, index) => {
       const dot = document.createElement("button");
       dot.className = "carousel-dot" + (index === 0 ? " active" : "");
       dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
@@ -100,13 +110,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dots = carouselDotsContainer.querySelectorAll(".carousel-dot");
 
-    function updateDots() {
+    function updateDots(activeSlideIndex = currentIndex + 1) {
       dots.forEach((dot, index) => {
         dot.classList.toggle("active", index === currentIndex);
         dot.setAttribute("aria-current", index === currentIndex ? "true" : "false");
       });
       slides.forEach((slide, index) => {
-        slide.classList.toggle("is-active", index === currentIndex);
+        slide.classList.toggle("is-active", index === activeSlideIndex);
+      });
+    }
+
+    function scrollToPhysicalSlide(index, behavior) {
+      slides[index].scrollIntoView({
+        behavior,
+        block: "nearest",
+        inline: "center"
       });
     }
 
@@ -114,16 +132,19 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isAnimating || index === currentIndex) return;
 
       isAnimating = true;
-      slides[index].scrollIntoView({
-        behavior: reduceMotion.matches ? "auto" : "smooth",
-        block: "nearest",
-        inline: "center"
-      });
+      const isWrappingForward = currentIndex === originalSlides.length - 1 && index === 0;
+      const isWrappingBackward = currentIndex === 0 && index === originalSlides.length - 1;
+      const targetSlideIndex = isWrappingForward ? slides.length - 1 : isWrappingBackward ? 0 : index + 1;
+      scrollToPhysicalSlide(targetSlideIndex, reduceMotion.matches ? "auto" : "smooth");
 
       currentIndex = index;
-      updateDots();
+      updateDots(targetSlideIndex);
 
       setTimeout(() => {
+        // The edge clones provide a continuous visual loop. Once the motion ends,
+        // jump invisibly to the matching real slide so the next move remains smooth.
+        scrollToPhysicalSlide(index + 1, "auto");
+        updateDots(index + 1);
         isAnimating = false;
       }, reduceMotion.matches ? 0 : 550);
     }
@@ -182,16 +203,22 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollTimeout = setTimeout(() => {
         if (!isAnimating) {
           const trackCenter = carouselTrack.getBoundingClientRect().left + carouselTrack.clientWidth / 2;
-          const newIndex = Array.from(slides).reduce((closestIndex, slide, index) => {
+          const physicalIndex = slides.reduce((closestIndex, slide, index) => {
             const rect = slide.getBoundingClientRect();
             const slideCenter = rect.left + rect.width / 2;
             const closestRect = slides[closestIndex].getBoundingClientRect();
             const closestCenter = closestRect.left + closestRect.width / 2;
             return Math.abs(slideCenter - trackCenter) < Math.abs(closestCenter - trackCenter) ? index : closestIndex;
           }, 0);
-          if (newIndex !== currentIndex) {
-            currentIndex = newIndex;
-            updateDots();
+          const newIndex = (physicalIndex - 1 + originalSlides.length) % originalSlides.length;
+          currentIndex = newIndex;
+          updateDots(physicalIndex);
+          if (physicalIndex === 0 || physicalIndex === slides.length - 1) {
+            const realSlideIndex = physicalIndex === 0 ? originalSlides.length : 1;
+            setTimeout(() => {
+              scrollToPhysicalSlide(realSlideIndex, "auto");
+              updateDots(realSlideIndex);
+            }, 0);
           }
         }
       }, 100);
@@ -220,7 +247,10 @@ document.addEventListener("DOMContentLoaded", () => {
       else startAutoAdvance();
     });
 
-    updateDots();
+    requestAnimationFrame(() => {
+      scrollToPhysicalSlide(1, "auto");
+      updateDots(1);
+    });
     startAutoAdvance();
   }
 
@@ -234,7 +264,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightboxNext = document.getElementById("lightboxNext");
   const lightboxBackdrop = document.getElementById("lightboxBackdrop");
   const lightboxCounter = document.getElementById("lightboxCounter");
-  const carouselSlides = document.querySelectorAll(".carousel-slide img[data-fullsrc]");
+  const carouselSlides = document.querySelectorAll(".carousel-slide:not(.carousel-slide--clone) img[data-fullsrc]");
 
   let lightboxCurrentIndex = 0;
   let lightboxSlides = [];
