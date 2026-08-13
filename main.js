@@ -260,6 +260,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const closestCenter = closestRect.left + closestRect.width / 2;
             return Math.abs(slideCenter - trackCenter) < Math.abs(closestCenter - trackCenter) ? index : closestIndex;
           }, 0);
+          const closestSlide = slides[physicalIndex];
+          const closestRect = closestSlide.getBoundingClientRect();
+          const centerDistance = Math.abs((closestRect.left + closestRect.width / 2) - trackCenter);
+          const centerZone = closestRect.width * 0.08;
+
+          // Keep the current feature card highlighted until the next photo has
+          // genuinely arrived at the middle, instead of swapping at the midpoint.
+          if (centerDistance > centerZone) return;
+
           const newIndex = (physicalIndex - 1 + originalSlides.length) % originalSlides.length;
           currentIndex = newIndex;
           updateDots(physicalIndex);
