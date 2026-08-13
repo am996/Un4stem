@@ -124,6 +124,18 @@ document.addEventListener("DOMContentLoaded", () => {
     function scrollToPhysicalSlide(index, behavior) {
       const slide = slides[index];
       const targetLeft = slide.offsetLeft - (carouselTrack.clientWidth - slide.offsetWidth) / 2;
+
+      if (behavior === "auto") {
+        // Overrides the CSS smooth-scroll rule for the invisible clone-to-real reset.
+        // Without this, the browser visibly scrolls back through every photo at a loop edge.
+        carouselTrack.style.scrollBehavior = "auto";
+        carouselTrack.scrollLeft = targetLeft;
+        requestAnimationFrame(() => {
+          carouselTrack.style.scrollBehavior = "";
+        });
+        return;
+      }
+
       carouselTrack.scrollTo({
         left: targetLeft,
         behavior
