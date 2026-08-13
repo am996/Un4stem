@@ -133,6 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isAnimating || index === currentIndex) return;
 
       isAnimating = true;
+      const isMovingNext = index === (currentIndex + 1) % originalSlides.length;
+      carouselTrack.classList.toggle("is-moving-next", isMovingNext);
+      carouselTrack.classList.toggle("is-moving-prev", !isMovingNext);
       const isWrappingForward = currentIndex === originalSlides.length - 1 && index === 0;
       const isWrappingBackward = currentIndex === 0 && index === originalSlides.length - 1;
       const targetSlideIndex = isWrappingForward ? slides.length - 1 : isWrappingBackward ? 0 : index + 1;
@@ -146,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // jump invisibly to the matching real slide so the next move remains smooth.
         scrollToPhysicalSlide(index + 1, "auto");
         updateDots(index + 1);
+        carouselTrack.classList.remove("is-moving-next", "is-moving-prev");
         isAnimating = false;
       }, reduceMotion.matches ? 0 : 550);
     }
