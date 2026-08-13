@@ -82,6 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (carouselTrack && carouselPrev && carouselNext && carouselDotsContainer) {
     const originalSlides = Array.from(carouselTrack.querySelectorAll(".carousel-slide"));
     carouselDotsContainer.style.setProperty("--carousel-slide-count", originalSlides.length);
+    originalSlides.forEach((slide) => {
+      const imagePath = slide.querySelector("img").getAttribute("src");
+      slide.style.setProperty("--carousel-image", `url("${imagePath}")`);
+    });
     const firstClone = originalSlides[0].cloneNode(true);
     const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
     [firstClone, lastClone].forEach((clone) => {
@@ -97,6 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let touchStartX = 0;
     let touchEndX = 0;
     let autoAdvanceInterval;
+    let autoResumeTimer;
+    let isUserInteracting = false;
     let carouselIsVisible = true;
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
@@ -106,7 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
       dot.className = "carousel-dot" + (index === 0 ? " active" : "");
       dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
       dot.setAttribute("data-index", index);
-      dot.addEventListener("click", () => goToSlide(index));
+      dot.addEventListener("click", () => {
+        pauseForUserInteraction();
+        goToSlide(index);
+      });
       carouselDotsContainer.appendChild(dot);
     });
 
@@ -174,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         carouselTrack.addEventListener("scrollend", finishMove, { once: true });
         // Fallback for browsers without scrollend support.
-        fallbackTimer = setTimeout(finishMove, 800);
+        fallbackTimer = setTimeout(finishMove, 520);
       }
     }
 
@@ -188,11 +197,20 @@ document.addEventListener("DOMContentLoaded", () => {
       goToSlide(prevIndex);
     }
 
-    carouselNext.addEventListener("click", nextSlide);
-    carouselPrev.addEventListener("click", prevSlide);
+    carouselNext.addEventListener("click", () => {
+      pauseForUserInteraction();
+      nextSlide();
+    });
+    carouselPrev.addEventListener("click", () => {
+      pauseForUserInteraction();
+      prevSlide();
+    });
+
+    carouselTrack.addEventListener("pointerdown", pauseForUserInteraction, { passive: true });
 
     // Touch/swipe support
     carouselTrack.addEventListener("touchstart", (e) => {
+      pauseForUserInteraction();
       touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
 
@@ -218,9 +236,11 @@ document.addEventListener("DOMContentLoaded", () => {
     carouselTrack.addEventListener("keydown", (e) => {
       if (e.key === "ArrowLeft") {
         e.preventDefault();
+        pauseForUserInteraction();
         prevSlide();
       } else if (e.key === "ArrowRight") {
         e.preventDefault();
+        pauseForUserInteraction();
         nextSlide();
       }
     });
@@ -254,13 +274,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { passive: true });
 
     function startAutoAdvance() {
-      if (reduceMotion.matches || document.hidden || !carouselIsVisible) return;
+      if (reduceMotion.matches || document.hidden || !carouselIsVisible || isUserInteracting) return;
       stopAutoAdvance();
       autoAdvanceInterval = setInterval(nextSlide, 4000);
     }
     
     function stopAutoAdvance() {
       clearInterval(autoAdvanceInterval);
+    }
+
+    function pauseForUserInteraction() {
+      isUserInteracting = true;
+      stopAutoAdvance();
+      clearTimeout(autoResumeTimer);
+      autoResumeTimer = setTimeout(() => {
+        isUserInteracting = false;
+        startAutoAdvance();
+      }, 5000);
     }
 
     const carouselContainer = document.querySelector(".carousel-container");

@@ -759,6 +759,13 @@ p {
 .carousel-slide {
   flex: 0 0 min(28vw, 360px);
   min-width: 0;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background: var(--navy);
+  border: 3px solid var(--navy);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
   scroll-snap-align: center;
   scroll-snap-stop: always;
   transform: scale(0.86);
@@ -766,6 +773,21 @@ p {
   opacity: 0.68;
   transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1), filter 420ms ease, opacity 420ms ease;
   will-change: transform, filter;
+}
+
+.carousel-slide::before {
+  content: "";
+  position: absolute;
+  inset: -18px;
+  z-index: 0;
+  background-color: var(--navy);
+  background-image: var(--carousel-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(16px);
+  opacity: 0.58;
+  transform: scale(1.08);
 }
 
 .carousel-slide.is-active {
@@ -776,21 +798,20 @@ p {
 }
 
 .carousel-slide img {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: auto;
-  aspect-ratio: auto;
+  height: 100%;
   object-fit: contain;
   border-radius: 20px;
-  border: 3px solid var(--navy);
-  box-shadow: var(--shadow);
+  border: 0;
+  box-shadow: none;
   display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .carousel-slide.is-active img:hover {
   transform: scale(1.02);
-  box-shadow: 16px 16px 0 rgba(0, 0, 0, 0.15);
-  border-color: var(--navy-light);
 }
 
 .carousel-btn {
@@ -904,6 +925,9 @@ p {
   
   .carousel-slide img {
     border-radius: 16px;
+  }
+
+  .carousel-slide {
     border-width: 2px;
   }
   
