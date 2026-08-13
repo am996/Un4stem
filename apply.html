@@ -67,6 +67,67 @@
         </div>
       </section>
 
+      <section class="carousel-section" aria-label="Event and activity photos">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <img src="assets/carousel/pic1.jpeg" alt="UN4STEM event photo 1" loading="lazy" data-fullsrc="assets/carousel/pic1.jpeg" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/pic2.jpeg" alt="UN4STEM event photo 2" loading="lazy" data-fullsrc="assets/carousel/pic2.jpeg" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/pic3.jpeg" alt="UN4STEM event photo 3" loading="lazy" data-fullsrc="assets/carousel/pic3.jpeg" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/pic4.jpeg" alt="UN4STEM event photo 4" loading="lazy" data-fullsrc="assets/carousel/pic4.jpeg" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/pic5.jpeg" alt="UN4STEM event photo 5" loading="lazy" data-fullsrc="assets/carousel/pic5.jpeg" />
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/carousel/pic6.jpeg" alt="UN4STEM event photo 6" loading="lazy" data-fullsrc="assets/carousel/pic6.jpeg" />
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          <div class="carousel-dots" id="carouselDots" aria-label="Slide indicators"></div>
+        </div>
+      </section>
+
+      <!-- Lightbox Modal for full-size image viewing -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-size image view" hidden>
+        <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close full-size image">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <button class="lightbox-nav lightbox-nav--prev" id="lightboxPrev" aria-label="Previous image">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="lightbox-nav lightbox-nav--next" id="lightboxNext" aria-label="Next image">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <div class="lightbox-content">
+          <img id="lightboxImage" src="" alt="" />
+        </div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+
       <section class="involvement-dropdowns">
         <details class="involvement-card" id="join-our-team" open>
           <summary>Join Our Team</summary>
