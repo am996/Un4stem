@@ -247,41 +247,42 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Keep the centered slide in sync with pointer/trackpad scrolling.
-    let scrollTimeout;
+    // Keep the centered slide in sync with continuous, pointer, and trackpad scrolling.
+    let scrollUpdateFrame;
     carouselTrack.addEventListener("scroll", () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        if (!isAnimating) {
-          const trackCenter = carouselTrack.getBoundingClientRect().left + carouselTrack.clientWidth / 2;
-          const physicalIndex = slides.reduce((closestIndex, slide, index) => {
-            const rect = slide.getBoundingClientRect();
-            const slideCenter = rect.left + rect.width / 2;
-            const closestRect = slides[closestIndex].getBoundingClientRect();
-            const closestCenter = closestRect.left + closestRect.width / 2;
-            return Math.abs(slideCenter - trackCenter) < Math.abs(closestCenter - trackCenter) ? index : closestIndex;
+      if (scrollUpdateFrame) return;
+      scrollUpdateFrame = requestAnimationFrame(() => {
+        scrollUpdateFrame = undefined;
+        if (isAnimating) return;
+
+        const trackCenter = carouselTrack.getBoundingClientRect().left + carouselTrack.clientWidth / 2;
+        const physicalIndex = slides.reduce((closestIndex, slide, index) => {
+          const rect = slide.getBoundingClientRect();
+          const slideCenter = rect.left + rect.width / 2;
+          const closestRect = slides[closestIndex].getBoundingClientRect();
+          const closestCenter = closestRect.left + closestRect.width / 2;
+          return Math.abs(slideCenter - trackCenter) < Math.abs(closestCenter - trackCenter) ? index : closestIndex;
+        }, 0);
+        const closestSlide = slides[physicalIndex];
+        const closestRect = closestSlide.getBoundingClientRect();
+        const centerDistance = Math.abs((closestRect.left + closestRect.width / 2) - trackCenter);
+        const centerZone = closestRect.width * 0.08;
+
+        // Keep the current feature card highlighted until the next photo has
+        // genuinely arrived at the middle, instead of swapping at the midpoint.
+        if (centerDistance > centerZone) return;
+
+        const newIndex = (physicalIndex - 1 + originalSlides.length) % originalSlides.length;
+        currentIndex = newIndex;
+        updateDots(physicalIndex);
+        if (physicalIndex === 0 || physicalIndex === slides.length - 1) {
+          const realSlideIndex = physicalIndex === 0 ? originalSlides.length : 1;
+          setTimeout(() => {
+            scrollToPhysicalSlide(realSlideIndex, "auto");
+            updateDots(realSlideIndex);
           }, 0);
-          const closestSlide = slides[physicalIndex];
-          const closestRect = closestSlide.getBoundingClientRect();
-          const centerDistance = Math.abs((closestRect.left + closestRect.width / 2) - trackCenter);
-          const centerZone = closestRect.width * 0.08;
-
-          // Keep the current feature card highlighted until the next photo has
-          // genuinely arrived at the middle, instead of swapping at the midpoint.
-          if (centerDistance > centerZone) return;
-
-          const newIndex = (physicalIndex - 1 + originalSlides.length) % originalSlides.length;
-          currentIndex = newIndex;
-          updateDots(physicalIndex);
-          if (physicalIndex === 0 || physicalIndex === slides.length - 1) {
-            const realSlideIndex = physicalIndex === 0 ? originalSlides.length : 1;
-            setTimeout(() => {
-              scrollToPhysicalSlide(realSlideIndex, "auto");
-              updateDots(realSlideIndex);
-            }, 0);
-          }
         }
-      }, 100);
+      });
     }, { passive: true });
 
     function startAutoAdvance() {
