@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let touchEndX = 0;
     let autoScrollFrame;
     let autoScrollLastTime;
+    let autoScrollRemainder = 0;
     let autoResumeTimer;
     let isUserInteracting = false;
     let carouselIsVisible = true;
@@ -288,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stopAutoAdvance();
       carouselTrack.classList.add("is-auto-scrolling");
 
-      const pixelsPerSecond = 28;
+      const pixelsPerSecond = 34;
       const autoScroll = (timestamp) => {
         if (document.hidden || !carouselIsVisible || isUserInteracting) {
           stopAutoAdvance();
@@ -297,7 +298,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (autoScrollLastTime) {
           const elapsedSeconds = (timestamp - autoScrollLastTime) / 1000;
-          carouselTrack.scrollLeft += pixelsPerSecond * elapsedSeconds;
+          autoScrollRemainder += pixelsPerSecond * elapsedSeconds;
+          const wholePixels = Math.floor(autoScrollRemainder);
+          if (wholePixels > 0) {
+            carouselTrack.scrollLeft += wholePixels;
+            autoScrollRemainder -= wholePixels;
+          }
         }
         autoScrollLastTime = timestamp;
         autoScrollFrame = requestAnimationFrame(autoScroll);
@@ -310,6 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
       cancelAnimationFrame(autoScrollFrame);
       autoScrollFrame = undefined;
       autoScrollLastTime = undefined;
+      autoScrollRemainder = 0;
       carouselTrack.classList.remove("is-auto-scrolling");
     }
 
