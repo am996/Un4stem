@@ -793,38 +793,6 @@ p {
   border-color: var(--navy-light);
 }
 
-.carousel-track.is-moving-next .carousel-slide.is-active img {
-  animation: carousel-focus-from-right 460ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.carousel-track.is-moving-prev .carousel-slide.is-active img {
-  animation: carousel-focus-from-left 460ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-@keyframes carousel-focus-from-right {
-  from {
-    opacity: 0.72;
-    transform: translateX(18px) scale(0.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
-@keyframes carousel-focus-from-left {
-  from {
-    opacity: 0.72;
-    transform: translateX(-18px) scale(0.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-}
-
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -866,7 +834,7 @@ p {
 
 .carousel-dots {
   display: grid;
-  grid-template-columns: repeat(6, minmax(24px, 72px));
+  grid-template-columns: repeat(var(--carousel-slide-count, 6), minmax(20px, 64px));
   justify-content: center;
   gap: 8px;
   margin: 8px auto 0;
@@ -989,8 +957,6 @@ p {
     transition-duration: 0.01ms;
   }
 
-  .carousel-track.is-moving-next .carousel-slide.is-active img,
-  .carousel-track.is-moving-prev .carousel-slide.is-active img,
   .lightbox-content img.lightbox-image--next,
   .lightbox-content img.lightbox-image--prev {
     animation: none;
@@ -1223,15 +1189,18 @@ p {
 }
 
 .get-involved-hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 42px 0 24px;
+  display: flex;
+  justify-content: center;
+  padding: 52px 0 22px;
 }
 
 .get-involved-hero-copy {
-  padding-left: 40px;
+  width: min(100%, 840px);
+  padding: clamp(28px, 5vw, 52px);
+  background: rgba(240, 249, 255, 0.54);
+  border: 3px solid var(--navy);
+  border-radius: 0 34px 34px 34px;
+  box-shadow: var(--shadow);
 }
 
 .get-involved-hero-copy h1 {
@@ -2246,7 +2215,7 @@ footer {
   }
 
   .get-involved-hero-copy {
-    padding-left: 0;
+    padding: 28px;
   }
 
   .nav-social {
