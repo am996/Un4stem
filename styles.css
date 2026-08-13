@@ -752,6 +752,10 @@ p {
   -webkit-overflow-scrolling: touch;
 }
 
+.carousel-track.is-auto-scrolling {
+  scroll-snap-type: none;
+}
+
 .carousel-track::-webkit-scrollbar {
   display: none;
 }
