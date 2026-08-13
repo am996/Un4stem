@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function startAutoAdvance() {
       if (reduceMotion.matches || document.hidden) return;
       stopAutoAdvance();
-      autoAdvanceInterval = setInterval(nextSlide, 5000);
+      autoAdvanceInterval = setInterval(nextSlide, 4000);
     }
     
     function stopAutoAdvance() {
