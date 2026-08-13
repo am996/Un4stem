@@ -121,10 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function scrollToPhysicalSlide(index, behavior) {
-      slides[index].scrollIntoView({
-        behavior,
-        block: "nearest",
-        inline: "center"
+      const slide = slides[index];
+      const targetLeft = slide.offsetLeft - (carouselTrack.clientWidth - slide.offsetWidth) / 2;
+      carouselTrack.scrollTo({
+        left: targetLeft,
+        behavior
       });
     }
 
