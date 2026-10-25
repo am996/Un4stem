@@ -7,7 +7,7 @@ const UN4STEM_COURSES = {
     category: "Health",
     level: "Introductory",
     overview: "This course is designed for students interested in understanding the structure and function of the human body. Students will explore the major body systems, including the cardiovascular, pulmonary, nervous, digestive, endocrine, skeletal, reproductive, and immune systems, while learning how these systems work together to maintain health and support everyday life. The course will examine key biological processes, organ functions, and the body's ability to respond to internal and external changes. Through scientific exploration and real-world examples, students will develop a deeper appreciation for human biology while strengthening their analytical thinking, scientific literacy, and understanding of health-related concepts. This course provides an excellent foundation for students interested in medicine, healthcare, biology, or life sciences.",
-    schedule: "Session 1\n🗓️ June 30 – August 8\n⏰ 12:00 PM – 1:15 PM EDT\n📍 Tuesdays, Thursdays & Saturdays\nTotal Classes: 18\n\nSession 2\n🗓️ June 29 – August 7\n⏰ 6:30 PM – 8:00 PM EDT\n📍 Mondays, Wednesdays & Fridays\nNo Class Week of July 6th\nTotal Classes: 18",
+    schedule: "Session 1\n🗓️ June 30 – August 8\n⏰ 12:00 PM – 1:30 PM EDT\n📍 Tuesdays, Thursdays & Saturdays\nTotal Classes: 18\n\nSession 2\n🗓️ June 29 – August 7\n⏰ 5:45 PM – 7:15 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 18",
     prerequisites: "Fundamental understanding of human biology or general science recommended",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSd02tjN6sn-DhPL3td9hS1LjAWy8L79BYmrXvBASHUkTNzK7Q/viewform?usp=publish-editor",
     outcomes: [
@@ -452,7 +452,7 @@ const UN4STEM_COURSES = {
     category: "Mathematics",
     level: "Intermediate",
     overview: "This Algebra I course introduces students to the language of mathematics through the study of functions, equations, inequalities, and mathematical modeling. Students will learn how to represent and analyze relationships using graphs, tables, equations, and real-world applications. Major topics include linear equations and inequalities, systems of equations, functions, exponents, polynomials, factoring, quadratic equations, rational expressions, radicals, and introductory statistics. Throughout the course, students will develop critical problem-solving skills, strengthen algebraic reasoning, and learn how mathematics can be used to model and interpret real-life situations. This course establishes the essential foundation required for future success in Algebra II, precalculus, and other advanced STEM courses.",
-    schedule: "🗓️ June 29 – August 7\n⏰ 5:00 PM – 6:30 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 18",
+    schedule: "🗓️ June 29 – August 7\n⏰ 4:00 PM – 5:30 PM EDT\n📍 Mondays, Wednesdays & Fridays\nTotal Classes: 18",
     prerequisites: "Proficiency in Pre-Algebra Concepts",
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSdwBZYT4rMXHPMjBu9_jNRq3vsrroidu3X4CfVGLsGCoEoWYg/viewform?usp=header",
     outcomes: [
@@ -533,7 +533,7 @@ const UN4STEM_COURSES = {
     ]
   },
   "abstract-algebra": {
-    title: "Introduction to the Art of Logic",
+    title: "∃(¬(¬Introduction to the Art of Logic))",
     short: "Advanced Theory",
     image: "../assets/illustrations/math-board.svg",
     imageAlt: "Playful clipart abstract algebra scene",

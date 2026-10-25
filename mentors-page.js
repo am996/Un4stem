@@ -34,17 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const sortMentors = (a, b) => {
-    const aIsAssistant = String(a.role || "").toLowerCase().includes("assistant");
-    const bIsAssistant = String(b.role || "").toLowerCase().includes("assistant");
-
-    if (aIsAssistant !== bIsAssistant) {
-      return aIsAssistant ? 1 : -1;
-    }
-
+    // Highest grade first (12 -> 9, then younger), then Mentors before Assistant Mentors,
+    // then alphabetical so the order is always stable.
     const aGrade = getGrade(a.role);
     const bGrade = getGrade(b.role);
     if (aGrade !== bGrade) {
       return bGrade - aGrade;
+    }
+
+    const aIsAssistant = String(a.role || "").toLowerCase().includes("assistant");
+    const bIsAssistant = String(b.role || "").toLowerCase().includes("assistant");
+    if (aIsAssistant !== bIsAssistant) {
+      return aIsAssistant ? 1 : -1;
     }
 
     return a.name.localeCompare(b.name);

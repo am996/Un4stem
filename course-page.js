@@ -7,21 +7,84 @@ function escapeHtml(text) {
     .replace(/'/g, "&#039;");
 }
 
-function formatCourseInfo(text) {
-  if (!text) return "";
+// Splits the plain-text schedule from course-data.js into one object per session.
+// Lines starting with 🗓 / ⏰ / 📍 become dates / time / days; "Total Classes: N" becomes
+// the class count; a leading plain line is the session label; anything else is a note.
+function parseSchedule(text) {
+  if (!text) return [];
 
   return String(text)
     .split(/\n\s*\n/)
     .map(group => {
-      const rows = group
-        .split("\n")
-        .filter(Boolean)
-        .map(line => `<span>${escapeHtml(line)}</span>`)
-        .join("");
+      const session = { label: "", dates: "", time: "", days: "", total: "", notes: [] };
 
-      return `<span class="course-info-row">${rows}</span>`;
-    })
-    .join("");
+      group
+        .split("\n")
+        .map(line => line.trim())
+        .filter(Boolean)
+        .forEach(line => {
+          if (line.startsWith("\u{1F5D3}")) session.dates = line.replace(/^\u{1F5D3}\uFE0F?\s*/u, "");
+          else if (line.startsWith("\u23F0")) session.time = line.replace(/^\u23F0\uFE0F?\s*/u, "");
+          else if (line.startsWith("\u{1F4CD}")) session.days = line.replace(/^\u{1F4CD}\uFE0F?\s*/u, "");
+          else if (/^Total Classes:/i.test(line)) session.total = line.replace(/^Total Classes:\s*/i, "");
+          else if (!session.label && !session.dates && !session.time && !session.days) session.label = line;
+          else session.notes.push(line);
+        });
+
+      return session;
+    });
+}
+
+function renderSchedule(text) {
+  const sessions = parseSchedule(text);
+  if (!sessions.length) return "";
+
+  const hasRealSchedule = sessions.some(s => s.dates || s.time || s.days);
+  if (!hasRealSchedule) {
+    // e.g. "Scheduling will be provided soon"
+    return `<p class="schedule-pending">${escapeHtml(sessions.map(s => [s.label, ...s.notes].filter(Boolean).join(" ")).join(" "))}</p>`;
+  }
+
+  // Blocks with no dates/time/days (e.g. "Sessions 1-4: ...") are extra notes, not sessions.
+  const extraNotes = sessions
+    .filter(s => !(s.dates || s.time || s.days))
+    .flatMap(s => [s.label, ...s.notes].filter(Boolean));
+  const realSessions = sessions.filter(s => s.dates || s.time || s.days);
+
+  const cards = realSessions.map(s => {
+    const facts = [
+      s.dates ? `<li><span class="fact-icon" aria-hidden="true">\u{1F5D3}\uFE0F</span><span class="sr-only">Dates: </span>${escapeHtml(s.dates)}</li>` : "",
+      s.time ? `<li><span class="fact-icon" aria-hidden="true">\u23F0</span><span class="sr-only">Time: </span>${escapeHtml(s.time.replace(" - ", " \u2013 "))}</li>` : "",
+      s.days ? `<li><span class="fact-icon" aria-hidden="true">\u{1F4CD}</span><span class="sr-only">Days: </span>${escapeHtml(s.days)}</li>` : ""
+    ].join("");
+
+    return `
+      <article class="session-card">
+        ${s.label ? `<h3 class="session-label">${escapeHtml(s.label)}</h3>` : ""}
+        <ul class="session-facts">${facts}</ul>
+        ${s.total ? `<p class="session-total">Total Classes: <strong>${escapeHtml(s.total)}</strong></p>` : ""}
+        ${s.notes.map(n => `<p class="session-note">${escapeHtml(n)}</p>`).join("")}
+      </article>`;
+  }).join("");
+
+  return `
+    <div class="session-grid session-count-${realSessions.length}">${cards}</div>
+    ${extraNotes.length ? `<div class="schedule-extra">${extraNotes.map(n => `<p>${escapeHtml(n)}</p>`).join("")}</div>` : ""}
+    <p class="schedule-reminder"><strong>Reminder:</strong> All program schedules are listed in <strong>Eastern Daylight Time (EDT)</strong>. Students are expected to meet all stated <strong>prerequisites</strong> prior to sign-up. For any questions or clarifications, please contact us at <a href="https://un4stem.org/">un4stem.org</a>.</p>`;
+}
+
+function renderPrerequisites(text) {
+  const items = String(text || "")
+    .split("\n")
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  if (!items.length) return "";
+  if (items.length === 1 && /^(n\/a|none)$/i.test(items[0])) {
+    return `<p class="prereq-none">N/A</p>`;
+  }
+
+  return `<ul class="prereq-list">${items.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -64,12 +127,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const scheduleEl = document.getElementById("course-schedule");
   if (scheduleEl) {
-    scheduleEl.innerHTML = `<div class="course-info-list">${formatCourseInfo(course.schedule)}</div>`;
+    scheduleEl.innerHTML = renderSchedule(course.schedule);
   }
 
   const prerequisitesEl = document.getElementById("course-prerequisites");
   if (prerequisitesEl) {
-    prerequisitesEl.innerHTML = `<div class="course-info-list">${formatCourseInfo(course.prerequisites)}</div>`;
+    prerequisitesEl.innerHTML = renderPrerequisites(course.prerequisites);
   }
 
   const detailGrid = document.querySelector(".detail-grid");

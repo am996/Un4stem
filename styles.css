@@ -1,4 +1,4 @@
-/* UN4STEM Stylesheet v1.1.3 - Force Sync */
+/* UN4STEM Stylesheet v1.2.0 */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Quicksand:wght@400;500;600;700&display=swap');
  
 html {
@@ -2586,4 +2586,395 @@ footer {
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(1deg); }
   50% { transform: translateY(-20px) rotate(-1deg); }
+}
+
+/* =========================================================
+   v1.2.0 REFINEMENTS
+   (home spacing + hero, apply page, SDG poster, course schedule cards, course catalog)
+========================================================= */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Home: tighter spacing + larger hero logo ---- */
+.home-page header.home-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 1.1fr);
+  gap: 28px;
+  padding: 18px 0 14px;
+}
+
+.home-page .hero-image {
+  max-height: none;
+  min-height: 0;
+}
+
+.home-page .hero-image .clipart-image {
+  height: auto;
+}
+
+.home-page .hero-title {
+  margin-bottom: 2px;
+}
+
+.hero-intro {
+  font-size: clamp(16px, 1.5vw, 19px);
+  line-height: 1.55;
+  margin-top: 6px;
+  max-width: 640px;
+}
+
+.hero-quote {
+  margin: 10px 0 0;
+  padding: 12px 18px;
+  max-width: 640px;
+  border-left: 5px solid var(--gold);
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 0 18px 18px 0;
+}
+
+.hero-quote p {
+  margin: 0;
+  max-width: none;
+  font-size: 15.5px;
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--text-on-light-bg);
+}
+
+.home-page .home-tagline {
+  font-size: clamp(26px, 3.2vw, 40px);
+  margin: 14px 0 0;
+}
+
+.home-page .btn {
+  margin-top: 14px;
+}
+
+.home-page section {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.home-page section > h2 {
+  margin-bottom: 12px;
+}
+
+.home-page .inline-image {
+  margin-top: 18px;
+}
+
+.home-page .sdg-banner {
+  margin: 26px auto 8px;
+  padding: 24px 36px;
+}
+
+.home-page .statement-strip {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.home-page .grid {
+  margin-top: 20px;
+}
+
+.home-page footer {
+  padding: 30px 0;
+}
+
+@media (max-width: 900px) {
+  .home-page header.home-hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 14px 0 10px;
+  }
+}
+
+/* ---- About: SDG poster ---- */
+.sdg-poster {
+  max-width: 860px;
+  margin: 28px auto 0;
+  text-align: center;
+}
+
+.sdg-poster > a {
+  display: block;
+}
+
+.sdg-poster img {
+  display: block;
+  width: 100%;
+  max-width: 801px;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  border: 3px solid var(--navy);
+  border-radius: 0 28px 28px 28px;
+  box-shadow: var(--shadow);
+}
+
+.sdg-poster figcaption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.sdg-poster figcaption a {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ---- Apply: hero photo + applications-closed notice ---- */
+.get-involved-hero {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+}
+
+.get-involved-hero-copy {
+  flex: 1 1 520px;
+  width: auto;
+  max-width: 840px;
+}
+
+.get-involved-hero-photo {
+  flex: 1 1 320px;
+  max-width: 460px;
+  align-self: stretch;
+  min-height: 260px;
+}
+
+.get-involved-hero-photo .clipart-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.apps-closed {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin: 14px 0 18px;
+  padding: 12px 16px;
+  border: 2px solid var(--gold);
+  border-left-width: 8px;
+  border-radius: 0 16px 16px 0;
+  background: rgba(252, 211, 77, 0.22);
+}
+
+.apps-closed-badge {
+  background: var(--navy);
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.apps-closed p {
+  flex: 1 1 280px;
+  margin: 0;
+  max-width: none;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.apps-closed a {
+  color: var(--navy);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+/* ---- Course pages: organized schedule + prerequisites ---- */
+.session-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.session-grid.session-count-2,
+.session-grid.session-count-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.session-card {
+  background: #fff;
+  border: 2px solid rgba(30, 58, 138, 0.2);
+  border-radius: 0 20px 20px 20px;
+  padding: 18px 22px;
+}
+
+.session-label {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.detail-panel .session-facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.detail-panel .session-facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--navy);
+}
+
+.fact-icon {
+  flex: 0 0 1.6em;
+  text-align: center;
+}
+
+.session-total {
+  display: inline-block;
+  margin: 14px 0 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  max-width: none;
+}
+
+.session-total strong {
+  color: var(--gold);
+}
+
+.session-note,
+.schedule-extra p {
+  margin: 10px 0 0;
+  max-width: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.schedule-extra {
+  margin-top: 14px;
+}
+
+.schedule-pending {
+  margin: 8px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.schedule-reminder {
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(30, 58, 138, 0.3);
+  max-width: none;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.schedule-reminder a,
+.note-banner a {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.detail-panel .prereq-list {
+  margin: 8px 0 0 22px;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.detail-panel .prereq-list li {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.prereq-none {
+  margin: 8px 0 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* ---- Course catalog (courses.html) ---- */
+.note-banner {
+  margin: 18px 0 8px;
+  padding: 14px 18px;
+  background: #fff;
+  border: 3px solid var(--navy);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.note-banner p {
+  margin: 0;
+  max-width: none;
+  font-size: 15.5px;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.course-jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0 6px;
+}
+
+.course-jump a {
+  padding: 9px 18px;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--navy);
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.course-jump a:hover,
+.course-jump a:focus-visible {
+  background: var(--navy);
+  color: #fff;
+}
+
+.course-jump ~ section {
+  scroll-margin-top: 130px;
+}
+
+.course-jump ~ section .course-card {
+  min-height: 210px;
+  padding: 32px;
+}
+
+.course-jump ~ section .course-grid {
+  margin-top: 24px;
+}
+
+.course-desc {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy-light);
 }
