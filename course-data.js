@@ -30,6 +30,18 @@ const UN4STEM_COURSES = {
         image: "../assets/mentors/elliot-chang.jpeg"
       },
       {
+        name: "Lakshmi Koganti",
+        role: "Chief Financial Officer",
+        bio: `Lakshmi Koganti is a 10th grade student in New Jersey interested in STEM, finance, and civic engagement. Through NASA’s Student Spaceflight Experiments Program (SSEP) Mission 21, she contributes to research investigating seed adaptation to microgravity aboard the International Space Station. She is a Civic Intern with IGNITE National and served as a Student Ambassador to the Edison Township Public Schools Board of Education, representing approximately 2,390 students at her high school. Passionate about entrepreneurship and financial strategy, Lakshmi has earned state and national recognition through DECA and FCCLA business competitions. She hopes to use innovation and leadership to expand opportunities and create meaningful community impact.`,
+        image: "../assets/mentors/lakshmi-koganti.jpg"
+      },
+      {
+        name: "Jesline Pern",
+        role: "Chief Operations Officer",
+        bio: `Jesline Pern is an 11th-grade student from Massachusetts with a passion for hands-on engineering and community building. Outside of her role in UN4STEM, she is the founder of her local STEMsters chapter and a coach for youth robotics, focusing on making technical concepts accessible to K-5 students. From directing summer youth programs to organizing community cultural festivals, she enjoys working behind the scenes to create collaborative spaces for younger learners.`,
+        image: "../assets/mentors/jesline-pern.jpg"
+      },
+      {
         name: "Tista Bhatia",
         role: "Mentor (Grade 12)",
         bio: `Tista is 16-year-old 12th grader that ranks second in her female cohort and directs national operations as the India Chapter Lead for Together with Sports. Beyond her rigorous studies, she uses her leadership experience to mentor others through their own unique passion projects, while simultaneously writing for two medical magazines and managing marketing strategies for global journals and MUNs`,
@@ -75,7 +87,7 @@ const UN4STEM_COURSES = {
       },
       {
         name: "Lian Guo",
-        role: "Mentor (Grade 10)",
+        role: "Educational Director",
         bio: `Lian is a 15-year-old 10th-grade student dedicated to excellence across the sciences and humanities. As an experienced tutor and Red Cross secretary, she has cultivated an adaptable teaching style focused on conceptual clarity. An accomplished musician who has performed at Carnegie Hall, Lian integrates discipline and creativity into her UN4STEM sessions to help students navigate psychology and math with confidence and purpose.`,
         image: "../assets/mentors/lian-guo.jpeg"
       },
@@ -202,7 +214,7 @@ const UN4STEM_COURSES = {
       {
         name: "Emma Florence",
         role: "Vice President (Grade 10)",
-        bio: `Emma is a 15-year-old 10th-grade student and the Vice President of UN4STEM. A mental health advocate and Girl Scout Gold Award candidate, she serves as the Co-President of her school's Mental Health Awareness Club. Emma integrates her leadership experience to mentor students in wellness and arithmetic, fostering a supportive global network.`,
+        bio: `Emma is a 16-year-old Gold Award Girl Scout who advocates for mental health, literacy rights, and STEM education for students around the world. As an officer of the Mental Health Awareness Club, Creative Writing Club, and Human Rights club at her school, Emma utilizes her leadership skills to create meaningful impact in her community.`,
         image: "../assets/mentors/emma-florence.jpeg"
       },
       {
@@ -389,7 +401,7 @@ const UN4STEM_COURSES = {
       {
         name: "Emma Florence",
         role: "Vice President (Grade 10)",
-        bio: `Emma is a 15-year-old 10th-grade student and the Vice President of UN4STEM. A mental health advocate and Girl Scout Gold Award candidate, she serves as the Co-President of her school's Mental Health Awareness Club. Emma integrates her leadership experience to mentor students in wellness and arithmetic, fostering a supportive global network.`,
+        bio: `Emma is a 16-year-old Gold Award Girl Scout who advocates for mental health, literacy rights, and STEM education for students around the world. As an officer of the Mental Health Awareness Club, Creative Writing Club, and Human Rights club at her school, Emma utilizes her leadership skills to create meaningful impact in her community.`,
         image: "../assets/mentors/emma-florence.jpeg"
       },
       {

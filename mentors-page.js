@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const mentors = Array.from(mentorMap.values());
-  const adminsOrder = ["Elliot Chang", "Emma Florence", "Lyla Rodrigues", "Aryan Mantena"];
+  const adminsOrder = ["Elliot Chang", "Emma Florence", "Lyla Rodrigues", "Aryan Mantena", "Lian Guo", "Lakshmi Koganti", "Jesline Pern"];
 
   const getGrade = (role) => {
     const match = String(role || "").match(/Grade\s+(\d+)/i);
